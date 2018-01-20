@@ -22,6 +22,12 @@ class QtIfw < Formula
       end
     end
 
+    cd "src/sdk" do
+      inreplace "sdk.pro" do |s|
+        s.gsub "$$[QT_INSTALL_BINS]", bin
+      end
+    end
+
     cd "tools/archivegen" do
       inreplace "archivegen.pro" do |s|
         s.gsub! "$$[QT_INSTALL_BINS]", bin

@@ -4,7 +4,7 @@ The QT Installer Framework for Homebrew
 ## Install
 
     brew tap jmuelbert/homebrew-qtifw
-     brew install qt-ifw [options]
+    brew install qt-ifw [options]
 
 
 By default (without any additional options) this formula install the
