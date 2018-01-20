@@ -1,5 +1,5 @@
-# Contributing to Homebrew
-First time contributing to Homebrew? Read our [Code of Conduct](https://github.com/Homebrew/brew/blob/master/CODE_OF_CONDUCT.md#code-of-conduct).
+# Contributing to qtifw
+First time contributing to Homebrew? Read our [Code of Conduct](https://github.com/jmuelbert/homebrew-qtifw/blob/master/CODE_OF_CONDUCT.md#code-of-conduct).
 
 ### Report a bug
 
