@@ -24,7 +24,7 @@ class QtIfw < Formula
 
     cd "src/sdk" do
       inreplace "sdk.pro" do |s|
-        s.gsub "$$[QT_INSTALL_BINS]", bin
+        s.gsub! "$$[QT_INSTALL_BINS]", bin
       end
     end
 
