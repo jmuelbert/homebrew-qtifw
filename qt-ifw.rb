@@ -2,7 +2,7 @@
 class QtIfw < Formula
   desc "The Qt Installer Framework"
   homepage "http://doc.qt.io/qtinstallerframework/"
-  url "http://download.qt.io/official_releases/qt-installer-framework/3.0.4/qt-installer-framework-opensource-src-3.0.4.tar.gz"
+  url "http://download.qt.io/official_releases/qt-installer-framework/3.0.4/qt-installer-framework-opensource-src-3.0.4.gz"
   sha256 "f65059141278e0a1224a5b821ae8affe59ee4bb4b50abdc4e04f93fd69a02617"
   head="http://code.qt.io/cgit/installer-framework/installer-framework.git/"
 
