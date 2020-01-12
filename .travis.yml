@@ -1,0 +1,21 @@
+language: cpp
+
+os: osx
+osx_image: xcode11.2
+
+env:
+  - FORMULA=qtifw
+
+matrix:
+  include:
+    - os: osx
+      env:
+        - FORMULA=qtifw
+        - BREW_ARGS="--whithout-qtdatasync"
+
+before_install:
+  - brew update
+  - brew tap jmuelbert/qt-ifw
+
+script:
+  - brew install $FORMULA $BREW_ARGS || ./print-logs

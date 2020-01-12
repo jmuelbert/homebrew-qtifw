@@ -7,15 +7,14 @@ The QT Installer Framework for Homebrew
     brew tap jmuelbert/homebrew-qtifw
     brew install qt-ifw [options]
 
-
 By default (without any additional options) this formula install the
 Qt Installer Framework. Please see the list of available options to
-disable any bit of default behaiviour or add even more stuff.
+disable any bit of default behaviour or add even more stuff.
 
 ## Options
 
 To get list of all available options, call ~brew info qt-ifw~. Here is
-the relevant part from output that command for your covenience.
+the relevant part from output that command for your convenience.
 
 ==> Options
 

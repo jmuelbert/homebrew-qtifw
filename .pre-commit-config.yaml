@@ -1,0 +1,29 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-docstring-first
+    -   id: check-json
+    -   id: check-added-large-files
+    -   id: check-yaml
+
+-   repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 1.11.2
+    hooks:
+    -   id: bundler-audit
+    -   id: check-mailmap
+    -   id: fasterer
+    -   id: forbid-binary
+    # -   id: forbid-space-in-indent
+    -   id: git-check
+    -   id: git-dirty
+    # -   id: markdownlint
+    -   id: reek
+    # -   id: require-ascii
+    -   id: rubocop
+    # -   id: shellcheck
+    -   id: script-must-have-extension
+    -   id: script-must-not-have-extension
+    # -   id: shfmt
