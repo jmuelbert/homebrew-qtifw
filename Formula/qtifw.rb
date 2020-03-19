@@ -5,10 +5,10 @@
 # with homebrew
 class QtIfw < Formula
   desc 'The Qt Installer Framework'
-  homepage 'http://doc.qt.io/qtinst allerframework/'
-  version '3.2.0'
-  sha256 '7cd0d7b86fbe63b101f263b6532485df3a2d336cc0026b47eb866dae134e319f'
-  url 'http://download.qt.io/official_releases/qt-installer-framework/3.2.0//qt-installer-framework-opensource-src-3.2.0.tar.gz'
+  homepage 'http://doc.qt.io/qtinstallerframework/'
+  version '3.2.2'
+  sha256 'd4793b891acaa06938e4bfc5367e024bc132108f819b48da0e8a97feab555ce9'
+  url 'http://download.qt.io/official_releases/qt-installer-framework/3.2.2/qt-installer-framework-opensource-src-3.2.2.tar.gz'
   head 'http://code.qt.io/cgit/installer-framework/installer-framework.git/'
 
   depends_on 'qt'

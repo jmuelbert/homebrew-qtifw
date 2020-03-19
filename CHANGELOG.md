@@ -1,3 +1,9 @@
+# 0.5.0
+
+## Released: 19.03.2020
+
+- Update to QtIFW 3.2.2
+
 # 0.4.0
 
 ## Released: 12.01.2020
