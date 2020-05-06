@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [homebrew-qtifw](#homebrew-qtifw)
+  - [Install](#install)
+  - [Options](#options)
+  - [Documentation](#documentation)
+  - [Contributing](#contributing)
+  - [Known Issues](#known-issues)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # homebrew-qtifw
 
 The QT Installer Framework for Homebrew

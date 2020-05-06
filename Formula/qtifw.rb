@@ -3,7 +3,7 @@
 # Class QtIFW to install
 # the QT Installer Framework
 # with homebrew
-class QtIfw < Formula
+class Qtifw < Formula
   desc 'The Qt Installer Framework'
   homepage 'http://doc.qt.io/qtinstallerframework/'
   version '3.2.2'

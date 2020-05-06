@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Contributing to qtifw](#contributing-to-qtifw)
+  - [Report a bug](#report-a-bug)
+  - [Propose a feature](#propose-a-feature)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Contributing to qtifw
 
 First time contributing to Homebrew? Read our [Code of Conduct](https://github.com/jmuelbert/homebrew-qtifw/blob/master/CODE_OF_CONDUCT.md#code-of-conduct).
