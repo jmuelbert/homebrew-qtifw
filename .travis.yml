@@ -15,7 +15,7 @@ matrix:
 
 before_install:
   - brew update
-  - brew tap jmuelbert/qt-ifw
+  - brew tap jmuelbert/qtifw
 
 script:
   - brew install $FORMULA $BREW_ARGS || ./print-logs

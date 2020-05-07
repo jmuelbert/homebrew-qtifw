@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_DIR=/Users/travis/Library/Logs/Homebrew/qt-ifw/
+LOG_DIR=/Users/travis/Library/Logs/Homebrew/qtifw/
 for file in $LOG_DIR; do
 	echo "===> Logs of file: $file"
 	if [ -e "$LOG_DIR/$file" ]; then
