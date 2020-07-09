@@ -15,6 +15,8 @@
 
 # homebrew-qtifw
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a02f8b8cb77d4d7088c8c3be5bc4f9ae)](https://app.codacy.com/manual/jmuelbert/homebrew-qtifw?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/homebrew-qtifw&utm_campaign=Badge_Grade_Dashboard)
+
 The QT Installer Framework for Homebrew
 
 ## Install
