@@ -1,22 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [homebrew-qtifw](#homebrew-qtifw)
-  - [Install](#install)
-  - [Options](#options)
-  - [Documentation](#documentation)
-  - [Contributing](#contributing)
-  - [Known Issues](#known-issues)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # homebrew-qtifw
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a02f8b8cb77d4d7088c8c3be5bc4f9ae)](https://app.codacy.com/manual/jmuelbert/homebrew-qtifw?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/homebrew-qtifw&utm_campaign=Badge_Grade_Dashboard)
-
+[![GitHub license](https://img.shields.io/badge/license-EUPL-blue.svg)](https://joinup.ec.europa.eu/page/eupl-text-11-12)
 The QT Installer Framework for Homebrew
 
 ## Install
