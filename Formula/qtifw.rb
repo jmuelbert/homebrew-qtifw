@@ -15,59 +15,23 @@ class Qtifw < Formula
 
   def install
 
-    cd "src/libs/7zip" do
-      inreplace "7zip.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_LIBS]", lib
-      end
-    end
-
-       cd "src/libs/installer" do
-      inreplace "installer.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_LIBS]", lib
-      end
-    end
-
-    cd "src/sdk" do
-      inreplace "sdk.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_BINS]", bin
-      end
-    end
-
-    cd "tools/archivegen" do
-      inreplace "archivegen.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_BINS]", bin
-      end
-    end
-
-    cd "tools/binarycreator" do
-      inreplace "binarycreator.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_BINS]", bin
-      end
-    end
-
-    cd "tools/repogen" do
-      inreplace "repogen.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_BINS]", bin
-      end
-    end
-
-    cd "tools/devtool" do
-      inreplace "devtool.pro" do |s|
-        s.gsub! "$$[QT_INSTALL_BINS]", bin
-      end
-    end
-
-    args =  %W[
+    args = %W[
       PREFIX=#{prefix}
       IFW_BUILD_TREE=#{buildpath}
       CONFIG+=release
     ]
 
-    #mkdir 'build' do
-      system 'qmake', *args, './installerfw.pro'
-      system 'make', 'install'
-
-    #end
+    mkdir 'build' do
+      system 'qmake', *args, '../installerfw.pro'
+      system 'make'
+      lib.install '../lib/lib7z.a'
+      lib.install '../lib/libinstaller.a'
+      bin.install '../bin/archivegen'
+      bin.install '../bin/binarycreator'
+      bin.install '../bin/repogen'
+      bin.install '../bin/devtool'
+      bin.install '../tools/build_installer.py'
+    end
   end
 
   test do

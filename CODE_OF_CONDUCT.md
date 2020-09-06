@@ -1,16 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Code of Conduct](#code-of-conduct)
-  - [Open](#open)
-  - [Considerate](#considerate)
-  - [Respectful](#respectful)
-- [Diversity](#diversity)
-- [Attribution](#attribution)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Code of Conduct
 
 The qtifw community is made up of members from around the globe with a diverse set of skills, personalities, and experiences. It is through these differences
