@@ -1,5 +1,4 @@
-###
-# Please keep /.mergify.yml synced!
+---
 name: CI
 
 on: [push, pull_request]
@@ -8,7 +7,7 @@ jobs:
     main:
         name: >-
             ${{ matrix.os }} ${{ matrix.ruby }}
-        runs-on: ${{ matrix.os }}-latest
+        runs-on: ${{ matrix.os }}
         env:
             # See https://github.com/tmm1/test-queue#environment-variables
             TEST_QUEUE_WORKERS: 2
@@ -28,7 +27,7 @@ jobs:
               if: matrix.os == 'windows'
               run: |
                   # set TMPDIR, git core.autocrlf
-                  echo "::set-env name=TMPDIR::$env:RUNNER_TEMP"
+                  echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
                   git config --system core.autocrlf false
             - name: checkout
               uses: actions/checkout@v2

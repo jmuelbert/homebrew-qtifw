@@ -6,9 +6,9 @@
 class Qtifw < Formula
   desc 'The Qt Installer Framework'
   homepage 'http://doc.qt.io/qtinstallerframework/'
-  version '3.2.2'
-  sha256 'd4793b891acaa06938e4bfc5367e024bc132108f819b48da0e8a97feab555ce9'
-  url 'http://download.qt.io/official_releases/qt-installer-framework/3.2.2/qt-installer-framework-opensource-src-3.2.2.tar.gz'
+  version '4.0.1x'
+  sha256 'ef04180c2779b781754fb198ad55b190c199baa27ee18ba09970959a6a6bdc22'
+  url 'http://download.qt.io/official_releases/qt-installer-framework/4.0.1/qt-installer-framework-4.01.tar'
   head 'http://code.qt.io/cgit/installer-framework/installer-framework.git/'
 
   depends_on 'qt' => '5.12'
