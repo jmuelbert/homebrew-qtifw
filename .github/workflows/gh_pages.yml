@@ -1,0 +1,71 @@
+
+name: github pages
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  #push:
+  #  branches-ignore:
+  #    - '**'
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest]
+        build_type: [Release]
+        qt_version: [6.1.0]
+        qt_arch: [clang_64]
+        arch: [clang_64]
+        generator: ["-G 'Ninja'"]
+
+      fail-fast: false
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Get the version
+        id: get_version
+        shell: bash
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+
+      - name: Checkout Source code
+        if: github.event_name == 'push'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          #          ref: master
+
+      - name: Checkout Source code
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          
+ 
+      - name: Requirements
+        run:
+          brew install doxygen && brew install sphinx-doc ninja pkg-config &&
+          pip3 install sphinx-rtd-theme && pip3 install breathe && pip3 install
+          sphinx-sitemap
+          #   && pip3 install conan
+          #   && conan user
+         
+      - name: Build manual
+        run: |
+          ls $GITHUB_WORKSPACE/docs/manual
+          cd $GITHUB_WORKSPACE/docs/manual
+          make html
+          cd $GITHUB_WORKSPACE/docs/manual/build/html
+          touch .nojekyll
+      - name: Deploy manual
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/manual/build/html # The folder the action should deploy.
