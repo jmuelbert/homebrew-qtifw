@@ -1,7 +1,6 @@
-
+---
 name: github pages
 
-name: Publish API docs
 on:
     # For some reason, `on: release: ...` didn't work with `nektos/act`
     push:
