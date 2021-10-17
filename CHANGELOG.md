@@ -39,9 +39,12 @@
 - Add a Codacy badge to README.md [\#10](https://github.com/jmuelbert/homebrew-qtifw/pull/10)
 - Update to the latest stable version Qt Installer Framework v3.1.1 [\#5](https://github.com/jmuelbert/homebrew-qtifw/pull/5)
 - Update qt installer framework to 3.0.6 [\#3](https://github.com/jmuelbert/homebrew-qtifw/pull/3)
-- Add the Code of Conduct. [\#1](https://github.com/jmuelbert/homebrew-qtifw/pull/1)
 
 ## [V1.0](https://github.com/jmuelbert/homebrew-qtifw/tree/V1.0) (2018-01-20)
+
+**Merged pull requests:**
+
+- Add the Code of Conduct. [\#1](https://github.com/jmuelbert/homebrew-qtifw/pull/1)
 
 
 
