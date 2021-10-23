@@ -16,6 +16,7 @@
 
 **Merged pull requests:**
 
+- Bump codacy/codacy-analysis-cli-action from 1.1.0 to 4.0.0 [\#41](https://github.com/jmuelbert/homebrew-qtifw/pull/41)
 - Bump actions/checkout from 2.3.4 to 2.3.5 [\#40](https://github.com/jmuelbert/homebrew-qtifw/pull/40)
 - Bump peter-evans/create-pull-request from 3.10.0 to 3.10.1 [\#39](https://github.com/jmuelbert/homebrew-qtifw/pull/39)
 - Bump peter-evans/create-pull-request from 3.9.2 to 3.10.0 [\#38](https://github.com/jmuelbert/homebrew-qtifw/pull/38)
