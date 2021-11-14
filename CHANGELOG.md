@@ -2,6 +2,8 @@
 
 ## [Unreleased](https://github.com/jmuelbert/homebrew-qtifw/tree/HEAD)
 
+[Full Changelog](https://github.com/jmuelbert/homebrew-qtifw/compare/V1.0...HEAD)
+
 **Fixed bugs:**
 
 - Cant Compiling with qt 5.14.2 [\#9](https://github.com/jmuelbert/homebrew-qtifw/issues/9)
@@ -16,36 +18,40 @@
 
 **Merged pull requests:**
 
-- Bump codacy/codacy-analysis-cli-action from 1.1.0 to 4.0.0 [\#41](https://github.com/jmuelbert/homebrew-qtifw/pull/41)
-- Bump actions/checkout from 2.3.4 to 2.3.5 [\#40](https://github.com/jmuelbert/homebrew-qtifw/pull/40)
-- Bump peter-evans/create-pull-request from 3.10.0 to 3.10.1 [\#39](https://github.com/jmuelbert/homebrew-qtifw/pull/39)
-- Bump peter-evans/create-pull-request from 3.9.2 to 3.10.0 [\#38](https://github.com/jmuelbert/homebrew-qtifw/pull/38)
-- Bump peter-evans/create-pull-request from 3.8.2 to 3.9.2 [\#37](https://github.com/jmuelbert/homebrew-qtifw/pull/37)
-- Bump actions/checkout from 2 to 2.3.4 [\#35](https://github.com/jmuelbert/homebrew-qtifw/pull/35)
-- Bump release-drafter/release-drafter from 5.14.0 to 5.15.0 [\#34](https://github.com/jmuelbert/homebrew-qtifw/pull/34)
-- Bump mislav/bump-homebrew-formula-action from v1.9 to v1.12 [\#31](https://github.com/jmuelbert/homebrew-qtifw/pull/31)
-- Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 [\#29](https://github.com/jmuelbert/homebrew-qtifw/pull/29)
-- Bump actions/setup-ruby from v1.1.2 to v1.1.3 [\#28](https://github.com/jmuelbert/homebrew-qtifw/pull/28)
-- Bump peter-evans/create-pull-request from v3.6.0 to v3.8.2 [\#27](https://github.com/jmuelbert/homebrew-qtifw/pull/27)
-- Bump mislav/bump-homebrew-formula-action from v1.8 to v1.9 [\#25](https://github.com/jmuelbert/homebrew-qtifw/pull/25)
-- Bump release-drafter/release-drafter from v5.12.1 to v5.13.0 [\#22](https://github.com/jmuelbert/homebrew-qtifw/pull/22)
-- Bump peter-evans/create-pull-request from v3.5.1 to v3.6.0 [\#21](https://github.com/jmuelbert/homebrew-qtifw/pull/21)
-- Bump crazy-max/ghaction-github-labeler from v3.1.0 to v3.1.1 [\#20](https://github.com/jmuelbert/homebrew-qtifw/pull/20)
-- Bump mislav/bump-homebrew-formula-action from v1.7 to v1.8 [\#18](https://github.com/jmuelbert/homebrew-qtifw/pull/18)
-- Bump peter-evans/create-pull-request from v2 to v3.5.1 [\#17](https://github.com/jmuelbert/homebrew-qtifw/pull/17)
-- Bump release-drafter/release-drafter from v5.11.0 to v5.12.1 [\#15](https://github.com/jmuelbert/homebrew-qtifw/pull/15)
-- Bump actions/setup-ruby from v1.1.1 to v1.1.2 [\#13](https://github.com/jmuelbert/homebrew-qtifw/pull/13)
-- Bump actions/setup-ruby from v1 to v1.1.1 [\#12](https://github.com/jmuelbert/homebrew-qtifw/pull/12)
-- Bump mislav/bump-homebrew-formula-action from v1.4 to v1.7 [\#11](https://github.com/jmuelbert/homebrew-qtifw/pull/11)
-- Add a Codacy badge to README.md [\#10](https://github.com/jmuelbert/homebrew-qtifw/pull/10)
-- Update to the latest stable version Qt Installer Framework v3.1.1 [\#5](https://github.com/jmuelbert/homebrew-qtifw/pull/5)
-- Update qt installer framework to 3.0.6 [\#3](https://github.com/jmuelbert/homebrew-qtifw/pull/3)
+- Bump peter-evans/create-pull-request from 3.10.1 to 3.11.0 [\#43](https://github.com/jmuelbert/homebrew-qtifw/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump heinrichreimer/github-changelog-generator-action from 2.2 to 2.3 [\#42](https://github.com/jmuelbert/homebrew-qtifw/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump codacy/codacy-analysis-cli-action from 1.1.0 to 4.0.0 [\#41](https://github.com/jmuelbert/homebrew-qtifw/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 2.3.4 to 2.3.5 [\#40](https://github.com/jmuelbert/homebrew-qtifw/pull/40) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3.10.0 to 3.10.1 [\#39](https://github.com/jmuelbert/homebrew-qtifw/pull/39) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3.9.2 to 3.10.0 [\#38](https://github.com/jmuelbert/homebrew-qtifw/pull/38) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3.8.2 to 3.9.2 [\#37](https://github.com/jmuelbert/homebrew-qtifw/pull/37) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 2 to 2.3.4 [\#35](https://github.com/jmuelbert/homebrew-qtifw/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from 5.14.0 to 5.15.0 [\#34](https://github.com/jmuelbert/homebrew-qtifw/pull/34) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mislav/bump-homebrew-formula-action from v1.9 to v1.12 [\#31](https://github.com/jmuelbert/homebrew-qtifw/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 [\#29](https://github.com/jmuelbert/homebrew-qtifw/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/setup-ruby from v1.1.2 to v1.1.3 [\#28](https://github.com/jmuelbert/homebrew-qtifw/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from v3.6.0 to v3.8.2 [\#27](https://github.com/jmuelbert/homebrew-qtifw/pull/27) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mislav/bump-homebrew-formula-action from v1.8 to v1.9 [\#25](https://github.com/jmuelbert/homebrew-qtifw/pull/25) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from v5.12.1 to v5.13.0 [\#22](https://github.com/jmuelbert/homebrew-qtifw/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from v3.5.1 to v3.6.0 [\#21](https://github.com/jmuelbert/homebrew-qtifw/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump crazy-max/ghaction-github-labeler from v3.1.0 to v3.1.1 [\#20](https://github.com/jmuelbert/homebrew-qtifw/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mislav/bump-homebrew-formula-action from v1.7 to v1.8 [\#18](https://github.com/jmuelbert/homebrew-qtifw/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from v2 to v3.5.1 [\#17](https://github.com/jmuelbert/homebrew-qtifw/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from v5.11.0 to v5.12.1 [\#15](https://github.com/jmuelbert/homebrew-qtifw/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/setup-ruby from v1.1.1 to v1.1.2 [\#13](https://github.com/jmuelbert/homebrew-qtifw/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/setup-ruby from v1 to v1.1.1 [\#12](https://github.com/jmuelbert/homebrew-qtifw/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mislav/bump-homebrew-formula-action from v1.4 to v1.7 [\#11](https://github.com/jmuelbert/homebrew-qtifw/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Add a Codacy badge to README.md [\#10](https://github.com/jmuelbert/homebrew-qtifw/pull/10) ([codacy-badger](https://github.com/codacy-badger))
+- Update to the latest stable version Qt Installer Framework v3.1.1 [\#5](https://github.com/jmuelbert/homebrew-qtifw/pull/5) ([iakov](https://github.com/iakov))
+- Update qt installer framework to 3.0.6 [\#3](https://github.com/jmuelbert/homebrew-qtifw/pull/3) ([yani-](https://github.com/yani-))
 
 ## [V1.0](https://github.com/jmuelbert/homebrew-qtifw/tree/V1.0) (2018-01-20)
 
+[Full Changelog](https://github.com/jmuelbert/homebrew-qtifw/compare/8970831f86cd2ac842b1fedbc0d5284639dfe616...V1.0)
+
 **Merged pull requests:**
 
-- Add the Code of Conduct. [\#1](https://github.com/jmuelbert/homebrew-qtifw/pull/1)
+- Add the Code of Conduct. [\#1](https://github.com/jmuelbert/homebrew-qtifw/pull/1) ([jmuelbert](https://github.com/jmuelbert))
 
 
 
