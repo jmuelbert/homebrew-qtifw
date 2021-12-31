@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump mislav/bump-homebrew-formula-action from 1.14 to 1.16 [\#47](https://github.com/jmuelbert/homebrew-qtifw/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump mislav/bump-homebrew-formula-action from 1.12 to 1.14 [\#46](https://github.com/jmuelbert/homebrew-qtifw/pull/46) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump peter-evans/create-pull-request from 3.11.0 to 3.12.0 [\#44](https://github.com/jmuelbert/homebrew-qtifw/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump peter-evans/create-pull-request from 3.10.1 to 3.11.0 [\#43](https://github.com/jmuelbert/homebrew-qtifw/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
