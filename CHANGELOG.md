@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5.16.1 to 5.17.6 [\#50](https://github.com/jmuelbert/homebrew-qtifw/pull/50) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.16.1 to 5.17.5 [\#49](https://github.com/jmuelbert/homebrew-qtifw/pull/49) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.15.0 to 5.16.1 [\#48](https://github.com/jmuelbert/homebrew-qtifw/pull/48) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump mislav/bump-homebrew-formula-action from 1.14 to 1.16 [\#47](https://github.com/jmuelbert/homebrew-qtifw/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
