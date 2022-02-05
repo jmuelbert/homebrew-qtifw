@@ -19,6 +19,7 @@
 **Merged pull requests:**
 
 - Bump release-drafter/release-drafter from 5.17.6 to 5.18.0 [\#52](https://github.com/jmuelbert/homebrew-qtifw/pull/52) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3.12.0 to 3.12.1 [\#51](https://github.com/jmuelbert/homebrew-qtifw/pull/51) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.16.1 to 5.17.6 [\#50](https://github.com/jmuelbert/homebrew-qtifw/pull/50) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.16.1 to 5.17.5 [\#49](https://github.com/jmuelbert/homebrew-qtifw/pull/49) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.15.0 to 5.16.1 [\#48](https://github.com/jmuelbert/homebrew-qtifw/pull/48) ([dependabot[bot]](https://github.com/apps/dependabot))
