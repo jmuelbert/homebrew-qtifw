@@ -18,6 +18,11 @@
 
 **Merged pull requests:**
 
+- Bump codacy/codacy-analysis-cli-action from 4.0.0 to 4.0.2 [\#59](https://github.com/jmuelbert/homebrew-qtifw/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from 5.18.1 to 5.19.0 [\#58](https://github.com/jmuelbert/homebrew-qtifw/pull/58) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 2 to 3 [\#56](https://github.com/jmuelbert/homebrew-qtifw/pull/56) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/labeler from 3 to 4 [\#55](https://github.com/jmuelbert/homebrew-qtifw/pull/55) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump peter-evans/create-pull-request from 3.12.1 to 3.14.0 [\#54](https://github.com/jmuelbert/homebrew-qtifw/pull/54) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.18.0 to 5.18.1 [\#53](https://github.com/jmuelbert/homebrew-qtifw/pull/53) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.17.6 to 5.18.0 [\#52](https://github.com/jmuelbert/homebrew-qtifw/pull/52) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump peter-evans/create-pull-request from 3.12.0 to 3.12.1 [\#51](https://github.com/jmuelbert/homebrew-qtifw/pull/51) ([dependabot[bot]](https://github.com/apps/dependabot))
