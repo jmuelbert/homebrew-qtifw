@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump github/codeql-action from 1 to 2 [\#61](https://github.com/jmuelbert/homebrew-qtifw/pull/61) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump peter-evans/create-pull-request from 3.14.0 to 4 [\#60](https://github.com/jmuelbert/homebrew-qtifw/pull/60) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump codacy/codacy-analysis-cli-action from 4.0.0 to 4.0.2 [\#59](https://github.com/jmuelbert/homebrew-qtifw/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.18.1 to 5.19.0 [\#58](https://github.com/jmuelbert/homebrew-qtifw/pull/58) ([dependabot[bot]](https://github.com/apps/dependabot))
