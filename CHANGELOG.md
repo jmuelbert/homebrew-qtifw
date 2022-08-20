@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5.20.0 to 5.20.1 [\#66](https://github.com/jmuelbert/homebrew-qtifw/pull/66) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump mislav/bump-homebrew-formula-action from 2.0 to 2.1 [\#65](https://github.com/jmuelbert/homebrew-qtifw/pull/65) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump codacy/codacy-analysis-cli-action from 4.0.2 to 4.1.0 [\#64](https://github.com/jmuelbert/homebrew-qtifw/pull/64) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.19.0 to 5.20.0 [\#63](https://github.com/jmuelbert/homebrew-qtifw/pull/63) ([dependabot[bot]](https://github.com/apps/dependabot))
