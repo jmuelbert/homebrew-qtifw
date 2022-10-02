@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump codacy/codacy-analysis-cli-action from 4.1.0 to 4.2.0 [\#70](https://github.com/jmuelbert/homebrew-qtifw/pull/70) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.20.1 to 5.21.0 [\#69](https://github.com/jmuelbert/homebrew-qtifw/pull/69) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump ahmadnassri/action-commit-lint from 1 to 2.0.3 [\#68](https://github.com/jmuelbert/homebrew-qtifw/pull/68) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.20.0 to 5.20.1 [\#66](https://github.com/jmuelbert/homebrew-qtifw/pull/66) ([dependabot[bot]](https://github.com/apps/dependabot))
