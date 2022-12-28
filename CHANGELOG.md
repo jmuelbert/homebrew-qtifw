@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Bump ahmadnassri/action-commit-lint from 2.0.4 to 2.0.5 [\#74](https://github.com/jmuelbert/homebrew-qtifw/pull/74) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump ahmadnassri/action-commit-lint from 2.0.3 to 2.0.4 [\#73](https://github.com/jmuelbert/homebrew-qtifw/pull/73) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump mshick/add-pr-comment from 1 to 2 [\#72](https://github.com/jmuelbert/homebrew-qtifw/pull/72) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5.21.0 to 5.21.1 [\#71](https://github.com/jmuelbert/homebrew-qtifw/pull/71) ([dependabot[bot]](https://github.com/apps/dependabot))
