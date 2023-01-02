@@ -3,39 +3,62 @@
 # Top-most EditorConfig file.
 root = true
 
+# Unix-style newlines with a newline ending every file
 # -----------------
 # Source code
 # -----------------
-# C++
-# Python
-# CMake
 [*]
+end_of_line = lf
 indent_style = space
 indent_size = 4
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-end_of_line = lf
 
-[*.py]
+# Indentation override for all JS under lib directory
+[*.{js,json,vue,scss,rb,haml,yml,yaml,toml}]
+indent_size = 2
+
+[*.{js,json,vue,scss,rb,haml,yml,md}]
+indent_style = space
+charset = utf-8
+
+# Source code files
+[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,swift,xsl}]
+indent_style = space
+indent_size = 2
+
+[CMakeLists.txt,*.cmake{,.in}]
+indent_size = 2
+indent_style = space
+
+# Override for Makefile
+[{Makefile, makefile, GNUmakefile}]
+indent_style = tab
 indent_size = 4
 
-[*.rb]
-indent_size = 2
-
-[*.{c,h,cpp,hpp,f90,F90}]
-indent_size = 2
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.py]
+indent_size = 4
+max_line_length = 8
 
 [*.rst]
 indent_size = 3
-tab_size = 3
 
-[Makefile]
-indent_style = tab
+[*.coffee]
+indent_style = space
+indent_size = 4
+
+[*.html]
+indent_style = space
+indent_size = 2
 
 [*.{bat,cmd}]
 end_of_line = crlf
 
-[**.md]
-trim_trailing_whitespace = true
-x-soft-wrap-text = true
+[*.{md,markdown,js.snap}]
+trim_trailing_whitespace = false
+
+[LICENSE]
+insert_final_newline = false

@@ -1,3 +1,4 @@
+---
 name: Misspell fixer
 
 on: [push, pull_request]

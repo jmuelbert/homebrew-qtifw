@@ -4,6 +4,22 @@
 
 [Full Changelog](https://github.com/jmuelbert/homebrew-qtifw/compare/V1.0...HEAD)
 
+**Added**
+
+- devskim-analysis workflow
+- release-drafter workflow
+- labeler config file
+- prettier config files
+- docs for Github Pages like [jmopenorders](https://github.com/jmuelbert/jmopenorders/tree/master/docs)
+
+**Changed**
+
+- Update to the Installer Framework Version 4.2.0
+- change ci workflow to build.
+- include build and deploy gh pages in the build workflow
+- include release notes in the build workflow
+- include update changelog in the build workflow
+
 **Fixed bugs:**
 
 - Cant Compiling with qt 5.14.2 [\#9](https://github.com/jmuelbert/homebrew-qtifw/issues/9)

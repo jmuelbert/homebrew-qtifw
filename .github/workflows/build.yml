@@ -1,0 +1,139 @@
+---
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    tests:
+        name: >-
+            ${{ matrix.os }} ${{ matrix.ruby }}
+        runs-on: ${{ matrix.os }}
+        env:
+            # See https://github.com/tmm1/test-queue#environment-variables
+            TEST_QUEUE_WORKERS: 2
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [ubuntu-latest, macos-latest, windows-latest]
+                # os: [windows]
+                ruby: [2.4, 2.5, 2.6, 2.7, head]
+                include:
+                    - { os: windows, ruby: mingw }
+                exclude:
+                    - { os: windows, ruby: head }
+
+        steps:
+            - name: windows misc
+              if: matrix.os == 'windows'
+              run: |
+                  # set TMPDIR, git core.autocrlf
+                  echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
+                  git config --system core.autocrlf false
+
+            - name: checkout
+              uses: actions/checkout@v2.3.5
+
+            - name: set up Ruby
+              uses: ruby/setup-ruby@v1
+              with:
+                  ruby-version: ${{ matrix.ruby }}
+
+            - name: install dependencies
+              run: bundle install --jobs 3 --retry 3
+
+            - name: spec
+              run: bundle exec rake spec
+
+            - name: ascii_spec
+              run: bundle exec rake ascii_spec
+
+            - name: internal_investigation
+              run: bundle exec rake internal_investigation
+
+    fastlaneChecks:
+        name: fastlane env reminder
+        runs-on: ubuntu-latest
+        needs: tests
+        steps:
+            - uses: actions/checkout@v2.3.5
+            - uses: fastlane/github-actions/fastlane-env-reminder@latest
+              with:
+                  repo-token: "${{ secrets.BOT_GITHUB_TOKEN }}"
+
+    build_GH_Pages:
+        name: Build GH Pages
+        runs-on: ubuntu-latest
+        needs: tests
+        steps:
+            - uses: actions/checkout@v2.4.0
+              with:
+                  fetch-depth: 2
+            - name: Fetch all history for all tags and branches
+              run: git fetch --prune --unshallow
+
+            - name: Set up Python
+              uses: actions/setup-python@v2.3.1
+              with:
+                  python-version: "3.10"
+
+            - name: Install sphinx
+              run: |
+                  pip install -r docs/requirements.txt
+            - name: Running the Sphinx to gh-pages Action
+              run: |
+                  sphinx-build docs docs/_build
+            - name: Upload documentation
+              uses: actions/upload-artifact@v2.2.4
+              with:
+                  name: docs
+                  path: docs/_build
+
+    releaseNotes:
+        if: startsWith(github.ref, 'refs/tags/')
+        runs-on: ubuntu-latest
+        steps:
+            - name: Build Releasenotes
+              id: github_releasenotes
+              uses: release-drafter/release-drafter@v5.15.0
+              with:
+                  publish: "${{ steps.check-version.outputs.tag != '' }}"
+                  tag: "${{ steps.check-version.outputs.tag }}"
+              env:
+                  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+    changeLog:
+        if: startsWith(github.ref, 'refs/tags/')
+        runs-on: ubuntu-latest
+        steps:
+            - name: Build ChangeLog
+              id: github_changelog
+              uses: mikepenz/release-changelog-builder-action@v2.7.1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Create Release
+              uses: actions/create-release@v1
+              with:
+                  tag_name: ${{ github.ref }}
+                  release_name: ${{ github.ref }}
+                  body: ${{ steps.check-version.outputs }}
+              env:
+                  GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+
+    deployGHPages:
+        runs-on: ubuntu-latest
+        needs: build_GH_Pages
+        steps:
+            - name: Download Artifact with Pages
+              uses: actions/download-artifact@v2.1.0
+              with:
+                  name: docs
+                  path: docs/_build
+
+            - name: Deploy to GitHub Pages
+              uses: Cecilapp/GitHub-Pages-deploy@v3
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  email: juergen.muelbert@gmail.com
+                  build_dir: docs/_build

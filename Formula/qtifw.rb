@@ -6,15 +6,14 @@
 class Qtifw < Formula
   desc 'The Qt Installer Framework'
   homepage 'http://doc.qt.io/qtinstallerframework/'
-  version '4.0.1x'
-  sha256 'ef04180c2779b781754fb198ad55b190c199baa27ee18ba09970959a6a6bdc22'
-  url 'http://download.qt.io/official_releases/qt-installer-framework/4.0.1/qt-installer-framework-4.0.1.tar'
+  version '4.2.0x'
+  sha256 '542957cb86b856a55521447b2481c7161532bcc45e99e3a5af1e1d42c34b222a'
+  url 'https://download.qt.io/official_releases/qt-installer-framework/4.2.0/installer-framework-opensource-src-4.2.0.tar.xz'
   head 'http://code.qt.io/cgit/installer-framework/installer-framework.git/'
 
-  depends_on 'qt' => '5.12'
+  depends_on 'qt' => '5.12.7'
 
   def install
-
     args = %W[
       PREFIX=#{prefix}
       IFW_BUILD_TREE=#{buildpath}
