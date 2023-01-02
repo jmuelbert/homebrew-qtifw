@@ -1,5 +1,5 @@
 ---
-name: 'markdown-lint'
+name: 'Write good'
 
 on:
   push:
