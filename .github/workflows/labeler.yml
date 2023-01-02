@@ -5,13 +5,20 @@
 # To use this workflow, you will need to set up a .github/labeler.yml
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
-name: "Pull Request Labeler"
+
+name: Labeler
+# yamllint disable
 on:
-  - pull_request_target
+  # yamllint enable
+  pull_request:
 
 jobs:
-  triage:
+  label:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - uses: actions/labeler@v4
         with:
