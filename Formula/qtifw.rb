@@ -6,30 +6,34 @@
 class Qtifw < Formula
   desc 'The Qt Installer Framework'
   homepage 'http://doc.qt.io/qtinstallerframework/'
-  version '4.2.0x'
-  sha256 '542957cb86b856a55521447b2481c7161532bcc45e99e3a5af1e1d42c34b222a'
-  url 'https://download.qt.io/official_releases/qt-installer-framework/4.2.0/installer-framework-opensource-src-4.2.0.tar.xz'
+  version '4.5.1'
+  sha256 '602417a0a2ada5cada8f5b6ad5a160390198b68b46a3721022b7370a971b040a'
+  url 'https://download.qt.io/official_releases/qt-installer-framework/4.5.1/installer-framework-opensource-src-4.5.1.tar.xz'
   head 'http://code.qt.io/cgit/installer-framework/installer-framework.git/'
 
-  depends_on 'qt' => '5.12.7'
+  depends_on 'qt@5'
+  depends_on 'xz' => :build
 
   def install
+    Dir.glob("**/*.pro") do |f|
+      inreplace f do |s|
+         s.gsub!("$$[QT_INSTALL_LIBS]", "$${PREFIX}/lib", false)
+         s.gsub!("$$[QT_INSTALL_BINS]", "$${PREFIX}/bin", false)
+      end
+    end
+
     args = %W[
       PREFIX=#{prefix}
       IFW_BUILD_TREE=#{buildpath}
       CONFIG+=release
+      CONFIG+=libarchive
+      INCLUDEPATH+=#{Formula["xz"].include}
     ]
 
     mkdir 'build' do
-      system 'qmake', *args, '../installerfw.pro'
-      system 'make'
-      lib.install '../lib/lib7z.a'
-      lib.install '../lib/libinstaller.a'
-      bin.install '../bin/archivegen'
-      bin.install '../bin/binarycreator'
-      bin.install '../bin/repogen'
-      bin.install '../bin/devtool'
-      bin.install '../tools/build_installer.py'
+      qt5 = Formula["qt@5"].opt_prefix
+      system "#{qt5}/bin/qmake", *args, '../installerfw.pro'
+      system 'make', 'install'
     end
   end
 
