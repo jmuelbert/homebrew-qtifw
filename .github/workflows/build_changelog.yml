@@ -13,6 +13,6 @@ jobs:
             - name: "Build Changelog"
               uses: mikepenz/release-changelog-builder-action@{latest-release}
               with:
-                configuration: ".github/changlog_configuration.json"
+                configuration: ".github/changelog_configuration.json"
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
