@@ -2,5 +2,19 @@
     "printWidth": 100,
     "singleQuote": true,
     "arrowParens": "always",
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "overrides": [
+        {
+            "files": ".github/**/*.yml",
+            "options": {
+                "singleQuote": false
+            }
+        },
+        {
+            "files": ["*.html", "legacy/**/*.js"],
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
 }
