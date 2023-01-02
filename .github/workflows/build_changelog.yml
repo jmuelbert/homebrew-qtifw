@@ -1,0 +1,18 @@
+name: Build Changelog
+
+on:
+    - push
+    - pull_request
+
+jobs:
+    changelog:
+        runs-on: ubuntu-latest
+        name: Changelog Validate
+        steps:
+            - uses: actions/checkout@v3
+            - name: "Build Changelog"
+              uses: mikepenz/release-changelog-builder-action@{latest-release}
+              with:
+                configuration: "configuration.json"
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
