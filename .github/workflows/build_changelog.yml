@@ -11,7 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: "Build Changelog"
-              uses: mikepenz/release-changelog-builder-action@v3
+              uses: mikepenz/release-changelog-builder-action@v3.5.0
               with:
                 configuration: ".github/changelog_configuration.json"
               env:
