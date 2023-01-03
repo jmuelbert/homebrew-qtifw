@@ -125,7 +125,7 @@ jobs:
         needs: build_GH_Pages
         steps:
             - name: Download Artifact with Pages
-              uses: actions/download-artifact@v2.1.0
+              uses: actions/download-artifact@v3.0.1
               with:
                   name: docs
                   path: docs/_build
