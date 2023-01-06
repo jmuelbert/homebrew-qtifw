@@ -30,7 +30,7 @@ jobs:
                   echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
                   git config --system core.autocrlf false
             - name: checkout
-              uses: actions/checkout@v3.2.0
+              uses: actions/checkout@v3.3.0
             - name: set up Ruby
               uses: ruby/setup-ruby@v1
               with:
