@@ -31,7 +31,7 @@ jobs:
                   git config --system core.autocrlf false
 
             - name: checkout
-              uses: actions/checkout@v2.3.5
+              uses: actions/checkout@v3.3.0
 
             - name: set up Ruby
               uses: ruby/setup-ruby@v1
@@ -55,7 +55,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: tests
         steps:
-            - uses: actions/checkout@v2.3.5
+            - uses: actions/checkout@v3.3.0
             - uses: fastlane/github-actions/fastlane-env-reminder@latest
               with:
                   repo-token: "${{ secrets.BOT_GITHUB_TOKEN }}"
@@ -65,14 +65,14 @@ jobs:
         runs-on: ubuntu-latest
         needs: tests
         steps:
-            - uses: actions/checkout@v2.4.0
+            - uses: actions/checkout@v3.3.0
               with:
                   fetch-depth: 2
             - name: Fetch all history for all tags and branches
               run: git fetch --prune --unshallow
 
             - name: Set up Python
-              uses: actions/setup-python@v2.3.1
+              uses: actions/setup-python@v4.5.0
               with:
                   python-version: "3.10"
 
@@ -83,7 +83,7 @@ jobs:
               run: |
                   sphinx-build docs docs/_build
             - name: Upload documentation
-              uses: actions/upload-artifact@v2.2.4
+              uses: actions/upload-artifact@v3.1.2
               with:
                   name: docs
                   path: docs/_build
@@ -94,7 +94,7 @@ jobs:
         steps:
             - name: Build Releasenotes
               id: github_releasenotes
-              uses: release-drafter/release-drafter@v5.15.0
+              uses: release-drafter/release-drafter@v5.22.0
               with:
                   publish: "${{ steps.check-version.outputs.tag != '' }}"
                   tag: "${{ steps.check-version.outputs.tag }}"
@@ -125,7 +125,7 @@ jobs:
         needs: build_GH_Pages
         steps:
             - name: Download Artifact with Pages
-              uses: actions/download-artifact@v2.1.0
+              uses: actions/download-artifact@v3.0.2
               with:
                   name: docs
                   path: docs/_build
