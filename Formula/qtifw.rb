@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2021 Jürgen Mülbert <juergen.muelbert@gmail.com>
+#
+# SPDX-License-Identifier: EUPL-1.2
+#
 # frozen_string_literal: true
 
 # Class Qtifw to install

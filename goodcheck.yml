@@ -1,7 +1,12 @@
 ---
+#
+# SPDX-FileCopyrightText: 2023 Jürgen Mülbert <juergen.muelbert@gmail.com>
+#
+# SPDX-License-Identifier: EUPL-1.2
+#
 rules:
   # id, pattern, message are required attributes.
-  - id: com.github.jmuelbert.qt_boilerpalte_template
+  - id: com.github.jmuelbert.homebrew-qtifw
     pattern: Github
     severity: warning
     message: Do you want to write GitHub?

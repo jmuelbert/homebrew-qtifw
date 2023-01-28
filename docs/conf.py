@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# SPDX-FilecopyrightText: 2019-2021 PROJECT jmopenorders, Jürgen Mülbert
+# SPDX-FilecopyrightText: 2019-2023 Jürgen Mülbert <juergen.muelbert@gmail.com>
 #
 # SPDX-License-Identifier: EUPL-1.2
 #
