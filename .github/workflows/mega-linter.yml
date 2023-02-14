@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: MIT
+#
 # MegaLinter GitHub Action configuration file
 # More info at https://oxsecurity.github.io/megalinter
 name: "MegaLinter"

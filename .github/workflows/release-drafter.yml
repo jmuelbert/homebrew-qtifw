@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: MIT
+#
 name: Release Drafter
 
 on:

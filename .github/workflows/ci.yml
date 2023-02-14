@@ -1,46 +1,92 @@
 ---
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: EUPL-1.2
 name: CI
 
 on: [push, pull_request]
 
 jobs:
-    main:
-        name: >-
-            ${{ matrix.os }} ${{ matrix.ruby }}
-        runs-on: ${{ matrix.os }}
+  tests:
+    name: >-
+      ${{ matrix.os }} ${{ matrix.ruby }}
+    runs-on: ${{ matrix.os }}
+    env:
+      # See https://github.com/tmm1/test-queue#environment-variables
+      TEST_QUEUE_WORKERS: 2
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        # os: [windows]
+        ruby: [2.4, 2.5, 2.6, 2.7, head]
+        include:
+          - { os: windows, ruby: mingw }
+        exclude:
+          - { os: windows, ruby: head }
+
+    steps:
+      - name: windows misc
+        if: matrix.os == 'windows'
+        run: |
+          # set TMPDIR, git core.autocrlf
+          echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
+          git config --system core.autocrlf false
+
+      - name: checkout
+        uses: actions/checkout@v3.3.0
+
+      - name: set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: install dependencies
+        run: bundle install --jobs 3 --retry 3
+
+      - name: spec
+        run: bundle exec rake spec
+
+      - name: ascii_spec
+        run: bundle exec rake ascii_spec
+
+      - name: internal_investigation
+        run: bundle exec rake internal_investigation
+
+  fastlaneChecks:
+    name: fastlane env reminder
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - uses: fastlane/github-actions/fastlane-env-reminder@latest
+        with:
+          repo-token: "${{ secrets.BOT_GITHUB_TOKEN }}"
+
+  releaseNotes:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Releasenotes
+        id: github_releasenotes
+        uses: release-drafter/release-drafter@v5.22.0
+        with:
+          publish: "${{ steps.check-version.outputs.tag != '' }}"
+          tag: "${{ steps.check-version.outputs.tag }}"
         env:
-            # See https://github.com/tmm1/test-queue#environment-variables
-            TEST_QUEUE_WORKERS: 2
-        strategy:
-            fail-fast: false
-            matrix:
-                os: [ ubuntu-latest, macos-latest, windows-latest ]
-                # os: [windows]
-                ruby: [2.4, 2.5, 2.6, 2.7, head]
-                include:
-                    - { os: windows, ruby: mingw }
-                exclude:
-                    - { os: windows, ruby: head }
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-        steps:
-            - name: windows misc
-              if: matrix.os == 'windows'
-              run: |
-                  # set TMPDIR, git core.autocrlf
-                  echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
-                  git config --system core.autocrlf false
-            - name: checkout
-              uses: actions/checkout@v3.3.0
-            - name: set up Ruby
-              uses: ruby/setup-ruby@v1
-              with:
-                  ruby-version: ${{ matrix.ruby }}
+  changeLog:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: install dependencies
-              run: bundle install --jobs 3 --retry 3
-            - name: spec
-              run: bundle exec rake spec
-            - name: ascii_spec
-              run: bundle exec rake ascii_spec
-            - name: internal_investigation
-              run: bundle exec rake internal_investigation
+      - name: Create Release
+        uses: mikepenz/action-gh-release@v0.2.0-a03 #softprops/action-gh-release
+        with:
+          body: ${{steps.github_release.outputs.changelog}}

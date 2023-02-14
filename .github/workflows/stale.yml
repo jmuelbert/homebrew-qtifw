@@ -1,32 +1,32 @@
 ---
-name: 'markdown-lint'
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: EUPL-1.2
+# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/actions/stale
+name: Mark stale issues and pull requests
 
+# yamllint disable
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  # yamllint enable
+  schedule:
+    - cron: "20 12 * * *"
 
 jobs:
-  write_good_job:
+  stale:
     runs-on: ubuntu-latest
-    name: A job to lint Markdown files
+    permissions:
+      issues: write
+      pull-requests: write
+
     steps:
-      - uses: actions/checkout@v3.3.0
-      - name: write-good action step
-        id: write-good
-        uses: tomwhross/write-good-action@v1.5
-      # Use the output from the `write-good` step
-      - name: Get the write-good output
-        run: echo "${{ steps.write-good.outputs.result }}"
-      - name: Post comment
-        uses: mshick/add-pr-comment@v2
-        if: ${{ steps.write-good.outputs.result }}
+      - uses: actions/stale@v7
         with:
-          message: |
-            ${{ steps.write-good.outputs.result }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
-          allow-repeats: false # This is the default
+          stale-issue-message: "Stale issue message"
+          stale-pr-message: "Stale pull request message"
+          stale-issue-label: "no-issue-activity"
+          stale-pr-label: "no-pr-activity"

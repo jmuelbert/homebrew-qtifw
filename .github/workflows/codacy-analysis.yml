@@ -1,3 +1,8 @@
+---
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: MIT
+#
 # This workflow checks out code, performs a Codacy security scan
 # and integrates the results with the
 # GitHub Advanced Security code scanning feature.  For more information on
@@ -10,12 +15,12 @@ name: Codacy Security Scan
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron: '29 2 * * 4'
+    - cron: "29 2 * * 4"
 
 jobs:
   codacy-security-scan:

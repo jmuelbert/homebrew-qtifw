@@ -1,5 +1,9 @@
 ---
-name: 'Write good'
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+#
+# SPDX-License-Identifier: EUPL-1.2
+#
+name: "Write good"
 
 on:
   push:
@@ -28,5 +32,5 @@ jobs:
           message: |
             ${{ steps.write-good.outputs.result }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
+          repo-token-user-login: "github-actions[bot]" # The user.login for temporary GitHub tokens
           allow-repeats: false # This is the default
