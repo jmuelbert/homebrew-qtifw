@@ -1,51 +1,42 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
-#
-# SPDX-License-Identifier: EUPL-1.2
-#
 # To get started with Dependabot version updates, you'll need to specify which
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
-  - package-ecosystem: github-actions
-    directory: /
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
-      include: scope
       prefix: ":rocket: gha"
 
-  - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
       prefix: ":rocket: docker"
 
-  - package-ecosystem: "bundler" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "bundler"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
       prefix: ":rocket: bundler"
 
-  # Maintain dependencies for npm
-  - package-ecosystem: bundler # See documentation for possible values
-    directory: '/' # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
-      include:
       prefix: ":rocket: npm"
 
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/**" # Location of package manifests
+  - package-ecosystem: "pip"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
       prefix: ":rocket: pip"
-
