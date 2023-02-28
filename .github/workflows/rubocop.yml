@@ -28,7 +28,7 @@ jobs:
     # If running on a self-hosted runner, check it meets the requirements
     # listed at https://github.com/ruby/setup-ruby#using-self-hosted-runners
     - name: Set up Ruby
-      uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+      uses: ruby/setup-ruby@92aece5fc9c784ab66851c1e702b1bd5885a51f2 # v1.139.0
       with:
         ruby-version: 2.6
 
