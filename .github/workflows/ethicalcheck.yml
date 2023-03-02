@@ -1,3 +1,4 @@
+---
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -53,17 +54,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-       - name: EthicalCheck  Free & Automated API Security Testing Service
-         uses: apisec-inc/ethicalcheck-action@6538d51caea53470bf8018e21f93414a70026f46
-         with:
-          # The OpenAPI Specification URL or Swagger Path or Public Postman collection URL.
-          oas-url: "http://netbanking.apisec.ai:8080/v2/api-docs"
-          # The email address to which the penetration test report will be sent.
-          email: "xxx@apisec.ai"
+      - name: EthicalCheck - Free & Automated API Security Testing Service
+        id: scan
+        uses: apisec-inc/ethicalcheck-action@005fac321dd843682b1af6b72f30caaf9952c641
+        with:
+          oas-url: http://netbanking.apisec.ai:8080/v2/api-docs
+          email: xxx@apisec.ai
           sarif-result-file: "ethicalcheck-results.sarif"
-
-       - name: Upload sarif file to repository
-         uses: github/codeql-action/upload-sarif@v2
-         with:
+    
+      - name: upload sarif file to repository
+        uses: github/codeql-action/upload-sarif@v2
+        with:
           sarif_file: ./ethicalcheck-results.sarif
-
