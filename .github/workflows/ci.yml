@@ -45,10 +45,12 @@ jobs:
         run: bundle install --jobs 3 --retry 3
 
       - name: spec
-        run: bundle exec rake spec
+        run: bundle exec rake
+        # spec
 
       - name: ascii_spec
-        run: bundle exec rake ascii_spec
+        run: bundle exec rake
+        # ascii_spec
 
       - name: internal_investigation
         run: bundle exec rake internal_investigation
