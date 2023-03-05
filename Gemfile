@@ -1,15 +1,10 @@
-
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "rake"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# gemspec
 
-# Required for running `jekyll algolia ...` (via `rake site:update_search_index`)
-group :jekyll_plugins do
-  if RUBY_VERSION >= "2.3"
-    gem 'jekyll-algolia', '~> 1.7.1'
-  end
-  gem 'jekyll-redirect-from'
-end
+gemspec
+
+gem 'rubocop', '1.43.0'
+gem 'rubocop-packaging', '0.5.2
