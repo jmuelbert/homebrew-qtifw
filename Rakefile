@@ -14,9 +14,9 @@ RuboCop::RakeTask.new
 
 # default_tasks = %i[spec cck]
 
-default_tasks << :examples if ENV['CI']
+# default_tasks << :examples if ENV['CI']
 
-task default: default_tasks
+# task default: default_tasks
 
 require 'rake/clean'
 CLEAN.include %w[**/*.{log,pyc,rbc,tgz} doc]
