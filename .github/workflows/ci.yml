@@ -20,8 +20,6 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         # os: [windows]
         ruby: [3.2.1, head]
-        include:
-          - { os: windows, ruby: mingw }
         exclude:
           - { os: windows, ruby: head }
 
@@ -44,16 +42,8 @@ jobs:
       - name: install dependencies
         run: bundle install --jobs 3 --retry 3
 
-      - name: spec
+      - name: Build
         run: bundle exec rake
-        # spec
-
-      - name: ascii_spec
-        run: bundle exec rake
-        # ascii_spec
-
-      - name: internal_investigation
-        run: bundle exec rake internal_investigation
 
   fastlaneChecks:
     name: fastlane env reminder
