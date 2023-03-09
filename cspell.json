@@ -1,0 +1,50 @@
+// cSpell settings
+{
+    // Version of the setting file. Always 0.2
+    "version": "0.2",
+    // language - current active spelling language
+    "language": "en-US",
+    "dictionaries": [
+        "bash",
+        "docker",
+        "project-words"
+    ],
+    // Define each dictionary:
+    //  - Relative paths are relative to the config file.
+    //  - URLs will be retrieved via HTTP GET
+    "dictionaryDefinitions": [
+        {
+            "name": "project-words",
+            "path": "./project-words.txt"
+        }
+    ],
+    "ignorePaths": [
+        "cspell.json",
+        "s**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/**",
+        ".github/labels.yml",
+        "docs/api-docs/**",
+        "*.gz",
+        "*.lock",
+        "*.svg",
+        ".gitignore",
+        ".gitattributes",
+        ".devcontainer/.dockerignore",
+        ".vscode",
+        "package-lock.json",
+        "dist/**",
+        "build/**",
+        "out/**"
+    ],
+    // words - list of words to be always considered correct
+    "words": [
+        "mkdirp"
+    ],
+    // flagWords - list of words to be always considered incorrect
+    // This is useful for offensive words and common spelling errors.
+    // For example "the" should be "the"
+    "flagWords": [
+        "hte"
+    ]
+}
