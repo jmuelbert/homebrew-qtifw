@@ -1,7 +1,7 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: crazy-max CrazyMax
 #
-# SPDX-License-Identifier: EUPL-1.2
+# SPDX-License-Identifier: MIT
 #
 name: Labeler
 
@@ -9,16 +9,27 @@ on:
   push:
     branches:
       - main
-      - master
+
+    paths:
+      - '.github/labels.yml'
+      - '.github/workflows/labels.yml'
 
 jobs:
   labeler:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v3.3.0
-
-      - name: Run Labeler
-        uses: crazy-max/ghaction-github-labeler@v4.1.0
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Run Labeler
+        if: success()
+        uses: crazy-max/ghaction-github-labeler@v4
         with:
-          skip-delete: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: .github/labels.yml
+          skip-delete: false
+          dry-run: false
+          exclude: |
+            help*
+            *issue
