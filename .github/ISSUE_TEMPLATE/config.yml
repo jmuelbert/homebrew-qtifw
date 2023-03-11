@@ -1,9 +1,9 @@
 ---
 blank_issues_enabled: false
 contact_links:
-    - name: FAQ
-      url: https://github.com/jmuelbert/homebrew-qtifw/wiki/FAQ
-      about: You may find your question and the answer to it here.
-    - name: Documentation
-      url: https://github.com/jmuelbert/homebrew-qtifw
-      about: The documentation tells you how to use jmbde.
+  - name: FAQ
+    url: https://github.com/jmuelbert/homebrew-qtifw/wiki/FAQ
+    about: You may find your question and the answer to it here.
+  - name: Documentation
+    url: https://jmuelbert.github.io/homebrew-qtifw/
+    about: The documentation tells you how to use qtifw.

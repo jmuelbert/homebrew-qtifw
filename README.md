@@ -28,7 +28,7 @@ the relevant part from output that command for your convenience.
 
 ==> Options
 
-Note that by default =qt-ifw= builds all Commandline tools are installed.
+Note that by default =qt-ifw= builds all command line tools are installed.
 
 Note that =--HEAD= builds are not really supported. They may fail to install,
 they may crash at run time. Or even worse, the may work as expected. So use this
@@ -46,17 +46,22 @@ Please see the [contributing guide][contribution_guide]
 
 Please checkout [Issues][github_issues] page for a list of all known issues.
 
-## Analysing Tools
+## Analyzing Tools
+
 [![Codacy Security Scan][codacy_action_badge]][codacy_action]
 [![CodeQL][codeql_action_badge]][codeql_action]
 [![Sonar Cloud Analysis][sonarcloud_action_badge]][sonarcloud_action]
 [![DevSkim][devskim_action_badge]][devskim_action]
 [![Rubocop][rubycop_action_badge]][rubycop_action]
+
 ## Linter and spell checking
+
 [![MegaLinter][megalinter_action_badge]][megalinter_action]
 [![Misspell fixer][misspellfixer_action_badge]][misspell_action]
 [![Write good][writegood_action_badge]][writegood_action]
-## Opensource compatibility check
+
+## Open source compatibility check
+
 [![REUSE Compliance Check][reuse_compliance_action_badge]][reuse_compliance_action]
 
 ## Acknowledgements
