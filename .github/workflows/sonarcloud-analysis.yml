@@ -20,7 +20,7 @@
 #     * a. Copy/paste the Project Key and the Organization Key into the args parameter below
 #          (You'll find this information in SonarCloud. Click on "Information" at the bottom left)
 #
-#     * b. Generate a new token and add it to your Github repository's secrets using the name SONAR_TOKEN
+#     * b. Generate a new token and add it to your GitHub repository's secrets using the name SONAR_TOKEN
 #          (On SonarCloud, click on your avatar on top-right > My account > Security
 #           or go directly to https://sonarcloud.io/account/security/)
 
