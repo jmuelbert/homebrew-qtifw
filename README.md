@@ -67,7 +67,6 @@ Many thanks to everyone reporting issues.
 
 Code is under the [European Public License V1.2][license].
 
-
 [license]: https://github.com/jmuelbert/homebrew-qtifw/blob/master/LICENSE
 
 [writegood_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/write-good.yml/badge.svg
