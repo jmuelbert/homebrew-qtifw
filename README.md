@@ -4,8 +4,7 @@
 [![CI][ci_action_badge]][ci_action]
 [![Dependabot auto-merge][dependabot_action_badge]][depandabot_action]
 [![Dependency Review][dependency_review_action_badge]][dependency_review_action]
-[![pages-build-deployment][pages_action_badge]][pages_action]
-[![Deploy Jekyll with GitHub Pages dependencies preinstalled][jekyll_pages_action]][jekyll_pages_action_badge]
+[![Deploy Astro site to Pages][ghpages_action_badge]][ghpages_action]
 [![GitHub license][github_license_badge]][euplv1.2_license]
 
 The QT Installer Framework V4.5.1 for Homebrew
@@ -23,20 +22,25 @@ disable any bit of default behavior or add even more stuff.
 
 ## Options
 
-To get list of all available options, call ~brew info qt-ifw~. Here is
-the relevant part from output that command for your convenience.
+To get list of all available options, call
 
-==> Options
+```bash
+    brew info qtifw
+```
 
-Note that by default =qt-ifw= builds all command line tools are installed.
+Here is the relevant part from output that command for your convenience.
 
-Note that =--HEAD= builds are not really supported. They may fail to install,
+Note that by default **qtifw** builds all command line tools are installed.
+
+Note that **--HEAD** builds are not really supported. They may fail to install,
 they may crash at run time. Or even worse, the may work as expected. So use this
 option at your own risk. And feel free to open up issues.
 
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation][homebrew_documetation].
+
+The documentation for the Qt Installer Framework is located on [https://doc.qt.io/qtinstallerframework][qtinstallerframework_manual]
 
 ## Contributing
 
@@ -98,14 +102,13 @@ Code is under the [European Public License V1.2][license].
 [ci_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/ci.yml
 [dependabot_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/dependabot-merge.yml/badge.svg
 [depandabot_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/dependabot-merge.yml
-[pages_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages/pages-build-deployment/badge.svg
-[pages_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages/pages-build-deployment
 [dependency_review_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/dependency-review.yml/badge.svg
 [dependency_review_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/dependency-review.yml
-[jekyll_pages_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-jekyll.yml
-[jekyll_pages_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-jekyll.yml/badge.svg
 [github_license_badge]: https://img.shields.io/badge/license-EUPL-blue.svg
 [euplv1.2_license]: https://joinup.ec.europa.eu/page/eupl-text-11-12
 [homebrew_documetation]: https://github.com/Homebrew/brew/blob/master/README.md
 [contribution_guide]: https://github.com/jmuelbert/homebrew-qtifw/blob/master/CONTRIBUTING.md
 [github_issues]: https://github.com/jmuelbert/homebrew-qtifw/issues
+[ghpages_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml
+[ghpages_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml/badge.svg
+[qtinstallerframework_manual]: https://doc.qt.io/qtinstallerframework

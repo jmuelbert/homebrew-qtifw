@@ -1,8 +1,11 @@
 {
+  "name": "GH Pages for qtifw",
+  "version": "0.0.1",
+  "description": "Build for Documentation qtifw",
+  "license": "CC BY-SA 4.0",
   "dependencies": {
     "astro": "^2.0.14"
   },
-  "name": "Documentation",
   "scripts": {
     "astro": "astro",
     "build": "astro build",
@@ -11,5 +14,4 @@
     "start": "astro dev"
   },
   "type": "module",
-  "version": "0.0.1"
 }
