@@ -45,11 +45,7 @@
   color: "016175"
 - name: production
   description: Production
-<<<<<<< HEAD
-  color: "#377D4F"
-=======
   color: "0015d6"
->>>>>>> e5c4f7792e106315264ca021ea2ecc07399117c1
 - name: python
   description: Pull requests that update Python code
   color: 2b67c6
