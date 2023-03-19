@@ -6,5 +6,5 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gemspec
 
-gem 'rubocop', '1.48.0'
+gem 'rubocop', '1.48.1'
 gem 'rubocop-packaging', '0.5.2'
