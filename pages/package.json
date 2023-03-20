@@ -2,7 +2,7 @@
   "name": "gh_pages_for_qtifw",
   "version": "0.0.1",
   "description": "Build for Documentation qtifw",
-  "license": "CC BY-SA 4.0",
+  "license": "MIT",
   "dependencies": {
     "astro": "^2.1.3"
   },
