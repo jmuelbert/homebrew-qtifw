@@ -32,11 +32,11 @@ class Qtifw < Formula
       IFW_BUILD_TREE=#{buildpath}
       CONFIG+=release
       CONFIG+=libarchive
-      INCLUDEPATH+=#{Formula["xz"].include}
+      INCLUDEPATH+=#{Formula['xz'].include}
     ]
 
     mkdir 'build' do
-      qt5 = Formula["qt@5"].opt_prefix
+      qt5 = Formula['qt@5'].opt_prefix
       system "#{qt5}/bin/qmake", *args, '../installerfw.pro'
       system 'make', 'install'
     end
