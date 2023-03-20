@@ -20,10 +20,10 @@ class Qtifw < Formula
   depends_on 'xz' => :build
 
   def install
-    Dir.glob("**/*.pro") do |f|
+    Dir.glob('**/*.pro') do |f|
       inreplace f do |s|
-         s.gsub!("$$[QT_INSTALL_LIBS]", "$${PREFIX}/lib", false)
-         s.gsub!("$$[QT_INSTALL_BINS]", "$${PREFIX}/bin", false)
+        s.gsub!('$$[QT_INSTALL_LIBS]', '$${PREFIX}/lib', false)
+        s.gsub!('$$[QT_INSTALL_BINS]', '$${PREFIX}/bin', false)
       end
     end
 
