@@ -1,5 +1,7 @@
 # homebrew-qtifw
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c06c5bcc39034bad8b4b3f22d4ea088d)](https://app.codacy.com/gh/jmuelbert/homebrew-qtifw?utm_source=github.com&utm_medium=referral&utm_content=jmuelbert/homebrew-qtifw&utm_campaign=Badge_Grade)
+
 [![Gitpod-Ready-Code][gitpod_badge]][gitpod]
 [![CI][ci_action_badge]][ci_action]
 [![Dependabot auto-merge][dependabot_action_badge]][depandabot_action]
