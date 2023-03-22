@@ -84,8 +84,8 @@ Code is under the [European Public License V1.2][license].
 [sonarcloud_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/sonarcloud-analysis.yml
 [rubycop_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/rubocop.yml/badge.svg
 [rubycop_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/rubocop.yml
-[codacy_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codacy-analysis.yml/badge.svg
-[codacy_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codacy-analysis.yml
+[codacy_action_badge]: https://app.codacy.com/project/badge/Grade/5540e367f8564b249334da47b20a6953
+[codacy_action]: https://app.codacy.com/gh/jmuelbert/homebrew-qtifw/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [codeql_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml/badge.svg
 [codeql_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml
 [devskim_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml/badge.svg

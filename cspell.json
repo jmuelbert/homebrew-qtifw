@@ -47,6 +47,7 @@
     "JSONLINT",
     "Jürgen",
     "kondo",
+    "libiconv",
     "mikepenz",
     "mkdirp",
     "Mülbert",
@@ -59,8 +60,10 @@
     "sobolevn",
     "softprops",
     "stefanzweifel",
+    "SUPPRESSMSGBOXES",
     "TMPDIR",
-    "TRIVY"
+    "TRIVY",
+    "whithout"
   ],
   "flagWords": [
     "hte"

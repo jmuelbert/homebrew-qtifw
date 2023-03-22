@@ -16,11 +16,13 @@ on:
   # yamllint enable
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   label:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pull-requests: write
 
     steps:

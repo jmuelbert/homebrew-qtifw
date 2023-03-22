@@ -4,15 +4,15 @@
 
 [Full Changelog](https://github.com/jmuelbert/homebrew-qtifw/compare/V1.0...HEAD)
 
-**Added**
+**Added:**
 
 - devskim-analysis workflow
 - release-drafter workflow
 - labeler config file
 - prettier config files
-- docs for Github Pages like [jmopenorders](https://github.com/jmuelbert/jmopenorders/tree/master/docs)
+- docs for Github Pages like [homebrew-qtifw](https://github.com/jmuelbert/homebrew-qtifw/tree/master/docs)
 
-**Changed**
+**Changed:**
 
 - Update to the Installer Framework Version 4.2.0
 - change ci workflow to build.

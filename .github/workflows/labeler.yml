@@ -4,20 +4,21 @@ name: "GitHub Labeler"
 on:
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '.github/labels.yml'
-      - '.github/workflows/labels.yml'
+      - ".github/labels.yml"
+      - ".github/workflows/labels.yml"
+
+permissions:
+  contents: read
 
 jobs:
   labeler:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3.3.0
-      -
-        name: Run Labeler
+      - name: Run Labeler
         if: success()
         uses: crazy-max/ghaction-github-labeler@v4
         with:

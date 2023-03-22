@@ -7,6 +7,9 @@ name: Misspell fixer
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
   misspell-fixer:
     runs-on: ubuntu-latest
