@@ -3,7 +3,9 @@
 #
 # SPDX-License-Identifier: MIT
 #
+
 name: Pull Request Linter
+
 on:
   pull_request:
     types:
