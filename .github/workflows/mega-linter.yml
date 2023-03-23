@@ -32,6 +32,9 @@ jobs:
   build:
     name: "MegaLinter"
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      
     steps:
       # Git Checkout
       - name: "🧰 Checkout"
