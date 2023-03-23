@@ -29,6 +29,10 @@ jobs:
   codacy-security-scan:
     name: Codacy Security Scan
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      security-events: write
+    
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout code
