@@ -30,7 +30,7 @@ jobs:
         if: matrix.os == 'windows'
         run: |
           # set TMPDIR, git core.autocrlf
-          echo "::set-output name=TMPDIR::$env:RUNNER_TEMP"
+          echo "TEMPDIR=$env:RUNNER_TEMP" >> $GITHUB_OUTPUT
           git config --system core.autocrlf false
 
       - name: checkout
@@ -68,6 +68,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
-        uses: mikepenz/action-gh-release@v0.2.0-a03 #softprops/action-gh-release
+        uses: mikepenz/action-gh-release@v0.2.0-a03
         with:
           body: ${{steps.github_release.outputs.changelog}}

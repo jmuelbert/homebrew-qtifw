@@ -1,7 +1,9 @@
 astro
 binarycreator
 buildpath
+buildscript
 cbproj
+compat
 fasterer
 giticket
 gitlint
@@ -17,4 +19,5 @@ qmake
 qtifw
 Rubocop
 svgz
+TEMPDIR
 venv

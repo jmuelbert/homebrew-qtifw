@@ -31,6 +31,7 @@ jobs:
       - name: Post comment
         uses: mshick/add-pr-comment@v2
         if: ${{ steps.write-good.outputs.result }}
+
         with:
           message: |
             ${{ steps.write-good.outputs.result }}

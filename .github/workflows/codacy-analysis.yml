@@ -1,7 +1,7 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: Codacy Analysis CLI GitHub Action Group
 #
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: APACHE-2.0
 #
 # This workflow checks out code, performs a Codacy security scan
 # and integrates the results with the
@@ -32,18 +32,21 @@ jobs:
     permissions:
       actions: read
       security-events: write
-    
+
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout code
         uses: actions/checkout@v3.3.0
 
-      # Execute Codacy Analysis CLI and generate a SARIF output with the security issues identified during the analysis
+      # Execute Codacy Analysis CLI and generate a SARIF output
+      # with the security issues identified during the analysis
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@v4.3.0
         with:
-          # Check https://github.com/codacy/codacy-analysis-cli#project-token to get your project token from your Codacy repository
-          # You can also omit the token and run the tools that support default configurations
+          # Check https://github.com/codacy/codacy-analysis-cli#project-token
+          # to get your project token from your Codacy repository
+          # You can also omit the token and run the tools that support
+          # default configurations
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           verbose: true
           output: results.sarif

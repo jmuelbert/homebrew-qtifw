@@ -24,7 +24,7 @@ jobs:
     permissions:
       actions: read
       security-events: write
-      
+
     strategy:
       fail-fast: false
 
