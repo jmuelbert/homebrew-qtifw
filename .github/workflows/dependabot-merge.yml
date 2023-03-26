@@ -1,10 +1,14 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: Dependabot
 #
-# SPDX-License-Identifier: EUPL-1.2
+# SPDX-License-Identifier: MIT
 #
 name: Dependabot auto-merge
-on: pull_request
+
+on:
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read

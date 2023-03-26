@@ -4,7 +4,7 @@
 # documentation.
 
 # pulled from repo
-name: "Rubocop"
+name: "RuboCop"
 
 on:
   push:
@@ -22,8 +22,9 @@ jobs:
   rubocop:
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      security-events: write
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
 
     strategy:
       fail-fast: false

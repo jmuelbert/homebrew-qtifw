@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description = 'QT Installer formula for HomeBrew'
   s.summary     = "qtifw-#{s.version}"
   s.email       = 'juergen.muelbert@web.de'
-  s.license     = 'MIT'
+  s.license     = 'EUPL-1.2'
   s.homepage    = 'https://github.com/jmuelbert/homebrew-qtifw/'
   s.platform    = Gem::Platform::RUBY
 

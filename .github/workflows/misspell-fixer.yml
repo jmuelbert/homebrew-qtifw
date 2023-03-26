@@ -1,11 +1,16 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: Nikita Sobolev
 #
-# SPDX-License-Identifier: EUPL-1.2
+# SPDX-License-Identifier: MIT
 #
 name: Misspell fixer
 
-on: [push, pull_request]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read

@@ -1,6 +1,0 @@
----
-# manages metadata about the repository within Git
-
-milestones:
-  # assign new PRs to this milestone
-  next-milestone: 1.0.2

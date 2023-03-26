@@ -2,6 +2,7 @@
 
 [![Gitpod-Ready-Code][gitpod_badge]][gitpod]
 [![CI][ci_action_badge]][ci_action]
+[![AppVeyor Build][appveyor_badge]][appveyor]
 [![Dependabot auto-merge][dependabot_action_badge]][depandabot_action]
 [![Dependency Review][dependency_review_action_badge]][dependency_review_action]
 [![Deploy Astro site to Pages][ghpages_action_badge]][ghpages_action]
@@ -90,8 +91,8 @@ Code is under the [European Public License V1.2][license].
 [codeql_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml
 [devskim_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml/badge.svg
 [devskim_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml
-[megalinter_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml/badge.svg
-[megalinter_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml
+[megalinter_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml/badge.svg?branch=main
+[megalinter_action]: https://github.com/jmuelbert/homebrew-qtifw/actions?query=workflow%3AMegaLinter+branch%3Amain
 [misspellfixer_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/misspell-fixer.yml/badge.svg
 [misspell_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/misspell-fixer.yml
 [reuse_compliance_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/reuse-check.yml/badge.svg
@@ -112,3 +113,5 @@ Code is under the [European Public License V1.2][license].
 [ghpages_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml
 [ghpages_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml/badge.svg
 [qtinstallerframework_manual]: https://doc.qt.io/qtinstallerframework
+[appveyor_badge]: https://ci.appveyor.com/api/projects/status/gf2yofmw6onqt306/branch/main?svg=true
+[appveyor]: https://ci.appveyor.com/project/jmuelbert/homebrew-qtifw/branch/main

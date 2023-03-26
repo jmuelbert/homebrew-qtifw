@@ -5,9 +5,11 @@ buildscript
 cbproj
 compat
 fasterer
+Formular
 giticket
 gitlint
 gitmodules
+goodcheck
 groupproj
 icns
 INCLUDEPATH
@@ -18,6 +20,7 @@ noqa
 qmake
 qtifw
 Rubocop
+Signup
 svgz
 TEMPDIR
 venv
