@@ -24,3 +24,4 @@ Signup
 svgz
 TEMPDIR
 venv
+wontfix

@@ -16,7 +16,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 # Indentation override for all JS under lib directory
-[*.{js,json,vue,scss,rb,haml,yml,yaml,toml}]
+[*.{js,json,vue,scss,rb,gemspec,haml,yml,yaml,toml}]
 indent_size = 2
 
 [*.{js,json,vue,scss,rb,haml,yml,md}]
