@@ -122,7 +122,7 @@ DEPENDENCIES
   qtifw!
   rack-test (~> 2.0, >= 1.1.0)
   rake (~> 13.0, >= 13.0.6)
-  rspec (~> 3.11, >= 3.11.0)
+  rspec (~> 3.12)
   rubocop (= 1.48.1)
   rubocop-packaging (= 0.5.2)
   simplecov (~> 0.21, >= 0.21.2)
@@ -130,6 +130,9 @@ DEPENDENCIES
   syntax (~> 1.2, >= 1.2.2)
   test-unit (~> 3.5, >= 3.5.3)
   webrick (~> 1.7, >= 1.7.0)
+
+RUBY VERSION
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.4.6
