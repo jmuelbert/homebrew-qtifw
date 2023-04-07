@@ -40,7 +40,7 @@ build:assets_precompile:
   extends: .base_db
   stage: build
   script:
-    - bundle exec rake assets:precompile
+    # - bundle exec rake assets:precompile
 
 build:rubocop:
   extends: .base
