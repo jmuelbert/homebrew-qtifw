@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name        = 'qtifw'
   s.version     = File.read(File.expand_path('VERSION', __dir__)).strip
@@ -5,15 +7,15 @@ Gem::Specification.new do |s|
   s.description = 'QT Installer formula for HomeBrew'
   s.summary     = "qtifw-#{s.version}"
   s.email       = 'juergen.muelbert@web.de'
-  s.license     = 'MIT'
+  s.license     = 'EUPL-1.2'
   s.homepage    = 'https://github.com/jmuelbert/homebrew-qtifw/'
   s.platform    = Gem::Platform::RUBY
 
   s.metadata    = {
-    'bug_tracker_uri'   => 'https://github.com/jmuelbert/homebrew-qtifw/issues',
-    'changelog_uri'     => 'https://github.com/jmuelbert/homebrew-qtifw/blob/main/CHANGELOG.md',
+    'bug_tracker_uri' => 'https://github.com/jmuelbert/homebrew-qtifw/issues',
+    'changelog_uri' => 'https://github.com/jmuelbert/homebrew-qtifw/blob/main/CHANGELOG.md',
     'documentation_uri' => 'https://jmuelbert.github.io/homebrew-qtifw/',
-    'source_code_uri'   => 'https://github.com/jmuelbert/homebrew-qtifw'
+    'source_code_uri' => 'https://github.com/jmuelbert/homebrew-qtifw'
   }
 
   # Keep in sync with .circleci/config.yml & .rubocop.yml

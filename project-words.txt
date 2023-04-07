@@ -2,10 +2,12 @@ astro
 binarycreator
 buildpath
 cbproj
+dawnscanner
 fasterer
 giticket
 gitlint
 gitmodules
+graphviz
 groupproj
 icns
 INCLUDEPATH
@@ -13,6 +15,7 @@ inreplace
 installerfw
 linebreak
 noqa
+nproc
 qmake
 qtifw
 Rubocop

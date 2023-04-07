@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'bundler'
 
@@ -10,7 +12,7 @@ require 'rubocop/rake_task'
 RuboCop::RakeTask.new
 
 task :doit do
-    puts "Done"
+  puts 'Done'
 end
 
 default_tasks = %i[doit]
