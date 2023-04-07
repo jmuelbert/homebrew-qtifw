@@ -60,7 +60,7 @@ test:brakeman:
     paths:
       - brakeman/
   only:
-    - master
+    - main
   script:
     - bundle exec brakeman --format html -o brakeman/index.html
 
@@ -80,7 +80,7 @@ test:dawnscanner:
     paths:
       - dawnscanner
   only:
-    - master
+    - main
   script:
     - mkdir dawnscanner
     - bundle exec dawn --html -zF dawnscanner/index.html .
@@ -94,7 +94,7 @@ test:erd:
     paths:
       - erd.pdf
   only:
-    - master
+    - main
   script:
     - apt-get -o dir::cache::archives="$APT_CACHE_DIR" install -y -qq graphviz
     - bundle exec rake erd
@@ -126,7 +126,7 @@ pages:
       - public/dawnscanner
       - public/erd.pdf
   only:
-    - master
+    - main
   script:
     - mv brakeman public/ || true
     - mv coverage public/ || true
