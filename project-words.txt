@@ -32,7 +32,7 @@ Pipfile
 qmake
 qtifw
 Rakefile
-Rubocop
+RuboCop
 rubygems
 Signup
 sitespeed
