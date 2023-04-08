@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: EUPL-1.2
 #
 name: Processing issues
+
 on:
   issues:
     types: [opened]
@@ -13,6 +14,9 @@ permissions:
 
 jobs:
   fastlane-env:
+    permissions:
+      contents: read
+      issues: write
     name: fastlane env reminder
     runs-on: ubuntu-latest
     steps:

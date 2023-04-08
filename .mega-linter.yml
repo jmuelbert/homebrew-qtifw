@@ -18,6 +18,7 @@ MARKDOWN_FILTER_REGEX_EXCLUDE: '(license\.md|LICENSE|LICENSES)'
 SPELL_MISSPELL_FILTER_REGEX_EXCLUDE: '(\.automation/generated|docs/descriptors)'
 TYPESCRIPT_FILTER_REGEX_EXCLUDE: '(src/apps/translations)'
 DOCKERFILE_HADOLINT_ARGUMENTS: '--ignore DL3003 --ignore DL3007 --ignore DL3013 --ignore DL3016 --ignore DL3018 --ignore DL3028 --ignore DL3059 --ignore DL4001 --ignore DL4006 --ignore SC2015 --ignore SC2016 --ignore SC2039 --ignore SC2086 --ignore SC1091 --ignore SC3046'
+EDITORCONFIG_FILTER_REGEX_EXCLUDE: '(license\.md|LICENSE|LICENSES|CODE_OF_CONDUCT.md|yarn.lock)'
 REPOSITORY_TRIVY_ARGUMENTS:
   - '--skip-dirs'
   - '.automation/test'

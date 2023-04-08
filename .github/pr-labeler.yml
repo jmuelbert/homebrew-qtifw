@@ -3,7 +3,7 @@ lang/ruby:
   - examples/ruby/**
   - src/compiler/ruby*
   - src/ruby/**
-  - Formular/**
+  - Formula/**
 
 pr/dependencies:
   - vendor/**/*

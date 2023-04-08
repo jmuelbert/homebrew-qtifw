@@ -8,10 +8,13 @@ name: "Rubocop"
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      - develop
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: ["main"]
+    types: [opened, synchronize, reopened]
+
   schedule:
     - cron: "43 0 * * 6"
 
@@ -24,7 +27,7 @@ jobs:
     permissions:
       actions: read
       security-events: write
-      
+
     strategy:
       fail-fast: false
 

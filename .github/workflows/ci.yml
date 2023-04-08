@@ -5,8 +5,13 @@
 name: CI
 
 on: [push, pull_request]
+
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   tests:

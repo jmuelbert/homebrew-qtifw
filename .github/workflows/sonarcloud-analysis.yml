@@ -29,16 +29,21 @@
 
 name: Sonar Cloud Analysis
 
-
 on:
   push:
     branches:
       - main
+      - develop
   pull_request:
+    # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   sonarcloud:
@@ -47,9 +52,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3.3.0
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

@@ -18,3 +18,14 @@ rules:
       - Signup via GitHub
     pass:
       - Signup via GitHub
+
+import:
+  - https://github.com/sider/goodcheck-rules/archive/refs/tags/v0.0.4.tar.gz
+
+# You can skip checking files.
+exclude:
+  - node_modules
+  - vendor
+  - '**/goodcheck.yml'
+
+exclude_binary: true

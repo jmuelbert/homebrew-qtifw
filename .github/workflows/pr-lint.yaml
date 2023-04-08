@@ -6,6 +6,9 @@
 
 name: Pull Request Linter
 
+permissions:
+  contents: read
+
 on:
   pull_request:
     # By default, a workflow only runs when a pull_request's activity type is opened, synchronize, or reopened. We

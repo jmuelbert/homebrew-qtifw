@@ -17,6 +17,7 @@
     "s**/node_modules/**",
     "**/vscode-extension/**",
     "**/.git/**",
+    ".editorconfig",
     ".github/labels.yml",
     "docs/api-docs/**",
     "*.gz",
@@ -28,8 +29,11 @@
     ".vscode",
     "package-lock.json",
     "dist/**",
+    "docs/**",
     "build/**",
-    "out/**"
+    "out/**",
+    "LICENSE",
+    "LICENSES/**"
   ],
   "words": [
     "Autobuild",

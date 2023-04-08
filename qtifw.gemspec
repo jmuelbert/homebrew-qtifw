@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   }
 
   # Keep in sync with .circleci/config.yml & .rubocop.yml
-  s.required_ruby_version = '>= 2.6'
+  s.required_ruby_version = '>= 3.1'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.4'
 
   s.add_development_dependency 'nokogiri', '~> 1.13', '>= 1.13.6'

@@ -1,7 +1,0 @@
----
-detectors:
-    IrresponsibleModule:
-        enabled: false
-
-    TooManyStatements:
-        max_statements: 20

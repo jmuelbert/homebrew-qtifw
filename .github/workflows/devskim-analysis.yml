@@ -11,31 +11,36 @@
 name: DevSkim
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
-    schedule:
-        - cron: "26 22 * * 3"
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
+
+  schedule:
+    - cron: "26 22 * * 3"
 
 permissions:
   contents: read
 
 jobs:
-    lint:
-        name: DevSkim
-        runs-on: ubuntu-20.04
-        permissions:
-            actions: read
-            security-events: write
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v3.3.0
+  lint:
+    name: DevSkim
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.3.0
 
-            - name: Run DevSkim scanner
-              uses: microsoft/DevSkim-Action@v1
+      - name: Run DevSkim scanner
+        uses: microsoft/DevSkim-Action@v1
 
-            - name: Upload DevSkim scan results to GitHub Security tab
-              uses: github/codeql-action/upload-sarif@v2
-              with:
-                  sarif_file: devskim-results.sarif
+      - name: Upload DevSkim scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: devskim-results.sarif
