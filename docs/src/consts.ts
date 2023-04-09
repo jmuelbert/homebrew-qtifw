@@ -38,7 +38,7 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	en: {
 		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' }
+			{ text: 'Introduction', link: 'homebrew-qtifw/en/introduction' }
 		]
 	},
 };
