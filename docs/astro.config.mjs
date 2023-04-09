@@ -11,5 +11,5 @@ export default defineConfig({
     react(),
   ],
   site: `https://jmuelbert.github.io`,
-  base: 'homebrew-qtifw',
+  base: '/homebrew-qtifw',
 });
