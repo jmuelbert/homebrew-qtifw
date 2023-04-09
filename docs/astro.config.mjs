@@ -10,6 +10,6 @@ export default defineConfig({
     // Enable React for the Algolia search component.
     react(),
   ],
-  site: `https://jmuelbert.github.io/homebrew-qtifw`,
+  site: `https://jmuelbert.github.io/homebrew-qtifw/`,
   base: '/',
 });
