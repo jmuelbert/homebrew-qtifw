@@ -55,9 +55,9 @@ Please checkout [Issues][github_issues] page for a list of all known issues.
 
 Code is under the [European Public License V1.2][license].
 
-[license]: https://github.com/jmuelbert/homebrew-qtifw/blob/master/LICENSE
+[license]: https://github.com/jmuelbert/homebrew-qtifw/blob/main/LICENSE
 
-[contribution_guide]: https://github.com/jmuelbert/homebrew-qtifw/blob/master/CONTRIBUTING.md
+[contribution_guide]: https://github.com/jmuelbert/homebrew-qtifw/blob/main/CONTRIBUTING.md
 [github_issues]: https://github.com/jmuelbert/homebrew-qtifw/issues
 [qtinstallerframework_manual]: https://doc.qt.io/qtinstallerframework
-[homebrew_documetation]: https://github.com/Homebrew/brew/blob/master/README.md
+[homebrew_documetation]: https://github.com/Homebrew/brew/blob/main/README.md
