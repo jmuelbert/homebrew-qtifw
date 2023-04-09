@@ -14,7 +14,6 @@ To add the formula enter the following command:
 ```bash
     brew tap jmuelbert/qtifw
     brew install qtifw [options]
-
 ```
 
 By default (without any additional options) this formula install the
@@ -39,7 +38,7 @@ option at your own risk. And feel free to open up issues.
 
 ***Documentation***
 
-`brew help`, `man brew` or check [Homebrew's documentation][homebrew_documetation].
+`brew help`, `man brew` or check [Homebrew's documentation][homebrew_documentation].
 
 The documentation for the Qt Installer Framework is located on [https://doc.qt.io/qtinstallerframework][qtinstallerframework_manual]
 
@@ -60,4 +59,4 @@ Code is under the [European Public License V1.2][license].
 [contribution_guide]: https://github.com/jmuelbert/homebrew-qtifw/blob/main/CONTRIBUTING.md
 [github_issues]: https://github.com/jmuelbert/homebrew-qtifw/issues
 [qtinstallerframework_manual]: https://doc.qt.io/qtinstallerframework
-[homebrew_documetation]: https://github.com/Homebrew/brew/blob/main/README.md
+[homebrew_documentation]: https://github.com/Homebrew/brew/blob/master/README.md
