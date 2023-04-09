@@ -2,8 +2,9 @@
   "name": "@qtifw/docs",
   "version": "0.0.1",
   "description": "Build for Documentation qtifw",
-  "license": "MIT",
+  "license": "EUPL-1.2",
   "scripts": {
+    "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",
     "start": "astro dev"
