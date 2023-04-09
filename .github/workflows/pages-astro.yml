@@ -26,8 +26,8 @@ concurrency:
 
 env:
   # BUILD_PATH: "." # default value when not using subfolders
-  BUILD_PATH: "pages"
-  SOURCE_PATH: "pages"
+  BUILD_PATH: "docs"
+  SOURCE_PATH: "docs"
 
 jobs:
   build:

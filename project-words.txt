@@ -1,6 +1,7 @@
 ahmadnassri
 appquick
 astro
+astrojs
 binarycreator
 buildpath
 cbproj
@@ -9,6 +10,7 @@ codeofconduct
 CODEOWNERS
 dawnscanner
 devcontainer
+docsearch
 fasterer
 giticket
 gitlint
@@ -29,6 +31,7 @@ mshick
 noqa
 nproc
 Pipfile
+Preact
 qmake
 qtifw
 Rakefile
@@ -37,6 +40,7 @@ rubygems
 Signup
 sitespeed
 svgz
+tsconfigs
 unshift
 venv
 wontfix
