@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'webrick', '~> 1.7', '>= 1.7.0'
 
   # For maintainer scripts
-  s.add_development_dependency 'octokit', '~> 4.22', '>= 4.22.0'
+  s.add_development_dependency 'octokit', '>= 4.22.0', '~> 6.1'
 
   # Needed for examples (rake examples)
   s.add_development_dependency 'capybara', '~> 3.36', '>= 3.36.0', '< 3.37'
