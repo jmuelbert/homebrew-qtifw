@@ -12,7 +12,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.1)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     audit (0.7.3)
@@ -20,7 +20,7 @@ GEM
       yajl-ruby
     brakeman (5.4.1)
     builder (3.2.4)
-    capybara (3.36.0)
+    capybara (3.39.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -193,7 +193,7 @@ PLATFORMS
 DEPENDENCIES
   audit (~> 0.7.3)
   brakeman (~> 5.4, >= 5.4.1)
-  capybara (~> 3.36, >= 3.36.0, < 3.37)
+  capybara (~> 3.36, >= 3.36.0, < 3.40)
   dawnscanner (~> 1.6, >= 1.6.9)
   erd (~> 0.8.1)
   nokogiri (~> 1.13, >= 1.13.6)
