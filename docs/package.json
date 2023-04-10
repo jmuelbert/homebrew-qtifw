@@ -1,29 +1,44 @@
 {
-  "name": "@qtifw/docs",
+  "name": "homebrew-qtifw/docs",
+  "type": "module",
   "version": "0.0.1",
-  "description": "Build for Documentation qtifw",
-  "license": "EUPL-1.2",
   "scripts": {
     "build": "astro build",
+    "check": "astro check",
     "dev": "astro dev",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "prettier:check": "prettier --check --plugin-search-dir=. .",
+    "format": "prettier --cache --write --plugin-search-dir=. .",
+    "lint:scss": "stylelint \"src/**/*.{astro,scss}\""
   },
   "dependencies": {
-    "@algolia/client-search": "^4.13.1",
+    "@algolia/client-search": "^4.17.0",
     "@astrojs/preact": "^2.1.0",
     "@astrojs/react": "^2.1.1",
-    "@docsearch/css": "^3.1.0",
-    "@docsearch/react": "^3.1.0",
-    "@types/node": "^18.0.0",
-    "@types/react": "^17.0.45",
-    "@types/react-dom": "^18.0.0",
+    "@docsearch/css": "^3.3.3",
+    "@docsearch/react": "^3.3.3",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
     "astro": "^2.2.1",
-    "preact": "^10.7.3",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "astro-html-minifier": "^0.4.1",
+    "preact": "^10.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "html-escaper": "^3.0.3"
+    "@astrojs/mdx": "^0.17.2",
+    "@astrojs/sitemap": "^1.2.2",
+    "astro-robots-txt": "^0.4.1",
+    "html-escaper": "^3.0.3",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.7",
+    "sass": "^1.61.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
+    "stylelint-config-standard": "^30.0.1"
   }
 }

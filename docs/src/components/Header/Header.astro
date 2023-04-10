@@ -1,18 +1,18 @@
 ---
-import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages';
-import { SITE } from '../../consts';
-import AstroLogo from './AstroLogo.astro';
-import SkipToContent from './SkipToContent.astro';
-import SidebarToggle from './SidebarToggle';
-import LanguageSelect from './LanguageSelect';
-import Search from './Search';
+import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages'
+import { SITE } from '../../consts'
+import AstroLogo from './AstroLogo.astro'
+import SkipToContent from './SkipToContent.astro'
+import SidebarToggle from './SidebarToggle'
+import LanguageSelect from './LanguageSelect'
+import Search from './Search'
 
 type Props = {
-    currentPage: string;
-};
+    currentPage: string
+}
 
-const { currentPage } = Astro.props;
-const lang = getLanguageFromURL(currentPage);
+const { currentPage } = Astro.props
+const lang = getLanguageFromURL(currentPage)
 ---
 
 <header>
@@ -27,11 +27,11 @@ const lang = getLanguageFromURL(currentPage);
                 <h1>{SITE.title ?? 'Documentation'}</h1>
             </a>
         </div>
-        <div style="flex-grow: 1;"></div>
-        {KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
+        <!-- <div style="flex-grow: 1;"></div> -->
         <div class="search-item">
             <Search client:idle />
         </div>
+        {KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
     </nav>
 </header>
 
@@ -69,9 +69,6 @@ const lang = getLanguageFromURL(currentPage);
         margin: -0.5em -0.25em;
         text-decoration: none;
         font-weight: bold;
-    }
-
-    .logo a {
         transition: color 100ms ease-out;
         color: var(--theme-text);
     }
@@ -126,7 +123,7 @@ const lang = getLanguageFromURL(currentPage);
     }
 
     .search-item {
-        display: none;
+        /* display: none; */
         position: relative;
         z-index: 10;
         flex-grow: 1;
