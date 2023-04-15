@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative '../Formula/qtifw'
 
-class qtifwTests < Test::Unit::TestCase
+class QtifwTests < Test::Unit::TestCase
     
     Test::Unit.at_start do
       puts 'START: runs only once at start'
@@ -21,6 +21,6 @@ class qtifwTests < Test::Unit::TestCase
 
     def test_default()
 
-        assert_equal(2,2))
+        assert_equal(2,2)
     end
 end
