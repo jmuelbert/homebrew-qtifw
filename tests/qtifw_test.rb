@@ -12,7 +12,7 @@ require_relative '../Formula/qtifw'
 # the QT Installer Framework
 # with homebrew
 class QtifwTests < Test::Unit::TestCase
-    
+
   Test::Unit.at_start do
     puts 'START: runs only once at start'
   end
@@ -27,9 +27,9 @@ class QtifwTests < Test::Unit::TestCase
 
   def teardown
     puts 'Runs after each test method'
-  end    
+  end
 
-  def test_default()
-    assert_equal(2,2)
+  def test_default
+    assert_equal(2, 2)
   end
 end
