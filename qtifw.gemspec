@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = File.read(File.expand_path('VERSION', __dir__)).strip
   spec.authors     = ['Jürgen Mülbert']
   spec.description = 'QT Installer formula for HomeBrew'
-  spec.summary     = "qtifw-#{s.version}"
+  spec.summary     = "qtifw-#{spec.version}"
   spec.email       = 'juergen.muelbert@web.de'
   spec.license     = 'EUPL-1.2'
   spec.homepage    = 'https://github.com/jmuelbert/homebrew-qtifw/'
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 3.1"
 
-  spec.files = Dir["LICENSE.txt", "CHANGELOG.md", "README.md", "lib/**/*.rb", "sig/**/*.rbs"]
+  spec.files = Dir["LICENSE.txt", "CHANGELOG.md", "README.md", "Formula/**/*.rb", "sig/**/*.rbs"]
   spec.extra_rdoc_files = Dir["LICENSE.txt", "CHANGELOG.md", "README.md"]
 
   spec.require_paths = ["Formula"]
