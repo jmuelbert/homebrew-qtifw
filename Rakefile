@@ -29,6 +29,5 @@ end
 
 task default: %i[test]
 
-
 require 'rake/clean'
 CLEAN.include %w[**/*.{log,pyc,rbc,tgz} doc]
