@@ -1,13 +1,44 @@
 include:
     - template: Ruby.gitlab-ci.yml
+    - template: Security/SAST.gitlab-ci.yml
+    - template: Security/Dependency-Scanning.gitlab-ci.yml
 
-rspec:
-    script:
-        - bundle exec rspec spec
+stages:
+  - setup
+  - lint
+  - execute
+
+cache:
+  paths:
+    - vendor
+
+before_script:
+  - bundle config path vendor/bundle
+  - date -u +'%Y-%m-%d_%H%M%S'
+
+after_script:
+  - date -u +'%Y-%m-%d_%H%M%S'
+
+install:
+  stage: setup
+  script:
+    - bundle install
 
 rubocop:
+  stage: lint
+  script:
+    - bundle exec rubocop
+
+test:
+  stage: execute
+  script:
+    - bundle exec ./test.rb
+
+
+rspec:
+    stage: execute
     script:
-        - bundle exec rubocop
+        - bundle exec rspec spec
 
 rails:
     variables:
