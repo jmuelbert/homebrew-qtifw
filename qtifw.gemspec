@@ -18,14 +18,14 @@ Gem::Specification.new do |spec|
     'source_code_uri' => 'https://github.com/jmuelbert/homebrew-qtifw'
   }
 
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = '>= 3.1'
 
-  spec.files = Dir["LICENSE.txt", "CHANGELOG.md", "README.md", "Formula/**/*.rb", "sig/**/*.rbs"]
-  spec.extra_rdoc_files = Dir["LICENSE.txt", "CHANGELOG.md", "README.md"]
+  spec.files = Dir['LICENSE', 'CHANGELOG.md', 'README.md', 'Formula/**/*.rb', 'sig/**/*.rbs']
+  spec.extra_rdoc_files = Dir['LICENSE', 'CHANGELOG.md', 'README.md']
 
-  spec.require_paths = ["Formula"]
-  spec.add_development_dependency "minitest"
-  spec.add_development_dependency "tzinfo"
+  spec.require_paths = ['Formula']
+  spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'tzinfo'
 
   spec.executables      = ['qtifw']
   spec.rdoc_options     = ['--charset=UTF-8']
