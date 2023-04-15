@@ -1,48 +1,94 @@
-include:
-    - template: Ruby.gitlab-ci.yml
-
 stages:
-  - setup
-  - lint
-  - execute
+  - test
+  - prepare
+  - deploy
 
+# Cache gems in between builds
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
-    - vendor
+    - vendor/ruby
+    - vendor/jruby
 
-before_script:
-  - bundle config path vendor/bundle
-  - date -u +'%Y-%m-%d_%H%M%S'
+variables:
+  BUNDLE_JOBS: 10
+  BUNDLE_PATH: vendor
+  CI: 1
+  PARALLEL: 1
 
-after_script:
-  - date -u +'%Y-%m-%d_%H%M%S'
+.before_script: &before_script
+  - ruby -v
+  - bundle install
 
-install:
-  stage: setup
-  script:
+jruby:
+  variables:
+    JRUBY_OPTS: "--debug"
+  before_script:
     - bundle install
-
-rubocop:
-  stage: lint
+  image: "jruby:9.4"
   script:
-    - bundle exec rubocop
-
-test:
-  stage: execute
+    - bundle exec rake test
+  artifacts:
+    paths:
+      - coverage
+ruby31:
+  before_script:
+    - bundle install
+    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
+    # - export RBS_TEST_RAISE="true"
+    # - export RBS_TEST_LOGLEVEL="error"
+    # - export RBS_TEST_OPT="-Isig"
+    # - export RBS_TEST_TARGET="HTTP2Next*"
+  image: "ruby:3.1"
   script:
-    - bundle exec ./test.rb
+    - bundle exec rake test
+    - bundle exec rake rubocop
+  artifacts:
+    paths:
+      - coverage
+ruby32:
+  before_script:
+    - bundle install
+    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
+    # - export RBS_TEST_RAISE="true"
+    # - export RBS_TEST_LOGLEVEL="error"
+    # - export RBS_TEST_OPT="-Isig"
+    # - export RBS_TEST_TARGET="HTTP2Next*"
+  image: "ruby:3.2"
+  script:
+    - bundle exec rake test
+    - bundle exec rake rubocop
+  artifacts:
+    paths:
+      - coverage
 
 
-rspec:
-    stage: execute
-    script:
-        - bundle exec rspec spec
+coverage:
+  stage: prepare
+  dependencies:
+    - jruby
+    - ruby31
+    - ruby32
+  image: "ruby:3.2"
+  before_script:
+    - gem install simplecov --no-doc
+  script:
+    - find coverage -name "*resultset.json" -exec sed -i 's?/home?'`pwd`'?' {} \;
+    - rake coverage:report
+  artifacts:
+    paths:
+      - "coverage/"
 
-rails:
-    stage: setup  
-    variables:
-        DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/$POSTGRES_DB"
-    script:
-        - bin/rails db:migrate
-        - bin/rails db:seed
-        - bin/rails test
+pages:
+  stage: deploy
+  dependencies:
+    - coverage
+  script:
+    - mkdir public
+    - mv coverage public/coverage
+  only:
+    - main
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days

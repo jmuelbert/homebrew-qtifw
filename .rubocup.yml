@@ -1,0 +1,99 @@
+require:
+  - rubocop-performance
+  - rubocop-thread_safety
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+  DisplayCopNames: true
+  Include:
+    - lib/**/*.rb
+    - test/**/*.rb
+    - Rakefile
+    - Gemfile
+    - cel.gemspec
+  Exclude:
+    - 'lib/cel/parser.rb'
+    - '.bundle/**/*'
+    - 'vendor/**/*'
+
+Naming/FileName:
+  Exclude:
+    - Gemfile
+    - Rakefile
+
+Naming/MethodName:
+  Exclude:
+    - lib/cel/ast/elements.rb
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Performance/RedundantEqualityComparisonBlock:
+  Enabled: false
+
+Performance/MethodObjectAsBlock:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
