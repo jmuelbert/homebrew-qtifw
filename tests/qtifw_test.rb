@@ -12,7 +12,6 @@ require_relative '../Formula/qtifw'
 # the QT Installer Framework
 # with homebrew
 class QtifwTests < Test::Unit::TestCase
-
   Test::Unit.at_start do
     puts 'START: runs only once at start'
   end
