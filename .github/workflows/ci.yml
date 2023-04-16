@@ -42,7 +42,7 @@ jobs:
 
       - name: Enable Brew on Ubuntu
         if: runner.os == 'Linux'
-        run: "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        run: echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> $GITHUB_PATH
 
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
@@ -51,15 +51,16 @@ jobs:
 
       - name: set up Brew
         run: |
-          brew tap --list-pinned
+          brew tap
           brew tap jmuelbert/qtifw
+          brew tap
 
       - name: Install qtifw
-        run: brew install qtifw --verbose --debugl
+        run: brew install qtifw --verbose --debug
 
       - name: Brew RuboCop
-        run: brew
-        
+        run: brew test
+
   fastlaneChecks:
     name: fastlane env reminder
     runs-on: ubuntu-latest
