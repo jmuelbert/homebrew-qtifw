@@ -6,7 +6,7 @@ APPLY_FIXES: all # all, none, or list of linter keys
 PRINT_ALL_FILES: false
 FILTER_REGEX_EXCLUDE: '(\.automation/test|\.automation/generated|\.github/workflows|docs/javascripts|docs/overrides|docs/json-schemas|flavors|clj-kondo|TEMPLATES)'
 JSON_JSONLINT_FILTER_REGEX_EXCLUDE: '(\.vscode/)'
-YAML_V8R_FILTER_REGEX_EXCLUDE: '(.gitlab-ci.yml|\.github/labels\.yml|\.github/pr-labeler.\yml)'
+YAML_V8R_FILTER_REGEX_EXCLUDE: '(.gitlab-ci.yml|\.github/labels\.yml|\.github/pr-labeler\.yml)'
 BASH_FILTER_REGEX_EXCLUDE: '(lib)'
 MARKDOWN_FILTER_REGEX_EXCLUDE: '(license\.md|LICENSE|LICENSES/)'
 SPELL_MISSPELL_FILTER_REGEX_EXCLUDE: '(\.automation/generated|docs/descriptors)'
