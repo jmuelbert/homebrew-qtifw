@@ -34,23 +34,32 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        ruby: [3.2.1, head]
+        ruby: [3.0.2, head]
 
     steps:
       - name: checkout
         uses: actions/checkout@v3.3.0
+
+      - name: Enable Brew on Ubuntu
+        if: runner.os == 'Linux'
+        run: "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
 
-      - name: install dependencies
-        run: bundle install --jobs 3 --retry 3
+      - name: set up Brew
+        run: |
+          brew tap --list-pinned
+          brew tap jmuelbert/qtifw
 
-      - name: Build
-        run: bundle exec rake
+      - name: Install qtifw
+        run: brew install qtifw --verbose --debugl
 
+      - name: Brew RuboCop
+        run: brew
+        
   fastlaneChecks:
     name: fastlane env reminder
     runs-on: ubuntu-latest

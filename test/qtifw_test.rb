@@ -5,7 +5,7 @@
 #
 # frozen_string_literal: true
 
-require 'test/unit'
+# require 'test/unit'
 require_relative '../Formula/qtifw'
 
 # Tests for Class Qtifw to install
