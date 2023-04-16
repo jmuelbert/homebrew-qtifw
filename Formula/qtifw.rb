@@ -30,8 +30,8 @@ class Qtifw < Formula
 
   def inreplace_qt_ifw_pro(file_path)
     inreplace file_path do |s|
-      s.gsub!('$$[QT_INSTALL_LIBS]', '$${PREFIX}/lib')
-      s.gsub!('$$[QT_INSTALL_BINS]', '$${PREFIX}/bin')
+      s.gsub!('$$[QT_INSTALL_LIBS]', '$${PREFIX}/lib', false)
+      s.gsub!('$$[QT_INSTALL_BINS]', '$${PREFIX}/bin', false)
     end
   end
 
