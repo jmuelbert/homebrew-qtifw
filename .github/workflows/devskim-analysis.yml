@@ -30,15 +30,6 @@ jobs:
     name: DevSkim
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      security-events: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3.3.0
-  lint:
-    name: DevSkim
-    runs-on: ubuntu-20.04
-    permissions:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
