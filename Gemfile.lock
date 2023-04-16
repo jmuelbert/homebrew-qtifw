@@ -11,7 +11,15 @@ GEM
     debug (1.7.2)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    debug (1.7.2)
+      irb (>= 1.5.0)
+      reline (>= 0.3.1)
     docile (1.4.0)
+    google-protobuf (3.22.3-x86_64-darwin)
+    google-protobuf (3.22.3-x86_64-linux)
+    io-console (0.6.0)
+    irb (1.6.4)
+      reline (>= 0.3.0)
     google-protobuf (3.22.3-x86_64-darwin)
     google-protobuf (3.22.3-x86_64-linux)
     io-console (0.6.0)
@@ -25,6 +33,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.7.0)
+    reline (0.3.3)
+      io-console (~> 0.5)
     reline (0.3.3)
       io-console (~> 0.5)
     rexml (3.2.5)
@@ -41,8 +51,11 @@ GEM
     rubocop-ast (1.28.0)
       parser (>= 3.2.1.0)
     rubocop-performance (1.16.0)
+    rubocop-performance (1.17.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
+    rubocop-thread_safety (0.5.1)
+      rubocop (>= 0.90.0)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
@@ -64,7 +77,16 @@ DEPENDENCIES
   debug
   google-protobuf
   minitest
+  debug
+  google-protobuf
+  minitest
   qtifw!
+  rake (~> 13.0)
+  rubocop
+  rubocop-performance
+  rubocop-thread_safety
+  simplecov
+  tzinfo
   rake (~> 13.0)
   rubocop
   rubocop-performance
