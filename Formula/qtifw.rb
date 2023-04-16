@@ -28,8 +28,6 @@ class Qtifw < Formula
     build_and_install_qt_ifw
   end
 
-  private
-
   def inreplace_qt_ifw_pro(file_path)
     inreplace file_path do |s|
       s.gsub!('$$[QT_INSTALL_LIBS]', '$${PREFIX}/lib')

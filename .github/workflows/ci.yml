@@ -42,7 +42,7 @@ jobs:
 
       - name: Enable Brew on Ubuntu
         if: runner.os == 'Linux'
-        run: echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> $GITHUB_PATH
+        run: eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
       - name: set up Ruby
         uses: ruby/setup-ruby@v1
