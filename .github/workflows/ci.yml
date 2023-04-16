@@ -46,6 +46,7 @@ jobs:
           test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
           test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
+          echo "~/.linuxbrew/bin/" >> $GITHUB_PATH
           eval "($(brew --prefix)/bin/brew shellenv)"
 
       - name: set up Ruby
@@ -63,7 +64,7 @@ jobs:
           path: |
             ~/Library/Caches/Homebrew/qt-*
             ~/Library/Caches/Homebrew/downloads/*qt*
-          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          key: ${{ runner.os }}-homebrew-${{ hashFiles('**/lockfiles') }}
 
       - name: Install qtifw
         run: |
