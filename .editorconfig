@@ -14,12 +14,13 @@ indent_size = 4
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+max_line_length = 180
 
 # Indentation override for all JS under lib directory
-[*.{js,json,vue,scss,rb,gemspec,haml,yml,yaml,toml}]
+[*.{mjs, astro,js,json,vue,scss,rb,gemspec,Rakefile,gemspec,haml,yml,yaml,toml}]
 indent_size = 2
 
-[*.{js,json,vue,scss,rb,haml,yml,md}]
+[*.{mjs,astro,js,json,vue,scss,rb,gemspec,Rakefile,haml,yml,md}]
 indent_style = space
 charset = utf-8
 
@@ -41,10 +42,10 @@ indent_size = 4
 # Set default charset
 [*.py]
 indent_size = 4
-max_line_length = 8
+max_line_length = 80
 
 [*.rst]
-indent_size = 3
+indent_size = 2
 
 [*.coffee]
 indent_style = space

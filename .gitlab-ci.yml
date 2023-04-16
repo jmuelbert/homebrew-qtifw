@@ -1,0 +1,94 @@
+stages:
+  - test
+  - prepare
+  - deploy
+
+# Cache gems in between builds
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - vendor/ruby
+    - vendor/jruby
+
+variables:
+  BUNDLE_JOBS: 10
+  BUNDLE_PATH: vendor
+  CI: 1
+  PARALLEL: 1
+
+.before_script: &before_script
+  - ruby -v
+  - bundle install
+
+jruby:
+  variables:
+    JRUBY_OPTS: "--debug"
+  before_script:
+    - bundle install
+  image: "jruby:9.4"
+  script:
+    - bundle exec rake test
+  artifacts:
+    paths:
+      - coverage
+ruby31:
+  before_script:
+    - bundle install
+    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
+    # - export RBS_TEST_RAISE="true"
+    # - export RBS_TEST_LOGLEVEL="error"
+    # - export RBS_TEST_OPT="-Isig"
+    # - export RBS_TEST_TARGET="HTTP2Next*"
+  image: "ruby:3.1"
+  script:
+    - bundle exec rake test
+    - bundle exec rake rubocop
+  artifacts:
+    paths:
+      - coverage
+ruby32:
+  before_script:
+    - bundle install
+    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
+    # - export RBS_TEST_RAISE="true"
+    # - export RBS_TEST_LOGLEVEL="error"
+    # - export RBS_TEST_OPT="-Isig"
+    # - export RBS_TEST_TARGET="HTTP2Next*"
+  image: "ruby:3.2"
+  script:
+    - bundle exec rake test
+    - bundle exec rake rubocop
+  artifacts:
+    paths:
+      - coverage
+
+
+coverage:
+  stage: prepare
+  dependencies:
+    - jruby
+    - ruby31
+    - ruby32
+  image: "ruby:3.2"
+  before_script:
+    - gem install simplecov --no-doc
+  script:
+    - find coverage -name "*resultset.json" -exec sed -i 's?/home?'`pwd`'?' {} \;
+    - rake coverage:report
+  artifacts:
+    paths:
+      - "coverage/"
+
+pages:
+  stage: deploy
+  dependencies:
+    - coverage
+  script:
+    - mkdir public
+    - mv coverage public/coverage
+  only:
+    - main
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days

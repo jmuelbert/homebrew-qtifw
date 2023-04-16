@@ -17,17 +17,37 @@
 #
 name: "CodeQL Analyze"
 
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
+
+  schedule:
+    - cron: "41 13 * * 1"
+
 permissions:
   contents: read
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      - develop
+
   pull_request:
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
+
   schedule:
     - cron: "41 13 * * 1"
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}

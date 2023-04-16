@@ -9,13 +9,18 @@ name: REUSE Compliance Check
 on:
   # yamllint enable
   push:
+    branches:
+      - main
+      - develop
   pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
 
 jobs:
-  test:
+  ReuseCheck:
     runs-on: ubuntu-latest
     steps:
       - name: "🧰 Checkout"

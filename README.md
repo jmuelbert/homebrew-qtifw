@@ -13,7 +13,7 @@ The QT Installer Framework V4.5.1 for Homebrew
 ## Install
 
 ```bash
-    brew tap jmuelbert/homebrew-qtifw
+    brew tap jmuelbert/qtifw
     brew install qtifw [options]
 ```
 
@@ -62,7 +62,6 @@ Please checkout [Issues][github_issues] page for a list of all known issues.
 ## Linter and spell checking
 
 [![MegaLinter][megalinter_action_badge]][megalinter_action]
-[![Misspell fixer][misspellfixer_action_badge]][misspell_action]
 [![Write good][writegood_action_badge]][writegood_action]
 
 ## Open source compatibility check
@@ -91,10 +90,8 @@ Code is under the [European Public License V1.2][license].
 [codeql_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml
 [devskim_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml/badge.svg
 [devskim_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml
-[megalinter_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml/badge.svg?branch=main
-[megalinter_action]: https://github.com/jmuelbert/homebrew-qtifw/actions?query=workflow%3AMegaLinter+branch%3Amain
-[misspellfixer_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/misspell-fixer.yml/badge.svg
-[misspell_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/misspell-fixer.yml
+[megalinter_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml/badge.svg
+[megalinter_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml
 [reuse_compliance_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/reuse-check.yml/badge.svg
 [reuse_compliance_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/reuse-check.yml
 [gitpod_badge]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod

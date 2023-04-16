@@ -1,21 +1,33 @@
-require 'rubygems'
-require 'bundler'
+# frozen_string_literal: true
 
-Bundler::GemHelper.install_tasks
+require 'bundler/gem_tasks'
+require 'rake/testtask'
 
-# $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib")
-# Dir['gem_tasks/**/*.rake'].each { |rake| load rake }
-
-require 'rubocop/rake_task'
-RuboCop::RakeTask.new
-
-task :doit do
-    puts "Done"
+Rake::TestTask.new do |t|
+  t.libs = %w[lib test]
+  t.pattern = 'test/*_test.rb'
+  t.warning = false
 end
 
-default_tasks = %i[doit]
+begin
+  require 'rubocop/rake_task'
+  desc 'Run rubocop'
+  RuboCop::RakeTask.new
+rescue LoadError # rubocop:disable Lint/SuppressedException
+end
 
-task default: default_tasks
+namespace :coverage do
+  desc 'Aggregates coverage reports'
+  task :report do
+    return unless ENV.key?('CI')
+
+    require 'simplecov'
+
+    SimpleCov.collate Dir['coverage/**/.resultset.json']
+  end
+end
+
+task default: %i[test]
 
 require 'rake/clean'
 CLEAN.include %w[**/*.{log,pyc,rbc,tgz} doc]

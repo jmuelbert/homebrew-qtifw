@@ -11,13 +11,12 @@
 name: DevSkim
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    types: [opened, synchronize, reopened]
-  schedule:
-    - cron: "26 22 * * 3"
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+    schedule:
+        - cron: "26 22 * * 3"
 
 permissions:
   contents: read
@@ -27,6 +26,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    name: DevSkim
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.3.0
   lint:
     name: DevSkim
     runs-on: ubuntu-20.04
