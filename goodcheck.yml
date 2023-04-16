@@ -27,5 +27,6 @@ exclude:
   - node_modules
   - vendor
   - '**/goodcheck.yml'
+  - megalinter-reports
 
 exclude_binary: true
