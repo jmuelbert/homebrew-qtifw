@@ -1,7 +1,7 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: Codacy Analysis CLI GitHub Action Group
 #
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: APACHE-2.0
 #
 # This workflow checks out code, performs a Codacy security scan
 # and integrates the results with the
@@ -15,13 +15,10 @@ name: Codacy Security Scan
 
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: ["main"]
   pull_request:
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
-
   schedule:
     - cron: "29 2 * * 4"
 
@@ -34,24 +31,27 @@ concurrency:
 
 jobs:
   codacy-security-scan:
+    name: Codacy Security Scan
+    runs-on: ubuntu-latest
     permissions:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-    name: Codacy Security Scan
-    runs-on: ubuntu-latest
 
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout code
         uses: actions/checkout@v3.3.0
 
-      # Execute Codacy Analysis CLI and generate a SARIF output with the security issues identified during the analysis
+      # Execute Codacy Analysis CLI and generate a SARIF output
+      # with the security issues identified during the analysis
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@v4.3.0
         with:
-          # Check https://github.com/codacy/codacy-analysis-cli#project-token to get your project token from your Codacy repository
-          # You can also omit the token and run the tools that support default configurations
+          # Check https://github.com/codacy/codacy-analysis-cli#project-token
+          # to get your project token from your Codacy repository
+          # You can also omit the token and run the tools that support
+          # default configurations
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           verbose: true
           output: results.sarif

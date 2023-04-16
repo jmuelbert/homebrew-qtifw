@@ -17,7 +17,7 @@ insert_final_newline = true
 max_line_length = 180
 
 # Indentation override for all JS under lib directory
-[*.{mjs, astro,js,json,vue,scss,rb,gemspec,Rakefile,haml,yml,yaml,toml}]
+[*.{mjs, astro,js,json,vue,scss,rb,gemspec,Rakefile,gemspec,haml,yml,yaml,toml}]
 indent_size = 2
 
 [*.{mjs,astro,js,json,vue,scss,rb,gemspec,Rakefile,haml,yml,md}]

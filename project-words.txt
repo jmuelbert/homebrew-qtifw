@@ -4,7 +4,9 @@ astro
 astrojs
 binarycreator
 buildpath
+buildscript
 cbproj
+compat
 codecov
 codeofconduct
 CODEOWNERS
@@ -12,6 +14,7 @@ dawnscanner
 devcontainer
 docsearch
 fasterer
+Formular
 giticket
 gitlint
 gitmodules

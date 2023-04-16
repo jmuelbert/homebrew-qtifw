@@ -8,6 +8,8 @@ lang/ruby:
 pr/dependencies:
   - vendor/**/*
   - go.*
+test:
+  - src/**/*.spec.js
 theme/contributing:
   - .github/**/*
 # theme/kubernetes:

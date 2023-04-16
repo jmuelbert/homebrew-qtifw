@@ -1,11 +1,12 @@
+---
 fixes:
-    - "::Library/Homebrew/"
+  - "::Library/Homebrew/"
 coverage:
-    round: nearest
-    status:
-        project:
-            default:
-                threshold: 0.05%
-        patch:
-            default:
-                informational: true
+  round: nearest
+  status:
+    project:
+      default:
+        threshold: 0.05%
+    patch:
+      default:
+        informational: true
