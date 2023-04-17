@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     'source_code_uri' => 'https://github.com/jmuelbert/homebrew-qtifw'
   }
 
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.2'
 
   spec.files = Dir['LICENSE', 'CHANGELOG.md', 'README.md', 'Formula/**/*.rb', 'sig/**/*.rbs']
   spec.extra_rdoc_files = Dir['LICENSE', 'CHANGELOG.md', 'README.md']

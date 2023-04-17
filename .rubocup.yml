@@ -1,19 +1,29 @@
 require:
+  - rubocop-rails
+  - rubocop-rake
   - rubocop-performance
+  - rubocop-minitest
+  - rubocop-git
+  - rubocop-i18n
+  - rubocop-changes
+  - rubocop-gitlab-security
+  - rubocop-packaging
   - rubocop-thread_safety
+  - rubocop-checkstyle_formatter
+  - rubocop-md
+  - rubocop-config-prettier
 
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.1
   DisplayCopNames: true
   Include:
-    - lib/**/*.rb
+    - Formula/**/*.rb
     - test/**/*.rb
     - Rakefile
     - Gemfile
-    - cel.gemspec
+    - qtifw.gemspec
   Exclude:
-    - 'lib/cel/parser.rb'
     - '.bundle/**/*'
     - 'vendor/**/*'
 
