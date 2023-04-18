@@ -14,11 +14,12 @@ class Qtifw < Formula
   url 'https://download.qt.io/official_releases/qt-installer-framework/4.5.1/installer-framework-opensource-src-4.5.1.tar.xz'
   sha256 '602417a0a2ada5cada8f5b6ad5a160390198b68b46a3721022b7370a971b040a' # DevSkim: ignore DS173237
   version_scheme 1
-
+  tool_version '4.5.1'
   head 'https://code.qt.io/cgit/installer-framework/installer-framework.git/'
 
+  depends_on 'xz'
   depends_on 'qt@5'
-  depends_on 'xz' => :build
+
 
   def install
     Dir.glob('**/*.pro') do |f|
@@ -56,6 +57,6 @@ class Qtifw < Formula
   end
 
   test do
-    assert_match "binarycreator #{version}", shell_output("#{bin}/binarycreator --version").chomp
+    assert_match "archivegen #{tool_version}", shell_output("#{bin}/archivegen --version").chomp
   end
 end
