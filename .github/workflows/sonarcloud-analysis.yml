@@ -36,7 +36,7 @@ on:
       - develop
   pull_request:
     # The branches below must be a subset of the branches above
-    types: [opened, synchronize, reopened]
+    branches: ["main"]
 
 permissions:
   pull-requests: read # allows SonarCloud to decorate PRs with analysis results
