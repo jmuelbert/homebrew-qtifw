@@ -66,7 +66,9 @@ jobs:
         run: |
           brew tap jmuelbert/qtifw
           brew tap
-          brew install qtifw --verbose --debug
+          # brew install qtifw --verbose --debug
+          brew test qtifw
+          brew audit qtifw
 
       # - name: Brew RuboCop
       #  run: brew test
