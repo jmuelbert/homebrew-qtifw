@@ -1,7 +1,7 @@
 ---
 # SPDX-FileCopyrightText: Codacy Analysis CLI GitHub Action Group
 #
-# SPDX-License-Identifier: APACHE-2.0
+# SPDX-License-Identifier: Apache-2.0
 #
 # This workflow checks out code, performs a Codacy security scan
 # and integrates the results with the
