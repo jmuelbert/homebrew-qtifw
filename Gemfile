@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 # gemspec
 
-ruby ">=3.2"
+ruby ">=2.6.10"
 
 gem "rake", "~> 13.0"
 
