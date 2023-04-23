@@ -9,7 +9,6 @@ require:
   - rubocop-gitlab-security
   - rubocop-packaging
   - rubocop-thread_safety
-  - rubocop-checkstyle_formatter
   - rubocop-md
   - rubocop-config-prettier
 

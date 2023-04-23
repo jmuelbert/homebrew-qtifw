@@ -9,7 +9,7 @@
 # the QT Installer Framework
 # with homebrew
 class Qtifw < Formula
-  desc "The Qt Installer Framework"
+  desc "Qt Installer Framework Installer"
   homepage "https://doc.qt.io/qtinstallerframework/"
   url "https://download.qt.io/official_releases/qt-installer-framework/4.5.1/installer-framework-opensource-src-4.5.1.tar.xz"
   sha256 "602417a0a2ada5cada8f5b6ad5a160390198b68b46a3721022b7370a971b040a" # DevSkim: ignore DS173237
