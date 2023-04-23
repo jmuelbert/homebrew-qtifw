@@ -52,11 +52,18 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
 
-      - name: Set up Ruby
+      - name: Set up Ruby (Linux)
         if: matrix.os == 'ubuntu-latest'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.6"
+          bundler-cache: true
+
+      - name: Set up Ruby (mac)
+        if: matrix.os == 'macOS-latest'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0"
           bundler-cache: true
 
       - name: Install Homebrew/homebrew-test-bot RubyGems
@@ -101,29 +108,32 @@ jobs:
           else
             brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
           fi
-          - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-          run: |
-            if [ "$RUNNER_OS" = "Linux" ]; then
-              docker exec brewtestbot \
-                brew test-bot --only-formulae-dependents --junit \
-                              --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
-                              --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-            else
-              brew test-bot --only-formulae-dependents --junit \
-                            --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
-                            --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-            fi
+
+      - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            docker exec brewtestbot \
+            brew test-bot --only-formulae-dependents --junit \
+              --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
+              --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
+          else
+            brew test-bot --only-formulae-dependents --junit \
+              --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
+              --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
+          fi
 
       - name: Output brew test-bot failures
         if: matrix.os == 'macOS-latest'
         run: |
           cat steps_output.txt
           rm steps_output.txt
+
       - name: Output brew bottle output
         if: matrix.os == 'macOS-latest'
         run: |
           cat bottle_output.txt
           rm bottle_output.txt
+
       - name: Run brew test-bot --only-cleanup-after
         run: |
           if [ "$RUNNER_OS" = "Linux" ]; then
