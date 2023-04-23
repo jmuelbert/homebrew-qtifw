@@ -24,7 +24,6 @@ jobs:
     name: >-
       ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-
     strategy:
       fail-fast: false
       matrix:
@@ -33,7 +32,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master      
+        uses: Homebrew/actions/setup-homebrew@master
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
@@ -46,11 +45,11 @@ jobs:
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
-    
+
       - run: brew test-bot --only-cleanup-before
-    
+
       - run: brew test-bot --only-setup
-    
+
       - run: brew test-bot --only-tap-syntax
 
       - name: Set up Ruby
@@ -133,7 +132,7 @@ jobs:
           else
             brew test-bot --only-cleanup-after
           fi
-         
+
       - name: Run brew test-bot --only-setup --dry-run
         run: |
           if [ "$RUNNER_OS" = "Linux" ]; then
@@ -142,7 +141,7 @@ jobs:
           else
             brew test-bot --only-setup --dry-run
           fi
-      
+
       - name: Run brew test-bot testbottest --only-formulae --dry-run
         run: |
           if [ "$RUNNER_OS" = "Linux" ]; then
@@ -151,40 +150,12 @@ jobs:
           else
             brew test-bot testbottest --only-formulae --dry-run
           fi
-        
+
       - name: Cleanup Docker container
         if: matrix.os == 'ubuntu-latest'
         run: |
-           docker stop brewtestbot
-           docker rm brewtestbot
-              
-      # - name: set up Ruby
-      #   uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: ${{ matrix.ruby }}
-
-      # - name: set up Brew
-      #   run: |
-      #     brew update --preinstall
-      #     brew tap
-
-      # - uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       ~/Library/Caches/Homebrew/qt-*
-      #       ~/Library/Caches/Homebrew/downloads/*qt*
-      #     key: ${{ runner.os }}-homebrew-${{ hashFiles('**/lockfiles') }}
-
-      # - name: Install qtifw
-      #   run: |
-      #     brew tap jmuelbert/qtifw
-      #     brew tap
-      #     # brew install qtifw --verbose --debug
-      #     brew test qtifw
-      #     brew audit qtifw
-
-      # # - name: Brew RuboCop
-      # #  run: brew test
+          docker stop brewtestbot
+          docker rm brewtestbot
 
   fastlaneChecks:
     name: fastlane env reminder

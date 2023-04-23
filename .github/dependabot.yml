@@ -18,12 +18,12 @@ updates:
       - dependency-name: actions/stale
       - dependency-name: dessant/lock-threads
 
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: "fix: :rocket: docker"
+  # - package-ecosystem: "docker"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "daily"
+  #   commit-message:
+  #     prefix: "fix: :rocket: docker"
 
   - package-ecosystem: "bundler"
     directory: "/"
@@ -33,11 +33,11 @@ updates:
       prefix: "fix: :rocket: bundler"
 
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/docs"
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "fix: :rocket: npm"
+      prefix: "fix: :rocket: npm for astro-docs"
 
   - package-ecosystem: "pip"
     directory: "/"
