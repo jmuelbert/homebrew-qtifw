@@ -22,7 +22,7 @@ gem "rubocop-performance", "~> 1.17.1"
 gem "rubocop-rails", "~> 2.19.0"
 gem "rubocop-rake", "~> 0.6.0"
 gem "rubocop-thread_safety", "~> 0.5.1"
-
+gem "rspec", "~> 3.8"
 gem "google-protobuf", "~> 3.22.3"
 gem "simplecov", "~> 0.22.0"
 
