@@ -95,7 +95,7 @@ jobs:
       - name: Run brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
         id: brew-test-bot-formulae
         run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
             docker exec brewtestbot \
               brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
           else
@@ -104,7 +104,7 @@ jobs:
 
       - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
         run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
             docker exec brewtestbot \
             brew test-bot --only-formulae-dependents --junit \
               --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
@@ -129,7 +129,7 @@ jobs:
 
       - name: Run brew test-bot --only-cleanup-after
         run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
             docker exec brewtestbot \
             brew test-bot --only-cleanup-after
           else
@@ -138,7 +138,7 @@ jobs:
 
       - name: Run brew test-bot --only-setup --dry-run
         run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
             docker exec brewtestbot \
             brew test-bot --only-setup --dry-run
           else
@@ -147,7 +147,7 @@ jobs:
 
       - name: Run brew test-bot testbottest --only-formulae --dry-run
         run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
+          if [ "$RUNNER_OS" == "Linux" ]; then
             docker exec brewtestbot \
             brew test-bot testbottest --only-formulae --dry-run
           else
