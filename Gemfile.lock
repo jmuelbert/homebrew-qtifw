@@ -95,10 +95,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (< 7)
   code-scanning-rubocop (~> 0.6.1)
   google-protobuf (~> 3.22.3)
   rake (~> 13.0)
-  rspec (~> 3.8)
+  rspec
   rubocop (~> 1.50)
   rubocop-changes (~> 0.8.1)
   rubocop-config-prettier (~> 0.1.13)
@@ -112,7 +113,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.19.0)
   rubocop-rake (~> 0.6.0)
   rubocop-thread_safety (~> 0.5.1)
-  simplecov (~> 0.22.0)
+  simplecov
 
 RUBY VERSION
    ruby 2.6.10p210

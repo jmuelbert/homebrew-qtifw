@@ -6,11 +6,16 @@ source "https://rubygems.org"
 
 ruby ">=2.6.10"
 
+group :test do
+  gem "activesupport", "< 7" # 7 requires Ruby 2.7
+  gem "rspec"
+  gem "simplecov"
+end
+
 gem "code-scanning-rubocop", "~> 0.6.1"
 gem "debug", platform: :mri if RUBY_VERSION >= "3.1.0"
 gem "google-protobuf", "~> 3.22.3"
 gem "rake", "~> 13.0"
-gem "rspec", "~> 3.8"
 gem "rubocop", "~> 1.50"
 gem "rubocop-changes", "~> 0.8.1"
 gem "rubocop-config-prettier", "~> 0.1.13"
@@ -24,4 +29,3 @@ gem "rubocop-performance", "~> 1.17.1"
 gem "rubocop-rails", "~> 2.19.0"
 gem "rubocop-rake", "~> 0.6.0"
 gem "rubocop-thread_safety", "~> 0.5.1"
-gem "simplecov", "~> 0.22.0"
