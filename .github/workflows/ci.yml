@@ -59,13 +59,6 @@ jobs:
           ruby-version: "2.6"
           bundler-cache: true
 
-      - name: Set up Ruby (mac)
-        if: matrix.os == 'macOS-latest'
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.0"
-          bundler-cache: true
-
       - name: Install Homebrew/homebrew-test-bot RubyGems
         if: matrix.os == 'macOS-latest'
         run: bundle install --jobs 4 --retry 3
@@ -87,7 +80,7 @@ jobs:
       - name: Build Docker image and start container
         if: matrix.os == 'ubuntu-latest'
         run: |
-          docker build -t brew .
+          docker build -t brew .devcontainer/Dockerfile
           docker create \
             -e GITHUB_ACTIONS -e GITHUB_BASE_REF -e GITHUB_OUTPUT -e GITHUB_REF -e GITHUB_REPOSITORY -e GITHUB_SHA \
             -v "$GITHUB_OUTPUT:$GITHUB_OUTPUT" \

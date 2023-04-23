@@ -1,4 +1,12 @@
 {
-  "name": "Ruby",
-  "image": "mcr.microsoft.com/devcontainers/ruby:0-3-bullseye"
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.ruby"
+      ]
+    }
+  }
 }
