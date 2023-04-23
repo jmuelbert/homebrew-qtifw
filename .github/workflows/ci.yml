@@ -80,7 +80,7 @@ jobs:
       - name: Build Docker image and start container
         if: matrix.os == 'ubuntu-latest'
         run: |
-          docker build -t brew .devcontainer/Dockerfile
+          docker build -t brew .devcontainer
           docker create \
             -e GITHUB_ACTIONS -e GITHUB_BASE_REF -e GITHUB_OUTPUT -e GITHUB_REF -e GITHUB_REPOSITORY -e GITHUB_SHA \
             -v "$GITHUB_OUTPUT:$GITHUB_OUTPUT" \
