@@ -1,20 +1,21 @@
 require:
+  - rubocop-changes
+  - rubocop-config-prettier
+  - rubocop-git
+  - rubocop-gitlab-security
+  - rubocop-i18n
+  - rubocop-md
+  - rubocop-minitest
+  - rubocop-packaging
+  - rubocop-performance
   - rubocop-rails
   - rubocop-rake
-  - rubocop-performance
-  - rubocop-minitest
-  - rubocop-git
-  - rubocop-i18n
-  - rubocop-changes
-  - rubocop-gitlab-security
-  - rubocop-packaging
+  - rubocop-rspec
   - rubocop-thread_safety
-  - rubocop-md
-  - rubocop-config-prettier
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 3.2
   DisplayCopNames: true
   Include:
     - Formula/**/*.rb
