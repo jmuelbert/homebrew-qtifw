@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
   
 env:
-  FORMULAE: jmuelbert/homebrew-qtifw
+  FORMULAE: jmuelbert/qtifw/qtifw
   
 jobs:
   tests:
