@@ -68,7 +68,7 @@ jobs:
 
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: ./setup-homebrew/
+        uses: Homebrew/actions/setup-homebrew@master
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
