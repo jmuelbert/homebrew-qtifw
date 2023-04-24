@@ -258,3 +258,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 coverage
+bottle_output.txt
+linkage_output.txt
+skipped_or_failed_formulae-ventura.txt
