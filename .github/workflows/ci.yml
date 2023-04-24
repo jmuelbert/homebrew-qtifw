@@ -18,7 +18,10 @@ permissions:
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
-
+  
+env:
+  FORMULAE: jmuelbert/homebrew-qtifw
+  
 jobs:
   tests:
     strategy:
@@ -94,17 +97,16 @@ jobs:
       - run: brew test-bot --only-formulae-detect --test-default-formula
         id: formulae-detect
 
-      - name: Run brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
+      - name: Run brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae="$FORMULAE"
         id: brew-test-bot-formulae
         run: |
-          brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
+          brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae="$FORMULAE"
 
-      - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
+      - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae="$FORMULAE"
         run: |
           brew test-bot --only-formulae-dependents --junit \
-              --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
-              --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-
+              --testing-formulae="$FORMULAE" \
+        
       - name: Output brew test-bot failures
         if: matrix.os == 'macOS-latest'
         run: |
