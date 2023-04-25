@@ -17,8 +17,8 @@ class Qtifw < Formula
 
   head "https://code.qt.io/cgit/installer-framework/installer-framework.git/"
 
-  depends_on "qt@5"
-  depends_on "xz"
+  depends_on "qt@5" => :build
+  depends_on "xz" => :build
 
   tool_version = "4.5.1"
 
