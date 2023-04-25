@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test-bot:
+  tests:
     strategy:
       fail-fast: false
       matrix:
