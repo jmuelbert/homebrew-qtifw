@@ -12,6 +12,7 @@ on:
       - "Formula/*.rb"
       - ".github/workflows/ci.yml"
   pull_request:
+    branches: [main]
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
 
