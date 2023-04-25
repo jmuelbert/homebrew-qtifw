@@ -8,7 +8,11 @@ on:
   # Trigger ci-workflow at every push. Action will also be visible from Pull Requests to main
   push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
     branches: [main]
+    paths:
+      - "Formula/*.rb"
+      - ".github/workflows/ci.yml"
   pull_request:
+    branches: [main]
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
 
@@ -24,112 +28,46 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - os: macos-latest
-            key: macos
-          - os: ubuntu-20.04
-            key: ubuntu-20
-          - os: ubuntu-22.04
-            key: ubuntu-22
-          - os: ubuntu-22.04
-            key: docker-root
-            container:
-              image: ghcr.io/homebrew/ubuntu22.04:master
-              options: --user=root
-          - os: ubuntu-22.04
-            key: docker-linuxbrew
-            container:
-              image: ghcr.io/homebrew/ubuntu22.04:master
-              options: --user=linuxbrew
+        os: [ubuntu-latest, macos-latest]
+
     runs-on: ${{ matrix.os }}
-    container: ${{ matrix.container }}
 
     steps:
-      - name: Checkout
-        run: |
-          if [ "$RUNNER_OS" = "Linux" ]
-          then
-            # Allow writing under linuxbrew user
-            orig_uid="$(stat --printf='%u' "$GITHUB_WORKSPACE")"
-            sudo chown -R "$(whoami)" "$GITHUB_WORKSPACE" "$HOME"
-          fi
-
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git init
-          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
-          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
-          git checkout --force "$GITHUB_SHA"
-
-          if [ "$RUNNER_OS" = "Linux" ]
-          then
-            # Reset ownership so we test if the equivalent in setup-homebrew works.
-            sudo chown -R "$orig_uid" "$GITHUB_WORKSPACE" "$HOME"
-          fi
+      - name: Activate Homebrew
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin" >> $GITHUB_PATH
 
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: ./setup-homebrew/
+        uses: Homebrew/actions/setup-homebrew@master
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ matrix.key }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ matrix.key }}-rubygems-
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
 
       - name: Install Homebrew Bundler RubyGems
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
-
       - run: brew test-bot --only-cleanup-before
-
 
       - run: brew test-bot --only-setup
 
-
       - run: brew test-bot --only-tap-syntax
 
-      - run: brew test-bot --only-formulae-detect --test-default-formula
-        id: formulae-detect
+      - run: brew test-bot --only-formulae --only-json-tab --skip-recursive-dependents --root-url="https://ghcr.io/v2/jmuelbert/homebrew-qtifw"
+        if: github.event_name == 'pull_request'
 
-      - name: Run brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
-        id: brew-test-bot-formulae
-        run: |
-          brew test-bot --only-formulae --junit --only-json-tab --skip-dependents --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }}
-
-      - name: Run brew test-bot --only-formulae-dependents --junit --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-        run: |
-          brew test-bot --only-formulae-dependents --junit \
-              --testing-formulae=${{ steps.formulae-detect.outputs.testing_formulae }} \
-              --skipped-or-failed-formulae=${{ steps.brew-test-bot-formulae.outputs.skipped_or_failed_formulae }}
-
-      - name: Output brew test-bot failures
-        if: matrix.os == 'macOS-latest'
-        run: |
-          cat steps_output.txt
-          rm steps_output.txt
-
-
-      - name: Output brew bottle output
-        if: matrix.os == 'macOS-latest'
-        run: |
-          cat bottle_output.txt
-          rm bottle_output.txt
-
-
-      - name: Run brew test-bot --only-cleanup-after
-        run: |
-          brew test-bot --only-cleanup-after
-
-      - name: Run brew test-bot --only-setup --dry-run
-        run: |
-          brew test-bot --only-setup --dry-run
-
-      - name: Run brew test-bot testbottest --only-formulae --dry-run
-        run: |
-          brew test-bot testbottest --only-formulae --dry-run
+      - name: Upload bottles as artifact
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@main
+        with:
+          name: bottles
+          path: "*.bottle.*"
 
   fastlaneChecks:
     name: fastlane env reminder
