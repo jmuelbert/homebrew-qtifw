@@ -7,7 +7,7 @@ source "https://rubygems.org"
 ruby ">=2.6.10"
 
 group :test do
-  gem "activesupport", "< 7" # 7 requires Ruby 2.7
+  gem "activesupport", "< 8" # 7 requires Ruby 2.7
   gem "rspec"
   gem "simplecov"
 end

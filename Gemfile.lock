@@ -1,12 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.7.3)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     ast (2.4.2)
     code-scanning-rubocop (0.6.1)
       rubocop (~> 1.0)
@@ -18,6 +17,7 @@ GEM
     docile (1.4.0)
     git_diff_parser (3.2.0)
     google-protobuf (3.22.3-x86_64-darwin)
+    google-protobuf (3.22.3-x86_64-linux)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -102,13 +102,13 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
-    zeitwerk (2.6.7)
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
-  activesupport (< 7)
+  activesupport (< 8)
   code-scanning-rubocop (~> 0.6.1)
   debug
   google-protobuf (~> 3.22.3)
