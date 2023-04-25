@@ -8,6 +8,9 @@ on:
   # Trigger ci-workflow at every push. Action will also be visible from Pull Requests to main
   push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
     branches: [main]
+    paths:
+      - "Formula/*.rb"
+      - ".github/workflows/ci.yml"
   pull_request:
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
