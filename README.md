@@ -2,7 +2,6 @@
 
 [![Gitpod-Ready-Code][gitpod_badge]][gitpod]
 [![CI][ci_action_badge]][ci_action]
-[![AppVeyor Build][appveyor_badge]][appveyor]
 [![Dependabot auto-merge][dependabot_action_badge]][depandabot_action]
 [![Dependency Review][dependency_review_action_badge]][dependency_review_action]
 [![Deploy Astro site to Pages][ghpages_action_badge]][ghpages_action]
@@ -57,11 +56,9 @@ Please checkout [Issues][github_issues] page for a list of all known issues.
 [![CodeQL][codeql_action_badge]][codeql_action]
 [![Sonar Cloud Analysis][sonarcloud_action_badge]][sonarcloud_action]
 [![DevSkim][devskim_action_badge]][devskim_action]
-[![Rubocop][rubycop_action_badge]][rubycop_action]
 
 ## Linter and spell checking
 
-[![MegaLinter][megalinter_action_badge]][megalinter_action]
 [![Write good][writegood_action_badge]][writegood_action]
 
 ## Open source compatibility check
@@ -82,16 +79,12 @@ Code is under the [European Public License V1.2][license].
 [writegood_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/write-good.yml
 [sonarcloud_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/sonarcloud-analysis.yml/badge.svg
 [sonarcloud_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/sonarcloud-analysis.yml
-[rubycop_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/rubocop.yml/badge.svg
-[rubycop_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/rubocop.yml
 [codacy_action_badge]: https://app.codacy.com/project/badge/Grade/5540e367f8564b249334da47b20a6953
 [codacy_action]: https://app.codacy.com/gh/jmuelbert/homebrew-qtifw/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [codeql_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml/badge.svg
 [codeql_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/codeql-analysis.yml
 [devskim_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml/badge.svg
 [devskim_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/devskim-analysis.yml
-[megalinter_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml/badge.svg
-[megalinter_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/mega-linter.yml
 [reuse_compliance_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/reuse-check.yml/badge.svg
 [reuse_compliance_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/reuse-check.yml
 [gitpod_badge]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod
@@ -110,5 +103,4 @@ Code is under the [European Public License V1.2][license].
 [ghpages_action]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml
 [ghpages_action_badge]: https://github.com/jmuelbert/homebrew-qtifw/actions/workflows/pages-astro.yml/badge.svg
 [qtinstallerframework_manual]: https://doc.qt.io/qtinstallerframework
-[appveyor_badge]: https://ci.appveyor.com/api/projects/status/gf2yofmw6onqt306/branch/main?svg=true
-[appveyor]: https://ci.appveyor.com/project/jmuelbert/homebrew-qtifw/branch/main
+ 

@@ -33,7 +33,7 @@ end_of_line = crlf
 
 [*.{md,markdown,js.snap}]
 trim_trailing_whitespace = false
-max_line_lenght = 180
+max_line_length = 180
 
 [LICENSE]
 insert_final_newline = false

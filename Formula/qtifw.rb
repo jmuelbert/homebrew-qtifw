@@ -17,10 +17,10 @@ class Qtifw < Formula
 
   head "https://code.qt.io/cgit/installer-framework/installer-framework.git/"
 
-  depends_on "qt@5" => :build
+  depends_on "qt@5"
   depends_on "xz" => :build
 
-  tool_version = "4.5.1"
+  version = "4.5.1"
 
   def install
     Dir.glob("**/*.pro") do |f|
@@ -29,6 +29,8 @@ class Qtifw < Formula
 
     build_and_install_qt_ifw
   end
+
+  private
 
   def inreplace_qt_ifw_pro(file_path)
     inreplace file_path do |s|
@@ -58,6 +60,6 @@ class Qtifw < Formula
   end
 
   test do
-    assert_match "archivegen #{tool_version}", shell_output("#{bin}/archivegen --version").chomp
+    assert_match "archivegen #{version}", shell_output("#{bin}/archivegen --version").chomp
   end
 end
