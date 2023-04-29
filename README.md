@@ -7,7 +7,8 @@
 [![Deploy Astro site to Pages][ghpages_action_badge]][ghpages_action]
 [![GitHub license][github_license_badge]][euplv1.2_license]
 
-The QT Installer Framework V4.5.1 for Homebrew
+The QT Installer Framework V4.5.2 for Homebrew
+**Update from 4.5.1 to 4.5.2**
 
 ## Install
 
