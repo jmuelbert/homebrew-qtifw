@@ -20,7 +20,7 @@ class Qtifw < Formula
   depends_on "xz" => :build
   depends_on "qt@5"
 
-  version = "4.5.2"
+  version = "4.5.2-1"
 
   def install
     Dir.glob("**/*.pro") do |f|
