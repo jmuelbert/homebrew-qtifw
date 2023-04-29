@@ -11,16 +11,16 @@
 class Qtifw < Formula
   desc "Qt Installer Framework Installer"
   homepage "https://doc.qt.io/qtinstallerframework/"
-  url "https://download.qt.io/official_releases/qt-installer-framework/4.5.1/installer-framework-opensource-src-4.5.1.tar.xz"
+  url "https://download.qt.io/official_releases/qt-installer-framework/4.5.2/installer-framework-opensource-src-4.5.2.tar.xz"
   sha256 "602417a0a2ada5cada8f5b6ad5a160390198b68b46a3721022b7370a971b040a" # DevSkim: ignore DS173237
   version_scheme 1
 
   head "https://code.qt.io/cgit/installer-framework/installer-framework.git/"
 
-  depends_on "qt@5"
   depends_on "xz" => :build
+  depends_on "qt@5"
 
-  version = "4.5.1"
+  version = "4.5.2"
 
   def install
     Dir.glob("**/*.pro") do |f|
