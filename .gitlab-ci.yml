@@ -18,58 +18,25 @@ variables:
 
 .before_script: &before_script
   - ruby -v
-  - bundle install
+  - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-jruby:
-  variables:
-    JRUBY_OPTS: "--debug"
-  before_script:
-    - bundle install
-  image: "jruby:9.4"
-  script:
-    - bundle exec rake test
-  artifacts:
-    paths:
-      - coverage
 ruby31:
-  before_script:
-    - bundle install
-    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
-    # - export RBS_TEST_RAISE="true"
-    # - export RBS_TEST_LOGLEVEL="error"
-    # - export RBS_TEST_OPT="-Isig"
-    # - export RBS_TEST_TARGET="HTTP2Next*"
-  image: "ruby:3.1"
   script:
-    - bundle exec rake test
-    - bundle exec rake rubocop
-  artifacts:
-    paths:
-      - coverage
-ruby32:
-  before_script:
-    - bundle install
-    # - export RUBYOPT="-rbundler/setup -rrbs/test/setup"
-    # - export RBS_TEST_RAISE="true"
-    # - export RBS_TEST_LOGLEVEL="error"
-    # - export RBS_TEST_OPT="-Isig"
-    # - export RBS_TEST_TARGET="HTTP2Next*"
-  image: "ruby:3.2"
-  script:
-    - bundle exec rake test
-    - bundle exec rake rubocop
-  artifacts:
-    paths:
-      - coverage
+    - brew install-bundler-gems
+    - brew test-bot --only-cleanup-before
+    - brew test-bot --only-setup
+    - brew test-bot --only-tap-syntax
+    - brew test-bot --only-formulae --only-json-tab --skip-recursive-dependents --root-url="https://ghcr.io/v2/jmuelbert/homebrew-qtifw"
 
+  artifacts:
+    paths:
+      - coverage
 
 coverage:
   stage: prepare
   dependencies:
-    - jruby
     - ruby31
-    - ruby32
-  image: "ruby:3.2"
+  image: 'ruby:3.2'
   before_script:
     - gem install simplecov --no-doc
   script:
@@ -77,7 +44,7 @@ coverage:
     - rake coverage:report
   artifacts:
     paths:
-      - "coverage/"
+      - 'coverage/'
 
 pages:
   stage: deploy
