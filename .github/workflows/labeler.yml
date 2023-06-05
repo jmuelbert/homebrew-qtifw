@@ -20,6 +20,6 @@ jobs:
   labeler:
     uses: jmuelbert/commons/.github/workflows/labeler.yml@main
     with:
-      config-path: .github/labels.yml
+      config-path: .github/labeler.yml
     secrets:
       envPath:  ${{ secrets.envPAT }}
