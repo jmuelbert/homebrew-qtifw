@@ -3,6 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 #
+#
 name: "GitHub Labeler"
 
 on:
