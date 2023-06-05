@@ -7,12 +7,7 @@
 name: "GitHub Labeler"
 
 on:
-  push:
-    branches:
-      - "main"
-    paths:
-      - ".github/labeler.yml"
-      - ".github/workflows/labeler.yml"
+  - pull_request_target
 
 permissions:
   contents: read
