@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   labeler:
-    uses: jmuelbert/commons/actions/labeler.yml@main
+    uses: jmuelbert/commons/workflows/labeler.yml@main
     with:
       config-path: .github/labels.yml
     secrets:
