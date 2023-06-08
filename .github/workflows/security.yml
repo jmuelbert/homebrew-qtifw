@@ -33,7 +33,7 @@ jobs:
   Codacy_Analysis:
     permissions:
        pull-requests: write
-    uses: jmuelbert/commons/.github/workflows/codacy_analysis.yml@main
+    uses: jmuelbert/commons/.github/workflows/codacy-analysis.yml@main
     secrets:
       token: ${{ secrets.CODACY_API_TOKEN }}
   
