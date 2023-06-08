@@ -32,7 +32,9 @@ concurrency:
 jobs:
   Codacy_Analysis:
     permissions:
-       pull-requests: write
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     uses: jmuelbert/commons/.github/workflows/codacy-analysis.yml@main
     secrets:
       token: ${{ secrets.CODACY_API_TOKEN }}
