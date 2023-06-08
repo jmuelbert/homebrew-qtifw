@@ -5,15 +5,19 @@
 #
 #
 name: "Pull Request Actions"
-
+  
 on:
-  - pull_request_target
-
+  pull_request:
+    # The branches below must be a subset of the branches above
+    types: [opened, synchronize, reopened]
+  
 permissions:
   contents: read
 
 jobs:
-  labeler:
+  Pull_Request:
+    permissions:
+       pull-requests: write
     uses: jmuelbert/commons/.github/workflows/pull-request.yml@main
     with:
       config-path: .github/labeler.yml
