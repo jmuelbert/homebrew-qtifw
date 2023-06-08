@@ -1,0 +1,21 @@
+---
+# SPDX-FileCopyrightText: Jürgen Mülbert
+#
+# SPDX-License-Identifier: MIT
+#
+#
+name: "Pull Request Actions"
+
+on:
+  - pull_request_target
+
+permissions:
+  contents: read
+
+jobs:
+  labeler:
+    uses: jmuelbert/commons/.github/workflows/pull-request.yml@main
+    with:
+      config-path: .github/labeler.yml
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
