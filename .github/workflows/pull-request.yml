@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 #
 #
-name: "GitHub Labeler"
+name: "Pull Request Actions"
 
 on:
   - pull_request_target
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   labeler:
-    uses: jmuelbert/commons/.github/workflows/labeler.yml@main
+    uses: jmuelbert/commons/.github/workflows/pull-request.yml@main
     with:
       config-path: .github/labeler.yml
     secrets:
