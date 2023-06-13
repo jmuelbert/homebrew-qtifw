@@ -11,8 +11,8 @@ dependencies:
     specifier: ^2.2.1
     version: 2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0)
   '@docsearch/css':
-    specifier: ^3.3.4
-    version: 3.3.4
+    specifier: ^3.5.0
+    version: 3.5.0
   '@docsearch/react':
     specifier: ^3.5.0
     version: 3.5.0(@algolia/client-search@4.17.0)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0)
@@ -694,10 +694,6 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.13
     dev: true
-
-  /@docsearch/css@3.3.4:
-    resolution: {integrity: sha512-vDwCDoVXDgopw/hvr0zEADew2wWaGP8Qq0Bxhgii1Ewz2t4fQeyJwIRN/mWADeLFYPVkpz8TpEbxya/i6Tm0WA==}
-    dev: false
 
   /@docsearch/css@3.5.0:
     resolution: {integrity: sha512-Ob5FQLubplcBNihAVtriR59FRBeP8u69F6mu4L4yIr60KfsPc10bOV0DoPErJw0zF9IBN2cNLW9qdmt8zWPxyg==}
