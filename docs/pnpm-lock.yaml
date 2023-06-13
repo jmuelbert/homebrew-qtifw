@@ -8,8 +8,8 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0(preact@10.13.2)
   '@astrojs/react':
-    specifier: ^2.1.1
-    version: 2.1.1(@types/react-dom@18.2.4)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.2.1
+    version: 2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0)
   '@docsearch/css':
     specifier: ^3.3.4
     version: 3.3.4
@@ -348,8 +348,8 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/react@2.1.1(@types/react-dom@18.2.4)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-nIcDFnn5H4FKGoSBYXZr95RIQvpcTNRcVV1hvUQifO0F5hQsgb0PVyk6TG4JWxiPGY4Jt4MVQb5JaaDQHlHu4w==}
+  /@astrojs/react@2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.10)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-nq5Zr8iWdwjSp5fh1NReaCplwsnL4w5PXAY5XWu1jE/frxEfF/ycGHrrhwWW0uJHX9G+kUtmQLR0GBhlR4FmAw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       '@types/react': ^17.0.50 || ^18.0.21
@@ -357,8 +357,8 @@ packages:
       react: ^17.0.2 || ^18.0.0
       react-dom: ^17.0.2 || ^18.0.0
     dependencies:
-      '@babel/core': 7.21.4
-      '@babel/plugin-transform-react-jsx': 7.21.0(@babel/core@7.21.4)
+      '@babel/core': 7.22.5
+      '@babel/plugin-transform-react-jsx': 7.21.0(@babel/core@7.22.5)
       '@types/react': 18.2.10
       '@types/react-dom': 18.2.4
       react: 18.2.0
