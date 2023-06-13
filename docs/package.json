@@ -19,7 +19,7 @@
     "@docsearch/css": "^3.3.4",
     "@docsearch/react": "^3.5.0",
     "@types/node": "^20.0.0",
-    "@types/react": "^18.2.10",
+    "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.4",
     "astro": "^2.6.3",
     "astro-html-minifier": "^0.4.1",
