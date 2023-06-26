@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@algolia/client-search':
     specifier: ^4.17.0
@@ -29,8 +33,8 @@ dependencies:
     specifier: ^2.6.3
     version: 2.6.3(@types/node@20.3.1)(sass@1.62.1)
   astro-html-minifier:
-    specifier: ^0.4.1
-    version: 0.4.1
+    specifier: ^0.5.0
+    version: 0.5.0
   preact:
     specifier: ^10.13.2
     version: 10.13.2
@@ -881,8 +885,8 @@ packages:
       - supports-color
     dev: true
 
-  /@minify-html/node@0.10.8:
-    resolution: {integrity: sha512-fS7YkbzYbQvTkWzJXHg4BJfFwK1dtkl942mY1B19X0gLlzm214MFVpmn/KGiVTWVZWCGI7aWoMCGPL2Ba0XBQA==}
+  /@minify-html/node@0.11.1:
+    resolution: {integrity: sha512-f+3VvBszFaY5xx8e7POka1K1FnVZur8Apk18uaI4lSyZrzmpLlkSBZfXOPHVhChFc0TDI+RQuBD+ws4qIt9+mg==}
     engines: {node: '>= 8.6.0'}
     hasBin: true
     requiresBuild: true
@@ -1185,10 +1189,10 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-html-minifier@0.4.1:
-    resolution: {integrity: sha512-SIAxk5r4CK4/iJAZ64eg5Xv7KmVu/HDbNp/ks0gGjwOexuWtNLZHYhDSIQqi/0/oF3734uzUYkAi9zBotMTRDQ==}
+  /astro-html-minifier@0.5.0:
+    resolution: {integrity: sha512-DpVLTGPC6TataNbVZ0WeR9YH2trgQRrIxbRpQKnrb2975LbYGKPtcKhda2kli9Gsh0aQ8kp0txE308VlEC4VIg==}
     dependencies:
-      '@minify-html/node': 0.10.8
+      '@minify-html/node': 0.11.1
     dev: false
 
   /astro-robots-txt@0.5.0:
