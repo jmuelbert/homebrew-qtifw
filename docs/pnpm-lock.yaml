@@ -10,7 +10,7 @@ dependencies:
     version: 4.18.0
   '@astrojs/preact':
     specifier: ^2.2.1
-    version: 2.2.1(preact@10.13.2)
+    version: 2.2.1(preact@10.16.0)
   '@astrojs/react':
     specifier: ^2.2.1
     version: 2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0
   preact:
-    specifier: ^10.13.2
-    version: 10.13.2
+    specifier: ^10.16.0
+    version: 10.16.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -334,7 +334,7 @@ packages:
       - supports-color
     dev: true
 
-  /@astrojs/preact@2.2.1(preact@10.13.2):
+  /@astrojs/preact@2.2.1(preact@10.16.0):
     resolution: {integrity: sha512-lObgrX/qfK2sEnGDWoyQ8KojFJ54FIKB4TeywWmgj4ZTg0yLnvvOz6ReyPQ8VfR/1MU+vWs22jE4cuZJ/vPnOA==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
@@ -342,10 +342,10 @@ packages:
     dependencies:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-react-jsx': 7.21.0(@babel/core@7.22.5)
-      '@preact/signals': 1.1.3(preact@10.13.2)
+      '@preact/signals': 1.1.3(preact@10.16.0)
       babel-plugin-module-resolver: 5.0.0
-      preact: 10.13.2
-      preact-render-to-string: 5.2.6(preact@10.13.2)
+      preact: 10.16.0
+      preact-render-to-string: 5.2.6(preact@10.16.0)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1145,13 +1145,13 @@ packages:
     resolution: {integrity: sha512-M+M3ZOtd1dtV/uasyk4SZu1vbfEJ4NeENv0F7F12nijZYedB5wSgbtZcuACyssnTznhF4ctUyrR0dZHuHfyWKA==}
     dev: false
 
-  /@preact/signals@1.1.3(preact@10.13.2):
+  /@preact/signals@1.1.3(preact@10.16.0):
     resolution: {integrity: sha512-N09DuAVvc90bBZVRwD+aFhtGyHAmJLhS3IFoawO/bYJRcil4k83nBOchpCEoS0s5+BXBpahgp0Mjf+IOqP57Og==}
     peerDependencies:
       preact: 10.x
     dependencies:
       '@preact/signals-core': 1.3.0
-      preact: 10.13.2
+      preact: 10.16.0
     dev: false
 
   /@types/acorn@4.0.6:
@@ -3576,17 +3576,17 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact-render-to-string@5.2.6(preact@10.13.2):
+  /preact-render-to-string@5.2.6(preact@10.16.0):
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.13.2
+      preact: 10.16.0
       pretty-format: 3.8.0
     dev: false
 
-  /preact@10.13.2:
-    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
+  /preact@10.16.0:
+    resolution: {integrity: sha512-XTSj3dJ4roKIC93pald6rWuB2qQJO9gO2iLLyTe87MrjQN+HklueLsmskbywEWqCHlclgz3/M4YLL2iBr9UmMA==}
     dev: false
 
   /preferred-pm@3.0.3:
