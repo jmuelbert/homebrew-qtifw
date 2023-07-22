@@ -13,7 +13,7 @@ dependencies:
     version: 2.2.1(preact@10.16.0)
   '@astrojs/react':
     specifier: ^2.2.1
-    version: 2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.2.1(@types/react-dom@18.2.7)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
   '@docsearch/css':
     specifier: ^3.5.1
     version: 3.5.1
@@ -21,17 +21,17 @@ dependencies:
     specifier: ^3.5.1
     version: 3.5.1(@algolia/client-search@4.18.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0)
   '@types/node':
-    specifier: ^20.3.1
-    version: 20.3.1
+    specifier: ^20.4.2
+    version: 20.4.2
   '@types/react':
     specifier: ^18.2.14
     version: 18.2.14
   '@types/react-dom':
-    specifier: ^18.2.4
-    version: 18.2.4
+    specifier: ^18.2.7
+    version: 18.2.7
   astro:
     specifier: ^2.8.0
-    version: 2.8.0(@types/node@20.3.1)(sass@1.63.6)
+    version: 2.8.0(@types/node@20.4.2)(sass@1.63.6)
   astro-html-minifier:
     specifier: ^0.5.0
     version: 0.5.0
@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^1.5.0
     version: 1.5.0
   prettier:
-    specifier: ^2.8.8
-    version: 2.8.8
+    specifier: ^3.0.0
+    version: 3.0.0
   sass:
     specifier: ^1.63.6
     version: 1.63.6
@@ -291,7 +291,7 @@ packages:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.8.0(@types/node@20.3.1)(sass@1.63.6)
+      astro: 2.8.0(@types/node@20.4.2)(sass@1.63.6)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -356,7 +356,7 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/react@2.2.1(@types/react-dom@18.2.4)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0):
+  /@astrojs/react@2.2.1(@types/react-dom@18.2.7)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-nq5Zr8iWdwjSp5fh1NReaCplwsnL4w5PXAY5XWu1jE/frxEfF/ycGHrrhwWW0uJHX9G+kUtmQLR0GBhlR4FmAw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
@@ -368,7 +368,7 @@ packages:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-react-jsx': 7.21.0(@babel/core@7.22.5)
       '@types/react': 18.2.14
-      '@types/react-dom': 18.2.4
+      '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -1233,8 +1233,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
-  /@types/node@20.3.1:
-    resolution: {integrity: sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==}
+  /@types/node@20.4.2:
+    resolution: {integrity: sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==}
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1247,8 +1247,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: false
 
-  /@types/react-dom@18.2.4:
-    resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
+  /@types/react-dom@18.2.7:
+    resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
       '@types/react': 18.2.14
     dev: false
@@ -1267,7 +1267,7 @@ packages:
   /@types/sax@1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 20.3.1
+      '@types/node': 20.4.2
     dev: true
 
   /@types/scheduler@0.16.3:
@@ -1426,7 +1426,7 @@ packages:
       zod: 3.21.4
     dev: true
 
-  /astro@2.8.0(@types/node@20.3.1)(sass@1.63.6):
+  /astro@2.8.0(@types/node@20.4.2)(sass@1.63.6):
     resolution: {integrity: sha512-bqdhE9039dzi0mqaWGO9rMk5HKxTn5TckxFmRPUdsV1qmbpghXtwuERHblfJu5etQofV6WVEyTrouG+BLRkqfA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -1487,7 +1487,7 @@ packages:
       typescript: 5.1.6
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.2(@types/node@20.3.1)(sass@1.63.6)
+      vite: 4.4.2(@types/node@20.4.2)(sass@1.63.6)
       vitefu: 0.2.4(vite@4.4.2)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
@@ -3612,6 +3612,12 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
+  /prettier@3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /pretty-format@3.8.0:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: false
@@ -4458,7 +4464,7 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite@4.4.2(@types/node@20.3.1)(sass@1.63.6):
+  /vite@4.4.2(@types/node@20.4.2)(sass@1.63.6):
     resolution: {integrity: sha512-zUcsJN+UvdSyHhYa277UHhiJ3iq4hUBwHavOpsNUGsTgjBeoBlK8eDt+iT09pBq0h9/knhG/SPrZiM7cGmg7NA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4486,7 +4492,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.3.1
+      '@types/node': 20.4.2
       esbuild: 0.18.11
       postcss: 8.4.26
       rollup: 3.26.2
@@ -4502,7 +4508,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.2(@types/node@20.3.1)(sass@1.63.6)
+      vite: 4.4.2(@types/node@20.4.2)(sass@1.63.6)
 
   /vscode-css-languageservice@6.2.5:
     resolution: {integrity: sha512-/1oyBZK3jfx6A0cA46FCUpy6OlqEsMT47LUIldCIP1YMKRYezJ9No+aNj9IM0AqhRZ92DxZ1DmU5lJ+biuiacA==}
