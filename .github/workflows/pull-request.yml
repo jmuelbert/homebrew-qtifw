@@ -18,6 +18,7 @@ jobs:
   Pull_Request:
     permissions:
        pull-requests: write
+       contents: read
     uses: jmuelbert/commons/.github/workflows/pull-request.yml@main
     with:
       config-path: .github/labeler.yml
