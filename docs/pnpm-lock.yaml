@@ -13,19 +13,19 @@ dependencies:
     version: 2.2.2(preact@10.17.1)
   '@astrojs/react':
     specifier: ^3.0.0
-    version: 3.0.0(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.9)
+    version: 3.0.0(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.9)
   '@docsearch/css':
     specifier: ^3.5.1
     version: 3.5.1
   '@docsearch/react':
     specifier: ^3.5.2
-    version: 3.5.2(@algolia/client-search@4.19.1)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0)
+    version: 3.5.2(@algolia/client-search@4.19.1)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0)
   '@types/node':
     specifier: ^20.5.9
     version: 20.5.9
   '@types/react':
-    specifier: ^18.2.20
-    version: 18.2.20
+    specifier: ^18.2.21
+    version: 18.2.21
   '@types/react-dom':
     specifier: ^18.2.7
     version: 18.2.7
@@ -325,7 +325,7 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/react@3.0.0(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.9):
+  /@astrojs/react@3.0.0(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.9):
     resolution: {integrity: sha512-JOj0DF7gCmyrM2fem8LLXOh2sF9lX0zSkm6B0GpLeJ4u2lH5B8w9znBZuLy4AZZVktNqiLfexwlhWE99VC9ZpQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -335,7 +335,7 @@ packages:
       react-dom: ^17.0.2 || ^18.0.0
     dependencies:
       '@astrojs/internal-helpers': 0.2.0
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       '@types/react-dom': 18.2.7
       '@vitejs/plugin-react': 4.0.4(vite@4.4.9)
       react: 18.2.0
@@ -774,7 +774,7 @@ packages:
     resolution: {integrity: sha512-SPiDHaWKQZpwR2siD0KQUwlStvIAnEyK6tAE2h2Wuoq8ue9skzhlyVQ1ddzOxX6khULnAALDiR/isSF3bnuciA==}
     dev: false
 
-  /@docsearch/react@3.5.2(@algolia/client-search@4.19.1)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0):
+  /@docsearch/react@3.5.2(@algolia/client-search@4.19.1)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.6.0):
     resolution: {integrity: sha512-9Ahcrs5z2jq/DcAvYtvlqEBHImbm4YJI8M9y0x6Tqg598P40HTEkX7hsMcIuThI+hTFxRGZ9hll0Wygm2yEjng==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
@@ -794,7 +794,7 @@ packages:
       '@algolia/autocomplete-core': 1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.6.0)
       '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
       '@docsearch/css': 3.5.2
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       algoliasearch: 4.19.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -1370,11 +1370,11 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: false
 
-  /@types/react@18.2.20:
-    resolution: {integrity: sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==}
+  /@types/react@18.2.21:
+    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
