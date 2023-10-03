@@ -15,7 +15,7 @@
   "dependencies": {
     "@algolia/client-search": "^4.20.0",
     "@astrojs/preact": "^3.0.0",
-    "@astrojs/react": "^3.0.0",
+    "@astrojs/react": "^3.0.2",
     "@docsearch/css": "^3.5.2",
     "@docsearch/react": "^3.5.2",
     "@types/node": "^20.8.0",
