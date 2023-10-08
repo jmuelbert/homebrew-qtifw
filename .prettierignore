@@ -1,6 +1,7 @@
 /app/assets/javascripts/locale/**/app.js
 /docs/themes/
 /fixtures/lib/gitlab/graphql/
+/node_modules/
 /public/
 /vendor/
 /tmp/
@@ -21,28 +22,3 @@ bin
 .vscode-test
 
 Pipfile.lock
-
-# build output
-dist/
-.output/
-
-# dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store

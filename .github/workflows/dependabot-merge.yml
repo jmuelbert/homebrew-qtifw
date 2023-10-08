@@ -1,17 +1,9 @@
 ---
-# SPDX-FileCopyrightText: Dependabot
-#
-# SPDX-License-Identifier: MIT
-#
 name: Dependabot auto-merge
 
-on:
-  pull_request:
-    # The branches below must be a subset of the branches above
-    types: [opened, synchronize, reopened]
+on: pull_request
 
 permissions:
-  contents: read
   pull-requests: write
   issues: write
   repository-projects: write
@@ -26,20 +18,22 @@ jobs:
         uses: dependabot/fetch-metadata@v1.6.0
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+
       - name: Add a label for all production dependencies
         if: ${{ steps.metadata.outputs.dependency-type == 'direct:production' }}
         run: gh pr edit "$PR_URL" --add-label "production"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
       - name: Approve a PR
         run: gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{contains(steps.metadata.outputs.dependency-names, 'my-dependency') && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
 
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{contains(steps.metadata.outputs.dependency-names, 'my-dependency') &&
+          steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}

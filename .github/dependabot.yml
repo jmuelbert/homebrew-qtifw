@@ -2,46 +2,40 @@
 # To get started with Dependabot version updates, you'll need to specify which
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
 updates:
+  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "fix: :rocket: gha"
-    open-pull-requests-limit: 10
-    # The actions in triage-issues.yml are updated in the Homebrew/.github repo
-    ignore:
-      - dependency-name: actions/stale
-      - dependency-name: dessant/lock-threads
+      prefix: ":rocket: gha"
 
+  # Enable version updates for Docker
   - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
     directory: "/"
-    schedule:
-     interval: "daily"
-    commit-message:
-     prefix: "fix: :rocket: docker"
-
-  - package-ecosystem: "bundler"
-    directory: "/"
+    # Check for updates once a week
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "fix: :rocket: bundler"
+      prefix: ":rocket: docker"
 
-  - package-ecosystem: "npm"
-    directory: "/docs"
+  # Maintain dependencies for nuget
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "fix: :rocket: npm for astro-docs"
+      prefix: ":rocket: nuget"
 
-  - package-ecosystem: "pip"
-    directory: "/"
+  # Maintain dependencies for pip
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "fix: :rocket: pip"
+      prefix: ":rocket: pip"
