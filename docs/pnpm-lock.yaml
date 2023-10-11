@@ -9,8 +9,8 @@ dependencies:
     specifier: ^4.20.0
     version: 4.20.0
   '@astrojs/preact':
-    specifier: ^3.0.0
-    version: 3.0.0(@babel/core@7.22.11)(preact@10.18.1)(vite@4.4.9)
+    specifier: ^3.0.1
+    version: 3.0.1(@babel/core@7.22.11)(preact@10.18.1)(vite@4.4.9)
   '@astrojs/react':
     specifier: ^3.0.3
     version: 3.0.3(@types/react-dom@18.2.13)(@types/react@18.2.24)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.9)
@@ -334,8 +334,8 @@ packages:
       - supports-color
     dev: true
 
-  /@astrojs/preact@3.0.0(@babel/core@7.22.11)(preact@10.18.1)(vite@4.4.9):
-    resolution: {integrity: sha512-KlHyozAyQIOorYb3op8MJlktvtKiK/an1nXqHsVYxW5oiOJZjD4fkTEgcDFByl/uRpce93tuK4pdGKKzzyMUVw==}
+  /@astrojs/preact@3.0.1(@babel/core@7.22.11)(preact@10.18.1)(vite@4.4.9):
+    resolution: {integrity: sha512-pAfN+U7J4hw7qijqkBx1ZBpPO+ooa+MkKIgshCozfqsHTp18uPflxQUviz0TEzB5nn7hSndzncWuc3pz/HbtJw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       preact: ^10.6.5
