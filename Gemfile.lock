@@ -1,21 +1,30 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.8)
+    activesupport (7.1.0)
+      base64
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
+      mutex_m
       tzinfo (~> 2.0)
     ast (2.4.2)
     base64 (0.1.1)
+    bigdecimal (3.1.4)
     code-scanning-rubocop (0.6.1)
       rubocop (~> 1.0)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    drb (2.1.1)
+      ruby2_keywords
     git_diff_parser (3.2.0)
     google-protobuf (3.24.4-x86_64-darwin)
     google-protobuf (3.24.4-x86_64-linux)
@@ -27,6 +36,7 @@ GEM
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     minitest (5.20.0)
+    mutex_m (0.1.2)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -102,6 +112,7 @@ GEM
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
+    ruby2_keywords (0.0.5)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
