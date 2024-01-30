@@ -34,7 +34,7 @@
     "astro-robots-txt": "^1.0.0",
     "html-escaper": "^3.0.3",
     "postcss": "^8.4.33",
-    "postcss-html": "^1.5.0",
+    "postcss-html": "^1.6.0",
     "prettier": "^3.2.4",
     "sass": "^1.70.0",
     "stylelint": "^15.11.0",
