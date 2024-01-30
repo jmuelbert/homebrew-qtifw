@@ -13,12 +13,12 @@
     "lint:scss": "stylelint \"src/**/*.{astro,scss}\""
   },
   "dependencies": {
-    "@algolia/client-search": "^4.22.0",
+    "@algolia/client-search": "^4.22.1",
     "@astrojs/preact": "^3.1.0",
     "@astrojs/react": "^3.0.9",
     "@docsearch/css": "^3.5.2",
     "@docsearch/react": "^3.5.2",
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "astro": "^2.10.12",
@@ -35,7 +35,7 @@
     "html-escaper": "^3.0.3",
     "postcss": "^8.4.33",
     "postcss-html": "^1.5.0",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.4",
     "sass": "^1.70.0",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended-scss": "^13.1.0",
