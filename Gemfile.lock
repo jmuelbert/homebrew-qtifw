@@ -26,8 +26,8 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     git_diff_parser (3.2.0)
-    google-protobuf (3.25.2-x86_64-darwin)
-    google-protobuf (3.25.2-x86_64-linux)
+    google-protobuf (3.25.3-x86_64-darwin)
+    google-protobuf (3.25.3-x86_64-linux)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.1)
@@ -138,7 +138,7 @@ DEPENDENCIES
   activesupport (< 8)
   code-scanning-rubocop (~> 0.6.1)
   debug
-  google-protobuf (~> 3.25.2)
+  google-protobuf (~> 3.25.3)
   rake (~> 13.1)
   rspec
   rubocop (~> 1.60)
