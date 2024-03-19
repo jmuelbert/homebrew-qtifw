@@ -1,11 +1,11 @@
 ^attache$
 ^bellow$
 benefitting
-occurences?
+occurrences?
 ^dependan.*
 ^oer$
 Sorce
 ^[Ss]pae.*
 ^untill$
 ^untilling$
-^wether.*
+^whether.*
