@@ -1,17 +1,23 @@
 {
-    "ignore": [
-        "**/node_modules/**",
-        "**/.git/**",
-        "**/.rbenv/**",
-        "**/.venv/**",
-        "**/*cache*/**",
-        "**/.github/**",
-        "**/.idea/**",
-        "**/report/**",
-        "**/*.svg",
-        "**/wwwroot/**",
-        "**/*.txt"
-    ],
-    "reporters": ["html", "markdown"],
-    "threshold": 0
+  "ignore": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/.rbenv/**",
+    "**/.venv/**",
+    "**/*cache*/**",
+    "**/.github/**",
+    "**/.idea/**",
+    "**/report/**",
+    "**/*.svg",
+    "**/wwwroot/**",
+    "**/*.txt",
+    "docs/src/content/docs/de/**",
+    "docs/src/content/docs/es/**",
+    "docs/src/content/docs/it/**"
+  ],
+  "reporters": [
+    "html",
+    "markdown"
+  ],
+  "threshold": 0
 }

@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: Microsoft Corporation
+#
+# SPDX-License-Identifier: MIT
+#
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -6,17 +10,15 @@
 
 name: DevSkim
 
-on:
+on: # yamllint disable-line rule:truthy
   push:
-    branches:
-      - main
-      - develop
+    branches: [main, develop, release, improve_build-workflow]
 
   pull_request:
     types: [opened, synchronize, reopened]
 
   schedule:
-    - cron: "26 20 * * 2"
+    - cron: "36 22 * * 3"
 
 permissions:
   contents: read
@@ -26,7 +28,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  devskim:
+  lint:
     name: DevSkim
     runs-on: ubuntu-latest
     permissions:
@@ -34,13 +36,14 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - name: "🧰 Check out code"
-        uses: actions/checkout@v3
+      - name: "🧰 Checkout Source Code"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Run DevSkim scanner
-        uses: microsoft/DevSkim-Action@v1
+        uses: microsoft/DevSkim-Action@b41921d947434b27f90b8949f8bfbe056e706bf6 # v1.0.11
 
-      - name: Upload DevSkim scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+      # Upload the results to GitHub's code scanning dashboard.
+      - name: "Upload to code-scanning"
+        uses: github/codeql-action/upload-sarif@17573ee1cc1b9d061760f3a006fc4aac # v2.2.4
         with:
           sarif_file: devskim-results.sarif

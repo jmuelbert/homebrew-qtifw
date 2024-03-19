@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@outlook.de>
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
 #
 # SPDX-License-Identifier: MIT
 #
@@ -11,8 +11,12 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on:
+
+on: # yamllint disable-line rule:truthy
   pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   label:
@@ -22,7 +26,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/labeler@v4
+      - name: Use PR Labeler Action
+        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9 # v5.0.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/pr-labeler.yml

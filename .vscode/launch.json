@@ -1,0 +1,53 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GDB/LLDB",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder:folder1}/build/bin/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build: Debug",
+      "internalConsoleOptions": "neverOpen",
+      "visualizerFile": "/Users/juergen/Library/Application Support/VSCodium/User/workspaceStorage/2f831df60866c25f60235b3da0a9c005/tonka3000.qtvsctools/qt.natvis.xml"
+    },
+    {
+      "name": "App",
+      "type": "cppvsdbg",
+      "program": "${workspaceFolder:folder1}/build/bin/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder:folder1}/build/bin/${fileBasenameNoExtension}",
+      "externalConsole": false,
+      "visualizerFile": "/Users/juergen/Library/Application Support/VSCodium/User/workspaceStorage/2f831df60866c25f60235b3da0a9c005/tonka3000.qtvsctools/qt.natvis.xml"
+    },
+    {
+      "name": "Launch current CMake target with GammaRay",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "GammaRay",
+      "args": [
+        "${command:cmake.launchTargetPath}"
+      ],
+      "console": "internalConsole",
+      "cwd": "${workspaceFolder}",
+      "visualizerFile": "/Users/juergen/Library/Application Support/VSCodium/User/workspaceStorage/2f831df60866c25f60235b3da0a9c005/tonka3000.qtvsctools/qt.natvis.xml"
+    },
+    {
+      "name": "Profile current CMake target with qmlprofile",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "qmlprofiler",
+      "args": [
+        "-o",
+        "your/favourite/output/dir/qmlprofiler.qtd",
+        "${command:cmake.launchTargetPath}"
+      ],
+      "visualizerFile": "/Users/juergen/Library/Application Support/VSCodium/User/workspaceStorage/2f831df60866c25f60235b3da0a9c005/tonka3000.qtvsctools/qt.natvis.xml"
+    }
+  ]
+}

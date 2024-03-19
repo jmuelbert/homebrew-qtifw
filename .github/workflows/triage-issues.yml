@@ -1,21 +1,22 @@
 ---
-# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@web.de>
+# SPDX-FileCopyrightText: Jürgen Mülbert <juergen.muelbert@outlook.de>
 #
 # SPDX-License-Identifier: EUPL-1.2
 #
-# This file is synced from the `.github` repository, do not modify it directly.
-name: Triage issues
 
-on:
+name: Triage Issues
+
+on: # yamllint disable-line rule:truthy
   push:
-    paths:
-      - .github/workflows/triage-issues.yml
     branches-ignore:
       - dependabot/**
-  schedule:
-    # Once every day at midnight UTC
-    - cron: "0 0 * * *"
   issue_comment:
+    types:
+      - created
+      - edited
+
+  schedule:
+    - cron: "0 0 * * *"
 
 permissions:
   issues: write
@@ -27,59 +28,61 @@ concurrency:
 
 jobs:
   stale:
-    if: >
-      startsWith(github.repository, 'jmuelbert/') && (
-        github.event_name != 'issue_comment' || (
+    if: |
+      startsWith(github.repository, 'jmuelbert/') &&
+      (
+        !startsWith(github.event.repository.name, 'dependabot/') ||
+        (github.event_name == 'schedule') ||
+        (
           contains(github.event.issue.labels.*.name, 'stale') ||
           contains(github.event.pull_request.labels.*.name, 'stale')
         )
       )
     runs-on: ubuntu-latest
     steps:
-      - name: Mark/Close Stale Issues and Pull Requests
+      - name: Mark or Close Stale Issues and Pull Requests
         uses: actions/stale@v8
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-stale: 21
-          days-before-close: 7
-          stale-issue-message: >
-            This issue has been automatically marked as stale because it has not had
-            recent activity. It will be closed if no further activity occurs.
-          stale-pr-message: >
-            This pull request has been automatically marked as stale because it has not had
-            recent activity. It will be closed if no further activity occurs.
-          exempt-issue-labels: "gsoc-outreachy,help wanted,in progress"
-          exempt-pr-labels: "gsoc-outreachy,help wanted,in progress"
+          days-before-stale: 365
+          days-before-close: 30
+          stale-issue-message: |
+            This issue was automatically marked as deprecated because there has been no activity for quite some time. It will be closed if there is no further activity.
+          stale-pr-message: |
+            This pull request was automatically marked as deprecated because it hasn't had any activity in quite some time. It will be closed if there is no further activity.
+          exempt-issue-labels: "gsoc-outreachy, help wanted, in progress"
+          exempt-pr-labels: "gsoc-outreachy, help wanted, in progress"
 
   bump-pr-stale:
-    if: >
-      startsWith(github.repository, 'jmuelbert/') && (
-        github.event_name != 'issue_comment' || (
+    if: |
+      startsWith(github.repository, 'jmuelbert/') &&
+      (
+        !startsWith(github.event.repository.name, 'dependabot/') ||
+        (github.event_name == 'schedule') ||
+        (
           contains(github.event.issue.labels.*.name, 'stale') ||
           contains(github.event.pull_request.labels.*.name, 'stale')
         )
       )
     runs-on: ubuntu-latest
     steps:
-      - name: Mark/Close Stale `bump-formula-pr` and `bump-cask-pr` Pull Requests
-        uses: actions/stale@v8
+      - name: Mark or Close Stale `bump-pr`  Pull Requests
+        uses: actions/stale@28ca1036281a5e5922ead5184a1bbf96e5fc984e # v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-stale: 2
-          days-before-close: 1
-          stale-pr-message: >
-            This pull request has been automatically marked as stale because it has not had
-            recent activity. It will be closed if no further activity occurs. To keep this
-            pull request open, add a `help wanted` or `in progress` label.
-          exempt-pr-labels: "help wanted,in progress"
-          any-of-labels: "bump-formula-pr,bump-cask-pr"
+          days-before-stale: 365
+          days-before-close: 30
+          stale-pr-message: |
+            This pull request was automatically marked as deprecated because it hasn't had any activity in quite some time. It will be closed if there is no further activity. To keep this pull request open, add a 'help wanted' or 'in progress' label.          exempt-pr-labels: "help wanted, in progress"
+          any-of-labels: "bump-pr"
 
   lock-threads:
-    if: startsWith(github.repository, 'Homebrew/') && github.event_name != 'issue_comment'
+    if: startsWith(github.repository, 'jmuelbert/') && github.event_name != 'issue_comment'
     runs-on: ubuntu-latest
+
     steps:
       - name: Lock Outdated Threads
-        uses: dessant/lock-threads@c1b35aecc5cdb1a34539d14196df55838bb2f836
+        uses: dessant/lock-threads@1bf7ec25051fe7c00bdd17e6a7cf3d7bfb7dc771 # v5.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-inactive-days: 30

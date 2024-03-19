@@ -1,42 +1,51 @@
 ---
-name-template: v$RESOLVED_VERSION
-tag-template: v$RESOLVED_VERSION
-template: >
-  # What's Changed
-
-
-  $CHANGES
-
-
-  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: Breaking
-    label: "type: breaking"
-  - title: New
-    label: "type: feature"
-  - title: Bug Fixes
-    label: "type: bug"
-  - title: Maintenance
-    label: "type: maintenance"
-  - title: Documentation
-    label: "type: docs"
-  - title: Other changes
-  - title: Dependency Updates
-    label: "type: dependencies"
-    collapse-after: 5
+  - title: ':boom: Breaking Changes'
+    label: 'breaking'
+  - title: ':package: Build System'
+    label: 'build'
+  - title: ':construction_worker: Continuous Integration'
+    label: 'ci'
+  - title: ':books: Documentation'
+    label: 'documentation'
+  - title: ':rocket: Features'
+    label: 'enhancement'
+  - title: ':beetle: Fixes'
+    label: 'bug'
+  - title: ':racehorse: Performance'
+    label: 'performance'
+  - title: ':hammer: Refactoring'
+    label: 'refactoring'
+  - title: ':fire: Removals and Deprecations'
+    label: 'removal'
+  - title: ':lipstick: Style'
+    label: 'style'
+  - title: ':rotating_light: Testing'
+    label: 'testing'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
 version-resolver:
   major:
     labels:
-      - "type: breaking"
+      - 'type: breaking'
   minor:
     labels:
-      - "type: feature"
+      - 'type: feature'
   patch:
     labels:
-      - "type: bug"
-      - "type: maintenance"
-      - "type: docs"
-      - "type: dependencies"
-      - "type: security"
+      - 'type: bug'
+      - 'type: maintenance'
+      - 'type: docs'
+      - 'type: dependencies'
+      - 'type: security'
+
 exclude-labels:
-  - skip-changelog
+  - 'skip-changelog'
+
+template: |
+  ## Changes
+
+  $CHANGES

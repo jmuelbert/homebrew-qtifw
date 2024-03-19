@@ -1,7 +1,29 @@
+.git* export-ignore
+.hooks* export-ignore
+.editorconfig export-ignore
+
+# Custom attribute to mark sources as using our C code style.
+[attr]our-c-style whitespace=tab-in-indent format.clang-format-6.0
+
+# Custom attribute to mark sources as generated.
+# Do not perform whitespace checks. Do not format.
+[attr]generated whitespace=-tab-in-indent,-indent-with-non-tab -format.clang-format-6.0
+
 * text=auto !eol svneol=native#text/plain
 *.gitattributes text svneol=native#text/plain
 
 # Scriptish formats
+*.[1-9] eol=lf
+*.bash eol=lf
+*.sh eol=lf
+*.sh.in eol=lf
+
+*.bat eol=crlf
+*.bat.in eol=crlf
+*.sln eol=crlf
+*.vcproj eol=crlf
+*.vcxproj eol=crlf
+
 *.bat text svneol=native#text/plain
 *.bsh text svneol=native#text/x-beanshell
 *.cgi text svneol=native#text/plain
@@ -11,7 +33,6 @@
 *.pl text svneol=native#text/x-perl
 *.pm text svneol=native#text/x-perl
 *.py text svneol=native#text/x-python
-*.sh eol=lf svneol=LF#text/x-sh
 configure eol=lf svneol=LF#text/x-sh
 
 # Image formats
