@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.19.7",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/sitemap": "^3.1.4",
     "astro-robots-txt": "^1.0.0",
     "html-escaper": "^3.0.3",
     "postcss": "^8.4.33",
