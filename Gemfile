@@ -14,7 +14,7 @@ end
 
 gem "code-scanning-rubocop", "~> 0.6.1"
 gem "debug", platform: :mri if RUBY_VERSION >= "3.1.0"
-gem "google-protobuf", "~> 3.25.2"
+gem "google-protobuf", "~> 4.27.0"
 gem "rake", "~> 13.2"
 gem "rubocop", "~> 1.63"
 gem "rubocop-changes", "~> 0.8.1"
