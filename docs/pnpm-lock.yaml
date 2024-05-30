@@ -31,7 +31,7 @@ dependencies:
     version: 18.2.18
   astro:
     specifier: ^2.10.12
-    version: 2.10.12(@types/node@20.12.12)(sass@1.70.0)
+    version: 2.10.12(@types/node@20.12.12)(sass@1.77.3)
   astro-html-minifier:
     specifier: ^0.5.1
     version: 0.5.1
@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^3.2.4
     version: 3.2.4
   sass:
-    specifier: ^1.70.0
-    version: 1.70.0
+    specifier: ^1.77.3
+    version: 1.77.3
   stylelint:
     specifier: ^15.11.0
     version: 15.11.0
@@ -291,7 +291,7 @@ packages:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.12(@types/node@20.12.12)(sass@1.70.0)
+      astro: 2.10.12(@types/node@20.12.12)(sass@1.77.3)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -1287,7 +1287,7 @@ packages:
       resolve: 1.22.8
       source-map: 0.7.4
       stack-trace: 1.0.0-pre2
-      vite: 4.5.2(@types/node@20.12.12)(sass@1.70.0)
+      vite: 4.5.2(@types/node@20.12.12)(sass@1.77.3)
     transitivePeerDependencies:
       - preact
       - supports-color
@@ -1334,7 +1334,7 @@ packages:
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
       preact: 10.19.3
-      vite: 4.5.2(@types/node@20.12.12)(sass@1.70.0)
+      vite: 4.5.2(@types/node@20.12.12)(sass@1.77.3)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1494,7 +1494,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.6)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 4.5.2(@types/node@20.12.12)(sass@1.70.0)
+      vite: 4.5.2(@types/node@20.12.12)(sass@1.77.3)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1646,7 +1646,7 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /astro@2.10.12(@types/node@20.12.12)(sass@1.70.0):
+  /astro@2.10.12(@types/node@20.12.12)(sass@1.77.3):
     resolution: {integrity: sha512-JbD+hLCbXhpDofuzWQxojmjXwoqD0bR2BGqIByZ7B5Cj6dKQXHIr1HsrDdWcmjM+O4NXKV2TCfeXv1ZTtjqX3Q==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -1709,7 +1709,7 @@ packages:
       typescript: 5.4.5
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.2(@types/node@20.12.12)(sass@1.70.0)
+      vite: 4.5.2(@types/node@20.12.12)(sass@1.77.3)
       vitefu: 0.2.4(vite@4.5.2)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
@@ -4127,8 +4127,8 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
-  /sass@1.70.0:
-    resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==}
+  /sass@1.77.3:
+    resolution: {integrity: sha512-WJHo+jmFp0dwRuymPmIovuxHaBntcCyja5hCB0yYY9wWrViEp4kF5Cdai98P72v6FzroPuABqu+ddLMbQWmwzA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -4700,7 +4700,7 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite@4.5.2(@types/node@20.12.12)(sass@1.70.0):
+  /vite@4.5.2(@types/node@20.12.12)(sass@1.77.3):
     resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4732,7 +4732,7 @@ packages:
       esbuild: 0.18.11
       postcss: 8.4.33
       rollup: 3.28.0
-      sass: 1.70.0
+      sass: 1.77.3
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -4744,7 +4744,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.2(@types/node@20.12.12)(sass@1.70.0)
+      vite: 4.5.2(@types/node@20.12.12)(sass@1.77.3)
 
   /vscode-css-languageservice@6.2.5:
     resolution: {integrity: sha512-/1oyBZK3jfx6A0cA46FCUpy6OlqEsMT47LUIldCIP1YMKRYezJ9No+aNj9IM0AqhRZ92DxZ1DmU5lJ+biuiacA==}
