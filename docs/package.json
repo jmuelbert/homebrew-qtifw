@@ -13,7 +13,7 @@
     "lint:scss": "stylelint \"src/**/*.{astro,scss}\""
   },
   "dependencies": {
-    "@algolia/client-search": "^4.22.1",
+    "@algolia/client-search": "^4.23.3",
     "@astrojs/preact": "^3.3.0",
     "@astrojs/react": "^3.5.0",
     "@docsearch/css": "^3.5.2",
