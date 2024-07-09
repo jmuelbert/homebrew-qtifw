@@ -12,8 +12,8 @@ importers:
         specifier: ^4.24.0
         version: 4.24.0
       '@astrojs/preact':
-        specifier: ^3.4.0
-        version: 3.4.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
+        specifier: ^3.5.0
+        version: 3.5.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
       '@astrojs/react':
         specifier: ^3.5.0
         version: 3.5.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
@@ -190,8 +190,8 @@ packages:
     resolution: {integrity: sha512-mfEbBD7oi8yBHhcJucEjnrquREkJ3os+jioURP8BR2B8tOV2rV2j8trvmLUgfS+P/+HevGObxCTjcRYxn6T7eg==}
     engines: {node: '>=16.12.0'}
 
-  '@astrojs/preact@3.4.0':
-    resolution: {integrity: sha512-QTv28aTzWtit3OaZXmqS+cYdUAWToSwsGt4SkWqD8vkD5QAmF3lPq3hPi1QpmzeHoS+w7VITWtTmgBkbOaphiQ==}
+  '@astrojs/preact@3.5.0':
+    resolution: {integrity: sha512-/zjxQ4/TrTk68fpm+rVIPSiF15xpsvXA5RWIDBqv1LjJkPyhVsOQEKasZkdmfq3DWcyJw3V5QvNVrwmS31CtmA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       preact: ^10.6.5
@@ -2981,7 +2981,7 @@ snapshots:
       - astro
       - supports-color
 
-  '@astrojs/preact@3.4.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
+  '@astrojs/preact@3.5.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.22.5)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.22.5)
