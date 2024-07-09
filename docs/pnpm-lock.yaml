@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@algolia/client-search':
-        specifier: ^4.23.3
-        version: 4.23.3
+        specifier: ^4.24.0
+        version: 4.24.0
       '@astrojs/preact':
-        specifier: ^3.4.0
-        version: 3.4.0(@babel/core@7.22.5)(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
+        specifier: ^3.5.0
+        version: 3.5.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
       '@astrojs/react':
         specifier: ^3.5.0
         version: 3.5.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
@@ -22,7 +22,7 @@ importers:
         version: 3.5.2
       '@docsearch/react':
         specifier: ^3.5.2
-        version: 3.5.2(@algolia/client-search@4.23.3)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)
+        version: 3.5.2(@algolia/client-search@4.24.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)
       '@types/node':
         specifier: ^20.14.9
         version: 20.14.9
@@ -39,8 +39,8 @@ importers:
         specifier: ^0.5.1
         version: 0.5.1
       preact:
-        specifier: ^10.22.0
-        version: 10.22.0
+        specifier: ^10.22.1
+        version: 10.22.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -64,8 +64,8 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3
       postcss:
-        specifier: ^8.4.38
-        version: 8.4.38
+        specifier: ^8.4.39
+        version: 8.4.39
       postcss-html:
         specifier: ^1.7.0
         version: 1.7.0
@@ -80,7 +80,7 @@ importers:
         version: 15.11.0
       stylelint-config-recommended-scss:
         specifier: ^13.1.0
-        version: 13.1.0(postcss@8.4.38)(stylelint@15.11.0)
+        version: 13.1.0(postcss@8.4.39)(stylelint@15.11.0)
       stylelint-config-standard:
         specifier: ^34.0.0
         version: 34.0.0(stylelint@15.11.0)
@@ -113,8 +113,8 @@ packages:
   '@algolia/cache-common@4.19.1':
     resolution: {integrity: sha512-XGghi3l0qA38HiqdoUY+wvGyBsGvKZ6U3vTiMBT4hArhP3fOGLXpIINgMiiGjTe4FVlTa5a/7Zf2bwlIHfRqqg==}
 
-  '@algolia/cache-common@4.23.3':
-    resolution: {integrity: sha512-h9XcNI6lxYStaw32pHpB1TMm0RuxphF+Ik4o7tcQiodEdpKK+wKufY6QXtba7t3k8eseirEMVB83uFFF3Nu54A==}
+  '@algolia/cache-common@4.24.0':
+    resolution: {integrity: sha512-emi+v+DmVLpMGhp0V9q9h5CdkURsNmFC+cOS6uK9ndeJm9J4TiqSvPYVu+THUP8P/S08rxf5x2P+p3CfID0Y4g==}
 
   '@algolia/cache-in-memory@4.19.1':
     resolution: {integrity: sha512-+PDWL+XALGvIginigzu8oU6eWw+o76Z8zHbBovWYcrtWOEtinbl7a7UTt3x3lthv+wNuFr/YD1Gf+B+A9V8n5w==}
@@ -128,8 +128,8 @@ packages:
   '@algolia/client-common@4.19.1':
     resolution: {integrity: sha512-3kAIVqTcPrjfS389KQvKzliC559x+BDRxtWamVJt8IVp7LGnjq+aVAXg4Xogkur1MUrScTZ59/AaUd5EdpyXgA==}
 
-  '@algolia/client-common@4.23.3':
-    resolution: {integrity: sha512-l6EiPxdAlg8CYhroqS5ybfIczsGUIAC47slLPOMDeKSVXYG1n0qGiz4RjAHLw2aD0xzh2EXZ7aRguPfz7UKDKw==}
+  '@algolia/client-common@4.24.0':
+    resolution: {integrity: sha512-bc2ROsNL6w6rqpl5jj/UywlIYC21TwSSoFHKl01lYirGMW+9Eek6r02Tocg4gZ8HAw3iBvu6XQiM3BEbmEMoiA==}
 
   '@algolia/client-personalization@4.19.1':
     resolution: {integrity: sha512-8CWz4/H5FA+krm9HMw2HUQenizC/DxUtsI5oYC0Jxxyce1vsr8cb1aEiSJArQT6IzMynrERif1RVWLac1m36xw==}
@@ -137,14 +137,14 @@ packages:
   '@algolia/client-search@4.19.1':
     resolution: {integrity: sha512-mBecfMFS4N+yK/p0ZbK53vrZbL6OtWMk8YmnOv1i0LXx4pelY8TFhqKoTit3NPVPwoSNN0vdSN9dTu1xr1XOVw==}
 
-  '@algolia/client-search@4.23.3':
-    resolution: {integrity: sha512-P4VAKFHqU0wx9O+q29Q8YVuaowaZ5EM77rxfmGnkHUJggh28useXQdopokgwMeYw2XUht49WX5RcTQ40rZIabw==}
+  '@algolia/client-search@4.24.0':
+    resolution: {integrity: sha512-uRW6EpNapmLAD0mW47OXqTP8eiIx5F6qN9/x/7HHO6owL3N1IXqydGwW5nhDFBrV+ldouro2W1VX3XlcUXEFCA==}
 
   '@algolia/logger-common@4.19.1':
     resolution: {integrity: sha512-i6pLPZW/+/YXKis8gpmSiNk1lOmYCmRI6+x6d2Qk1OdfvX051nRVdalRbEcVTpSQX6FQAoyeaui0cUfLYW5Elw==}
 
-  '@algolia/logger-common@4.23.3':
-    resolution: {integrity: sha512-y9kBtmJwiZ9ZZ+1Ek66P0M68mHQzKRxkW5kAAXYN/rdzgDN0d2COsViEFufxJ0pb45K4FRcfC7+33YB4BLrZ+g==}
+  '@algolia/logger-common@4.24.0':
+    resolution: {integrity: sha512-LLUNjkahj9KtKYrQhFKCzMx0BY3RnNP4FEtO+sBybCjJ73E8jNdaKJ/Dd8A/VA4imVHP5tADZ8pn5B8Ga/wTMA==}
 
   '@algolia/logger-console@4.19.1':
     resolution: {integrity: sha512-jj72k9GKb9W0c7TyC3cuZtTr0CngLBLmc8trzZlXdfvQiigpUdvTi1KoWIb2ZMcRBG7Tl8hSb81zEY3zI2RlXg==}
@@ -155,8 +155,8 @@ packages:
   '@algolia/requester-common@4.19.1':
     resolution: {integrity: sha512-BisRkcWVxrDzF1YPhAckmi2CFYK+jdMT60q10d7z3PX+w6fPPukxHRnZwooiTUrzFe50UBmLItGizWHP5bDzVQ==}
 
-  '@algolia/requester-common@4.23.3':
-    resolution: {integrity: sha512-xloIdr/bedtYEGcXCiF2muajyvRhwop4cMZo+K2qzNht0CMzlRkm8YsDdj5IaBhshqfgmBb3rTg4sL4/PpvLYw==}
+  '@algolia/requester-common@4.24.0':
+    resolution: {integrity: sha512-k3CXJ2OVnvgE3HMwcojpvY6d9kgKMPRxs/kVohrwF5WMr2fnqojnycZkxPoEg+bXm8fi5BBfFmOqgYztRtHsQA==}
 
   '@algolia/requester-node-http@4.19.1':
     resolution: {integrity: sha512-6DK52DHviBHTG2BK/Vv2GIlEw7i+vxm7ypZW0Z7vybGCNDeWzADx+/TmxjkES2h15+FZOqVf/Ja677gePsVItA==}
@@ -164,8 +164,8 @@ packages:
   '@algolia/transporter@4.19.1':
     resolution: {integrity: sha512-nkpvPWbpuzxo1flEYqNIbGz7xhfhGOKGAZS7tzC+TELgEmi7z99qRyTfNSUlW7LZmB3ACdnqAo+9A9KFBENviQ==}
 
-  '@algolia/transporter@4.23.3':
-    resolution: {integrity: sha512-Wjl5gttqnf/gQKJA+dafnD0Y6Yw97yvfY8R9h0dQltX1GXTgNs1zWgvtWW0tHl1EgMdhAyw189uWiZMnL3QebQ==}
+  '@algolia/transporter@4.24.0':
+    resolution: {integrity: sha512-86nI7w6NzWxd1Zp9q3413dRshDqAzSbsQjhcDhPIatEFiZrL1/TjnHL8S7jVKFePlIMzDsZWXAXwXzcok9c5oA==}
 
   '@ampproject/remapping@2.2.1':
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
@@ -190,8 +190,8 @@ packages:
     resolution: {integrity: sha512-mfEbBD7oi8yBHhcJucEjnrquREkJ3os+jioURP8BR2B8tOV2rV2j8trvmLUgfS+P/+HevGObxCTjcRYxn6T7eg==}
     engines: {node: '>=16.12.0'}
 
-  '@astrojs/preact@3.4.0':
-    resolution: {integrity: sha512-QTv28aTzWtit3OaZXmqS+cYdUAWToSwsGt4SkWqD8vkD5QAmF3lPq3hPi1QpmzeHoS+w7VITWtTmgBkbOaphiQ==}
+  '@astrojs/preact@3.5.0':
+    resolution: {integrity: sha512-/zjxQ4/TrTk68fpm+rVIPSiF15xpsvXA5RWIDBqv1LjJkPyhVsOQEKasZkdmfq3DWcyJw3V5QvNVrwmS31CtmA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       preact: ^10.6.5
@@ -2094,6 +2094,9 @@ packages:
   picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
+  picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
+
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
@@ -2135,8 +2138,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.4.38:
-    resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
+  postcss@8.4.39:
+    resolution: {integrity: sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==}
     engines: {node: ^10 || ^12 || >=14}
 
   preact-render-to-string@6.3.1:
@@ -2149,8 +2152,8 @@ packages:
     peerDependencies:
       preact: '>=10 || ^10.0.0-beta.0 || ^10.0.0-alpha.0'
 
-  preact@10.22.0:
-    resolution: {integrity: sha512-RRurnSjJPj4rp5K6XoP45Ui33ncb7e4H7WiOHVpjbkvqvA3U+N8Z6Qbo0AE6leGYBV66n8EhEaFixvIu3SkxFw==}
+  preact@10.22.1:
+    resolution: {integrity: sha512-jRYbDDgMpIb5LHq3hkI0bbl+l/TQ9UnkdQ0ww+lp+4MMOdqaUYdFc5qeyP+IV8FAd/2Em7drVPeKdQxsiWCf/A==}
 
   preferred-pm@3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
@@ -2797,32 +2800,32 @@ packages:
 
 snapshots:
 
-  '@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)(search-insights@2.6.0)':
+  '@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)(search-insights@2.6.0)':
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)(search-insights@2.6.0)
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)(search-insights@2.6.0)
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)(search-insights@2.6.0)':
+  '@algolia/autocomplete-plugin-algolia-insights@1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)(search-insights@2.6.0)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)
       search-insights: 2.6.0
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
 
-  '@algolia/autocomplete-preset-algolia@1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)':
+  '@algolia/autocomplete-preset-algolia@1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)
-      '@algolia/client-search': 4.23.3
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)
+      '@algolia/client-search': 4.24.0
       algoliasearch: 4.19.1
 
-  '@algolia/autocomplete-shared@1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)':
+  '@algolia/autocomplete-shared@1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)':
     dependencies:
-      '@algolia/client-search': 4.23.3
+      '@algolia/client-search': 4.24.0
       algoliasearch: 4.19.1
 
   '@algolia/cache-browser-local-storage@4.19.1':
@@ -2831,7 +2834,7 @@ snapshots:
 
   '@algolia/cache-common@4.19.1': {}
 
-  '@algolia/cache-common@4.23.3': {}
+  '@algolia/cache-common@4.24.0': {}
 
   '@algolia/cache-in-memory@4.19.1':
     dependencies:
@@ -2855,10 +2858,10 @@ snapshots:
       '@algolia/requester-common': 4.19.1
       '@algolia/transporter': 4.19.1
 
-  '@algolia/client-common@4.23.3':
+  '@algolia/client-common@4.24.0':
     dependencies:
-      '@algolia/requester-common': 4.23.3
-      '@algolia/transporter': 4.23.3
+      '@algolia/requester-common': 4.24.0
+      '@algolia/transporter': 4.24.0
 
   '@algolia/client-personalization@4.19.1':
     dependencies:
@@ -2872,15 +2875,15 @@ snapshots:
       '@algolia/requester-common': 4.19.1
       '@algolia/transporter': 4.19.1
 
-  '@algolia/client-search@4.23.3':
+  '@algolia/client-search@4.24.0':
     dependencies:
-      '@algolia/client-common': 4.23.3
-      '@algolia/requester-common': 4.23.3
-      '@algolia/transporter': 4.23.3
+      '@algolia/client-common': 4.24.0
+      '@algolia/requester-common': 4.24.0
+      '@algolia/transporter': 4.24.0
 
   '@algolia/logger-common@4.19.1': {}
 
-  '@algolia/logger-common@4.23.3': {}
+  '@algolia/logger-common@4.24.0': {}
 
   '@algolia/logger-console@4.19.1':
     dependencies:
@@ -2892,7 +2895,7 @@ snapshots:
 
   '@algolia/requester-common@4.19.1': {}
 
-  '@algolia/requester-common@4.23.3': {}
+  '@algolia/requester-common@4.24.0': {}
 
   '@algolia/requester-node-http@4.19.1':
     dependencies:
@@ -2904,11 +2907,11 @@ snapshots:
       '@algolia/logger-common': 4.19.1
       '@algolia/requester-common': 4.19.1
 
-  '@algolia/transporter@4.23.3':
+  '@algolia/transporter@4.24.0':
     dependencies:
-      '@algolia/cache-common': 4.23.3
-      '@algolia/logger-common': 4.23.3
-      '@algolia/requester-common': 4.23.3
+      '@algolia/cache-common': 4.24.0
+      '@algolia/logger-common': 4.24.0
+      '@algolia/requester-common': 4.24.0
 
   '@ampproject/remapping@2.2.1':
     dependencies:
@@ -2978,16 +2981,16 @@ snapshots:
       - astro
       - supports-color
 
-  '@astrojs/preact@3.4.0(@babel/core@7.22.5)(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
+  '@astrojs/preact@3.5.0(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.22.5)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.22.5)
-      '@preact/preset-vite': 2.8.2(@babel/core@7.22.5)(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
-      '@preact/signals': 1.2.3(preact@10.22.0)
+      '@preact/preset-vite': 2.8.2(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
+      '@preact/signals': 1.2.3(preact@10.22.1)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.22.5)
-      preact: 10.22.0
-      preact-render-to-string: 6.3.1(preact@10.22.0)
-      preact-ssr-prepass: 1.2.1(preact@10.22.0)
+      preact: 10.22.1
+      preact-render-to-string: 6.3.1(preact@10.22.1)
+      preact-ssr-prepass: 1.2.1(preact@10.22.1)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
@@ -3304,10 +3307,10 @@ snapshots:
 
   '@docsearch/css@3.5.2': {}
 
-  '@docsearch/react@3.5.2(@algolia/client-search@4.23.3)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)':
+  '@docsearch/react@3.5.2(@algolia/client-search@4.24.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)':
     dependencies:
-      '@algolia/autocomplete-core': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)(search-insights@2.6.0)
-      '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.23.3)(algoliasearch@4.19.1)
+      '@algolia/autocomplete-core': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)(search-insights@2.6.0)
+      '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.19.1)
       '@docsearch/css': 3.5.2
       algoliasearch: 4.19.1
     optionalDependencies:
@@ -3526,12 +3529,12 @@ snapshots:
       tiny-glob: 0.2.9
       tslib: 2.5.0
 
-  '@preact/preset-vite@2.8.2(@babel/core@7.22.5)(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
+  '@preact/preset-vite@2.8.2(@babel/core@7.22.5)(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
     dependencies:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.22.5)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.22.5)
-      '@prefresh/vite': 2.4.1(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
+      '@prefresh/vite': 2.4.1(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.22.5)
       debug: 4.3.4
@@ -3548,27 +3551,27 @@ snapshots:
 
   '@preact/signals-core@1.6.0': {}
 
-  '@preact/signals@1.2.3(preact@10.22.0)':
+  '@preact/signals@1.2.3(preact@10.22.1)':
     dependencies:
       '@preact/signals-core': 1.6.0
-      preact: 10.22.0
+      preact: 10.22.1
 
   '@prefresh/babel-plugin@0.5.0': {}
 
-  '@prefresh/core@1.5.1(preact@10.22.0)':
+  '@prefresh/core@1.5.1(preact@10.22.1)':
     dependencies:
-      preact: 10.22.0
+      preact: 10.22.1
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.1(preact@10.22.0)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
+  '@prefresh/vite@2.4.1(preact@10.22.1)(vite@4.5.2(@types/node@20.14.9)(sass@1.77.6))':
     dependencies:
       '@babel/core': 7.24.7
       '@prefresh/babel-plugin': 0.5.0
-      '@prefresh/core': 1.5.1(preact@10.22.0)
+      '@prefresh/core': 1.5.1(preact@10.22.1)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.22.0
+      preact: 10.22.1
       vite: 4.5.2(@types/node@20.14.9)(sass@1.77.6)
     transitivePeerDependencies:
       - supports-color
@@ -5256,6 +5259,8 @@ snapshots:
 
   picocolors@1.0.0: {}
 
+  picocolors@1.0.1: {}
+
   picomatch@2.3.1: {}
 
   pify@4.0.1: {}
@@ -5268,20 +5273,20 @@ snapshots:
     dependencies:
       htmlparser2: 8.0.2
       js-tokens: 9.0.0
-      postcss: 8.4.38
-      postcss-safe-parser: 6.0.0(postcss@8.4.38)
+      postcss: 8.4.39
+      postcss-safe-parser: 6.0.0(postcss@8.4.39)
 
   postcss-media-query-parser@0.2.3: {}
 
   postcss-resolve-nested-selector@0.1.1: {}
 
-  postcss-safe-parser@6.0.0(postcss@8.4.38):
+  postcss-safe-parser@6.0.0(postcss@8.4.39):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
 
-  postcss-scss@4.0.9(postcss@8.4.38):
+  postcss-scss@4.0.9(postcss@8.4.39):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
 
   postcss-selector-parser@6.0.13:
     dependencies:
@@ -5290,22 +5295,22 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.4.38:
+  postcss@8.4.39:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  preact-render-to-string@6.3.1(preact@10.22.0):
+  preact-render-to-string@6.3.1(preact@10.22.1):
     dependencies:
-      preact: 10.22.0
+      preact: 10.22.1
       pretty-format: 3.8.0
 
-  preact-ssr-prepass@1.2.1(preact@10.22.0):
+  preact-ssr-prepass@1.2.1(preact@10.22.1):
     dependencies:
-      preact: 10.22.0
+      preact: 10.22.1
 
-  preact@10.22.0: {}
+  preact@10.22.1: {}
 
   preferred-pm@3.0.3:
     dependencies:
@@ -5660,14 +5665,14 @@ snapshots:
     dependencies:
       inline-style-parser: 0.1.1
 
-  stylelint-config-recommended-scss@13.1.0(postcss@8.4.38)(stylelint@15.11.0):
+  stylelint-config-recommended-scss@13.1.0(postcss@8.4.39)(stylelint@15.11.0):
     dependencies:
-      postcss-scss: 4.0.9(postcss@8.4.38)
+      postcss-scss: 4.0.9(postcss@8.4.39)
       stylelint: 15.11.0
       stylelint-config-recommended: 13.0.0(stylelint@15.11.0)
       stylelint-scss: 5.3.0(stylelint@15.11.0)
     optionalDependencies:
-      postcss: 8.4.38
+      postcss: 8.4.39
 
   stylelint-config-recommended@13.0.0(stylelint@15.11.0):
     dependencies:
@@ -5716,9 +5721,9 @@ snapshots:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       picocolors: 1.0.0
-      postcss: 8.4.38
+      postcss: 8.4.39
       postcss-resolve-nested-selector: 0.1.1
-      postcss-safe-parser: 6.0.0(postcss@8.4.38)
+      postcss-safe-parser: 6.0.0(postcss@8.4.39)
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
@@ -5913,7 +5918,7 @@ snapshots:
   vite@4.5.2(@types/node@20.14.9)(sass@1.77.6):
     dependencies:
       esbuild: 0.18.11
-      postcss: 8.4.38
+      postcss: 8.4.39
       rollup: 3.28.0
     optionalDependencies:
       '@types/node': 20.14.9
