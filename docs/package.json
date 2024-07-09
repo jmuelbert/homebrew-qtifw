@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^2.10.12",
     "astro-html-minifier": "^0.5.1",
-    "preact": "^10.22.0",
+    "preact": "^10.22.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.4.5"
@@ -33,7 +33,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "astro-robots-txt": "^1.0.0",
     "html-escaper": "^3.0.3",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.39",
     "postcss-html": "^1.7.0",
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
