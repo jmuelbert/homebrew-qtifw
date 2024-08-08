@@ -18,8 +18,8 @@ importers:
         specifier: ^3.6.0
         version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@20.14.11)(sass@1.77.8))
       '@docsearch/css':
-        specifier: ^3.5.2
-        version: 3.5.2
+        specifier: ^3.6.1
+        version: 3.6.1
       '@docsearch/react':
         specifier: ^3.6.1
         version: 3.6.1(@algolia/client-search@4.24.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)
@@ -403,9 +403,6 @@ packages:
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss-selector-parser: ^6.0.13
-
-  '@docsearch/css@3.5.2':
-    resolution: {integrity: sha512-SPiDHaWKQZpwR2siD0KQUwlStvIAnEyK6tAE2h2Wuoq8ue9skzhlyVQ1ddzOxX6khULnAALDiR/isSF3bnuciA==}
 
   '@docsearch/css@3.6.1':
     resolution: {integrity: sha512-VtVb5DS+0hRIprU2CO6ZQjK2Zg4QU5HrDM1+ix6rT0umsYvFvatMAnf97NHZlVWDaaLlx7GRfR/7FikANiM2Fg==}
@@ -3307,8 +3304,6 @@ snapshots:
   '@csstools/selector-specificity@3.0.0(postcss-selector-parser@6.0.13)':
     dependencies:
       postcss-selector-parser: 6.0.13
-
-  '@docsearch/css@3.5.2': {}
 
   '@docsearch/css@3.6.1': {}
 
