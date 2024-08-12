@@ -13,10 +13,10 @@ importers:
         version: 4.24.0
       '@astrojs/preact':
         specifier: ^3.5.1
-        version: 3.5.1(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+        version: 3.5.1(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       '@astrojs/react':
         specifier: ^3.6.1
-        version: 3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+        version: 3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       '@docsearch/css':
         specifier: ^3.6.1
         version: 3.6.1
@@ -24,8 +24,8 @@ importers:
         specifier: ^3.6.1
         version: 3.6.1(@algolia/client-search@4.24.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.6.0)
       '@types/node':
-        specifier: ^22.1.0
-        version: 22.1.0
+        specifier: ^22.2.0
+        version: 22.2.0
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -34,7 +34,7 @@ importers:
         version: 18.3.0
       astro:
         specifier: ^2.10.12
-        version: 2.10.12(@types/node@22.1.0)(sass@1.77.8)
+        version: 2.10.12(@types/node@22.2.0)(sass@1.77.8)
       astro-html-minifier:
         specifier: ^0.5.1
         version: 0.5.1
@@ -53,7 +53,7 @@ importers:
     devDependencies:
       '@astrojs/mdx':
         specifier: ^0.19.7
-        version: 0.19.7(astro@2.10.12(@types/node@22.1.0)(sass@1.77.8))
+        version: 0.19.7(astro@2.10.12(@types/node@22.2.0)(sass@1.77.8))
       '@astrojs/sitemap':
         specifier: ^3.1.6
         version: 3.1.6
@@ -832,11 +832,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@20.14.11':
-    resolution: {integrity: sha512-kprQpL8MMeszbz6ojB5/tU8PLN4kesnN8Gjzw349rDlNgsSzg90lAVj3llK99Dh7JON+t9AuscPPFW6mPbTnSA==}
-
-  '@types/node@22.1.0':
-    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+  '@types/node@22.2.0':
+    resolution: {integrity: sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2577,9 +2574,6 @@ packages:
   ultrahtml@1.5.3:
     resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-
   undici-types@6.13.0:
     resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
 
@@ -2936,10 +2930,10 @@ snapshots:
       vscode-languageserver-types: 3.17.3
       vscode-uri: 3.0.7
 
-  '@astrojs/markdown-remark@2.2.1(astro@2.10.12(@types/node@22.1.0)(sass@1.77.8))':
+  '@astrojs/markdown-remark@2.2.1(astro@2.10.12(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.12(@types/node@22.1.0)(sass@1.77.8)
+      astro: 2.10.12(@types/node@22.2.0)(sass@1.77.8)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -2955,9 +2949,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@0.19.7(astro@2.10.12(@types/node@22.1.0)(sass@1.77.8))':
+  '@astrojs/mdx@0.19.7(astro@2.10.12(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
-      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12(@types/node@22.1.0)(sass@1.77.8))
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12(@types/node@22.2.0)(sass@1.77.8))
       '@astrojs/prism': 2.1.2
       '@mdx-js/mdx': 2.3.0
       acorn: 8.8.2
@@ -2979,11 +2973,11 @@ snapshots:
       - astro
       - supports-color
 
-  '@astrojs/preact@3.5.1(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))':
+  '@astrojs/preact@3.5.1(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.22.5)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.22.5)
-      '@preact/preset-vite': 2.8.2(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+      '@preact/preset-vite': 2.8.2(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       '@preact/signals': 1.3.0(preact@10.23.1)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.22.5)
       preact: 10.23.1
@@ -2997,11 +2991,11 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))':
+  '@astrojs/react@3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
-      '@vitejs/plugin-react': 4.3.1(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+      '@vitejs/plugin-react': 4.3.1(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.5.3
@@ -3526,12 +3520,12 @@ snapshots:
       tiny-glob: 0.2.9
       tslib: 2.5.0
 
-  '@preact/preset-vite@2.8.2(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))':
+  '@preact/preset-vite@2.8.2(@babel/core@7.22.5)(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.22.5)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.22.5)
-      '@prefresh/vite': 2.4.1(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+      '@prefresh/vite': 2.4.1(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.22.5)
       debug: 4.3.4
@@ -3541,7 +3535,7 @@ snapshots:
       resolve: 1.22.8
       source-map: 0.7.4
       stack-trace: 1.0.0-pre2
-      vite: 4.5.2(@types/node@22.1.0)(sass@1.77.8)
+      vite: 4.5.2(@types/node@22.2.0)(sass@1.77.8)
     transitivePeerDependencies:
       - preact
       - supports-color
@@ -3561,7 +3555,7 @@ snapshots:
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.1(preact@10.23.1)(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))':
+  '@prefresh/vite@2.4.1(preact@10.23.1)(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@babel/core': 7.24.7
       '@prefresh/babel-plugin': 0.5.0
@@ -3569,7 +3563,7 @@ snapshots:
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
       preact: 10.23.1
-      vite: 4.5.2(@types/node@22.1.0)(sass@1.77.8)
+      vite: 4.5.2(@types/node@22.2.0)(sass@1.77.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -3645,11 +3639,7 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@20.14.11':
-    dependencies:
-      undici-types: 5.26.5
-
-  '@types/node@22.1.0':
+  '@types/node@22.2.0':
     dependencies:
       undici-types: 6.13.0
 
@@ -3672,20 +3662,20 @@ snapshots:
 
   '@types/sax@1.2.4':
     dependencies:
-      '@types/node': 20.14.11
+      '@types/node': 22.2.0
 
   '@types/unist@2.0.6': {}
 
   '@types/yargs-parser@21.0.0': {}
 
-  '@vitejs/plugin-react@4.3.1(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))':
+  '@vitejs/plugin-react@4.3.1(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 4.5.2(@types/node@22.1.0)(sass@1.77.8)
+      vite: 4.5.2(@types/node@22.2.0)(sass@1.77.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -3783,12 +3773,12 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.22.4
 
-  astro@2.10.12(@types/node@22.1.0)(sass@1.77.8):
+  astro@2.10.12(@types/node@22.2.0)(sass@1.77.8):
     dependencies:
       '@astrojs/compiler': 1.8.1
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12(@types/node@22.1.0)(sass@1.77.8))
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12(@types/node@22.2.0)(sass@1.77.8))
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -3838,8 +3828,8 @@ snapshots:
       typescript: 5.5.4
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.2(@types/node@22.1.0)(sass@1.77.8)
-      vitefu: 0.2.4(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8))
+      vite: 4.5.2(@types/node@22.2.0)(sass@1.77.8)
+      vitefu: 0.2.4(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8))
       which-pm: 2.0.0
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -5803,8 +5793,6 @@ snapshots:
 
   ultrahtml@1.5.3: {}
 
-  undici-types@5.26.5: {}
-
   undici-types@6.13.0: {}
 
   undici@5.26.3:
@@ -5911,19 +5899,19 @@ snapshots:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  vite@4.5.2(@types/node@22.1.0)(sass@1.77.8):
+  vite@4.5.2(@types/node@22.2.0)(sass@1.77.8):
     dependencies:
       esbuild: 0.18.11
       postcss: 8.4.41
       rollup: 3.28.0
     optionalDependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
       fsevents: 2.3.2
       sass: 1.77.8
 
-  vitefu@0.2.4(vite@4.5.2(@types/node@22.1.0)(sass@1.77.8)):
+  vitefu@0.2.4(vite@4.5.2(@types/node@22.2.0)(sass@1.77.8)):
     optionalDependencies:
-      vite: 4.5.2(@types/node@22.1.0)(sass@1.77.8)
+      vite: 4.5.2(@types/node@22.2.0)(sass@1.77.8)
 
   vscode-css-languageservice@6.2.5:
     dependencies:
