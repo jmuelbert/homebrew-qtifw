@@ -26,10 +26,10 @@ GEM
     docile (1.4.0)
     drb (2.2.1)
     git_diff_parser (3.2.0)
-    google-protobuf (4.28.0-x86_64-darwin)
+    google-protobuf (4.28.1-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.28.0-x86_64-linux)
+    google-protobuf (4.28.1-x86_64-linux)
       bigdecimal
       rake (>= 13)
     i18n (1.14.5)
@@ -40,8 +40,8 @@ GEM
       reline (>= 0.4.2)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
+    logger (1.6.1)
     minitest (5.25.1)
-    mutex_m (0.2.0)
     parallel (1.26.3)
     parser (3.3.4.2)
       ast (~> 2.4.1)
@@ -138,7 +138,7 @@ DEPENDENCIES
   activesupport (< 8)
   code-scanning-rubocop (~> 0.6.1)
   debug
-  google-protobuf (~> 4.28.0)
+  google-protobuf (~> 4.28.1)
   rake (~> 13.2)
   rspec
   rubocop (~> 1.65)
