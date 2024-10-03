@@ -17,7 +17,7 @@
     "@astrojs/preact": "^3.5.3",
     "@astrojs/react": "^3.6.2",
     "@docsearch/css": "^3.6.1",
-    "@docsearch/react": "^3.6.1",
+    "@docsearch/react": "^3.6.2",
     "@types/node": "^22.5.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
