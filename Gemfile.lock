@@ -57,7 +57,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.7)
       io-console (~> 0.5)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -111,7 +111,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (3.0.4)
+    rubocop-rspec (3.1.0)
       rubocop (~> 1.61)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
@@ -151,7 +151,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.21.1)
   rubocop-rails (~> 2.26.2)
   rubocop-rake (~> 0.6.0)
-  rubocop-rspec (~> 3.0)
+  rubocop-rspec (~> 3.1)
   rubocop-thread_safety (~> 0.5.1)
   simplecov
 
