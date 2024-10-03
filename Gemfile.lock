@@ -26,13 +26,13 @@ GEM
     docile (1.4.0)
     drb (2.2.1)
     git_diff_parser (3.2.0)
-    google-protobuf (4.28.0-x86_64-darwin)
+    google-protobuf (4.28.2-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.28.0-x86_64-linux)
+    google-protobuf (4.28.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     irb (1.13.1)
@@ -40,10 +40,10 @@ GEM
       reline (>= 0.4.2)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
+    logger (1.6.1)
     minitest (5.25.1)
-    mutex_m (0.2.0)
     parallel (1.26.3)
-    parser (3.3.4.2)
+    parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
     psych (5.1.2)
@@ -57,8 +57,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.7)
       io-console (~> 0.5)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.7)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -83,7 +82,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.32.1)
+    rubocop-ast (1.32.3)
       parser (>= 3.3.1.0)
     rubocop-changes (0.8.1)
       git_diff_parser (~> 3.2)
@@ -105,7 +104,7 @@ GEM
     rubocop-performance (1.21.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.26.0)
+    rubocop-rails (2.26.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
@@ -125,10 +124,9 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     stringio (3.1.0)
-    strscan (3.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.5.0)
+    unicode-display_width (2.6.0)
 
 PLATFORMS
   x86_64-darwin-22
@@ -138,7 +136,7 @@ DEPENDENCIES
   activesupport (< 8)
   code-scanning-rubocop (~> 0.6.1)
   debug
-  google-protobuf (~> 4.28.0)
+  google-protobuf (~> 4.28.2)
   rake (~> 13.2)
   rspec
   rubocop (~> 1.65)
@@ -151,7 +149,7 @@ DEPENDENCIES
   rubocop-minitest (~> 0.35.1)
   rubocop-packaging (~> 0.5.2)
   rubocop-performance (~> 1.21.1)
-  rubocop-rails (~> 2.26.0)
+  rubocop-rails (~> 2.26.2)
   rubocop-rake (~> 0.6.0)
   rubocop-rspec (~> 3.0)
   rubocop-thread_safety (~> 0.5.1)
