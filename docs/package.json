@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^2.10.12",
     "astro-html-minifier": "^0.5.1",
-    "preact": "^10.23.2",
+    "preact": "^10.24.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.5.4"
