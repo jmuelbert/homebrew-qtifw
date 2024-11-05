@@ -18,7 +18,7 @@
     "@astrojs/react": "^3.6.2",
     "@docsearch/css": "^3.6.1",
     "@docsearch/react": "^3.6.1",
-    "@types/node": "^22.5.1",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "astro": "^2.10.12",
