@@ -17,7 +17,7 @@
     "@astrojs/preact": "^3.5.3",
     "@astrojs/react": "^3.6.2",
     "@docsearch/css": "^3.6.1",
-    "@docsearch/react": "^3.6.1",
+    "@docsearch/react": "^3.8.0",
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
@@ -36,7 +36,7 @@
     "postcss": "^8.4.47",
     "postcss-html": "^1.7.0",
     "prettier": "^3.3.3",
-    "sass": "^1.77.8",
+    "sass": "^1.82.0",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended-scss": "^13.1.0",
     "stylelint-config-standard": "^34.0.0"
