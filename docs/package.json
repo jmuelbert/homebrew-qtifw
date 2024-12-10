@@ -17,8 +17,8 @@
     "@astrojs/preact": "^3.5.3",
     "@astrojs/react": "^3.6.2",
     "@docsearch/css": "^3.6.1",
-    "@docsearch/react": "^3.6.1",
-    "@types/node": "^22.5.1",
+    "@docsearch/react": "^3.8.0",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "astro": "^2.10.12",
@@ -26,7 +26,7 @@
     "preact": "^10.23.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.19.7",
@@ -36,7 +36,7 @@
     "postcss": "^8.4.47",
     "postcss-html": "^1.7.0",
     "prettier": "^3.3.3",
-    "sass": "^1.77.8",
+    "sass": "^1.82.0",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended-scss": "^13.1.0",
     "stylelint-config-standard": "^34.0.0"
