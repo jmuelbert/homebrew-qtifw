@@ -11,8 +11,8 @@
 class Qtifw < Formula
   desc "Qt Installer Framework Installer"
   homepage "https://doc.qt.io/qtinstallerframework/"
-  url "https://download.qt.io/official_releases/qt-installer-framework/4.5.2/installer-framework-opensource-src-4.5.2.tar.xz"
-  sha256 "f815a1a230963f0fe7c3c2b0a9b559d5d7cadbaa4404ff8a2bd6c6eb74d89aca" # DevSkim: ignore DS173237
+  url "https://download.qt.io/official_releases/qt-installer-framework/4.6.1/installer-framework-everywhere-src-4.6.1.tar.xz"
+  sha256 "21596b84cd6c848a033f66b84b316802f5c1ec980a0eb4973c085a3a92c1c729" # DevSkim: ignore DS173237
   version_scheme 1
 
   head "https://code.qt.io/cgit/installer-framework/installer-framework.git/"
